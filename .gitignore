@@ -10,5 +10,16 @@
 *.swp
 *.swo
 
+# Node
+node_modules/
+
+# Env
+.env
+.env.*
+
 # Logs
 *.log
+
+# Build
+dist/
+build/

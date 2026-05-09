@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "course": "TS200416 Risikostyring av maritime operasjoner",
+    "institution": "NTNU",
+    "examDate": "2026-05-28",
+    "version": "0.1.0",
+    "lastUpdated": "2026-05-09"
+  },
+  "temaer": [
+    { "id": "risiko-grunnlag", "navn": "Risikobegreper og grunnlag", "beskrivelse": "Definisjon av risiko, sannsynlighet vs. frekvens, ALARP, akseptabel risiko.", "kilder": ["dag1", "dag2", "Aven kap.6", "Aven kap.7"] },
+    { "id": "iso-31000", "navn": "ISO 31000 og risikostyringsprosessen", "beskrivelse": "Risikostyring som rammeverk: planlegging, risikovurdering (identifisering, analyse, evaluering), risikohåndtering, kommunikasjon og overvåking.", "kilder": ["dag2", "dag3"] },
+    { "id": "risikoidentifisering", "navn": "Risikoidentifisering – grov analyse, HAZID, PBD", "beskrivelse": "Metoder for å finne farer: grov analyse, HAZID, pålitelighetsblokkdiagram.", "kilder": ["dag3"] },
+    { "id": "palitelighet", "navn": "Pålitelighet og blokkdiagram", "beskrivelse": "MTBF, sviktintensitet, badekarkurve, serie- og parallellstruktur, minimale stier og kutt.", "kilder": ["dag1", "dag3", "dag4"] },
+    { "id": "barrierer", "navn": "Barrierer og ulykkesmodeller", "beskrivelse": "Energi/barriere-modellen, Bow tie, Swiss cheese (Reason), Haddon, MTO.", "kilder": ["dag4", "dag5"] },
+    { "id": "organisasjon", "navn": "Organisasjon, NAT, HRO, MTO", "beskrivelse": "Normal Accident Theory, High Reliability Organizations, Man Made Disasters, systemperspektiv.", "kilder": ["dag5"] },
+    { "id": "beslutninger", "navn": "Beslutninger, heuristikker, ELECTRE", "beskrivelse": "Beslutningsteori, heuristikker og bias, kompenserende vs ikke-kompenserende metoder, ELECTRE.", "kilder": ["dag6", "Rangeringsmetoder ELECTRE"] },
+    { "id": "indikatorer", "navn": "Sikkerhetsindikatorer og rapportering", "beskrivelse": "Ledende og laggende indikatorer, hendelsesstatistikk, rapporteringskultur.", "kilder": ["dag7", "Aven kap.9", "Aven kap.10"] }
+  ],
+  "flashcards": [
+    {
+      "id": "fc-001",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "front": "Hvilke to grunnelementer består risiko av (ifølge kursets definisjon)?",
+      "back": "Sannsynlighet (eller frekvens) og konsekvens. Risiko = sannsynlighet × konsekvens, eller mer generelt risiko = f(sannsynlighet, konsekvens).",
+      "kilde": "Undervisning dag 1, s.17"
+    },
+    {
+      "id": "fc-002",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "front": "Hva betyr ALARP?",
+      "back": "As Low As Reasonably Practicable – så lavt som det er rimelig praktisk mulig. Brukes når en risiko ikke kan fjernes helt, men må holdes på et akseptabelt nivå.",
+      "kilde": "Undervisning dag 2"
+    },
+    {
+      "id": "fc-003",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hvilke aktiviteter inngår i 'risikovurdering' ifølge ISO 31000?",
+      "back": "Risikoidentifisering, risikoanalyse og risikoevaluering. (Risikohåndtering er et eget steg etter risikovurderingen.)",
+      "kilde": "Undervisning dag 2, s.8"
+    },
+    {
+      "id": "fc-004",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hvilke to støtteaktiviteter går parallelt med hele risikostyringsprosessen i ISO 31000?",
+      "back": "Kommunikasjon og konsultasjon (sikrer involvering av interessenter) og overvåking og gjennomgang (kontinuerlig forbedring).",
+      "kilde": "Undervisning dag 2"
+    },
+    {
+      "id": "fc-005",
+      "tema": "palitelighet",
+      "vanskegrad": "lett",
+      "front": "Hva står MTBF for, og hvordan beregnes det?",
+      "back": "Mean Time Between Failures – gjennomsnittlig tid mellom feil. Beregnes som: MTBF = Totalt antall driftstimer / Antall feil.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "fc-006",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hva er forholdet mellom sviktintensitet (λ) og MTBF?",
+      "back": "Sviktintensiteten er det inverse av MTBF: λ = 1/MTBF.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "fc-007",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hvilken forenklet formel for pålitelighet brukes i dette kurset?",
+      "back": "P = 1 − 1/MTBF (forenkling). Den eksakte formelen er P = e^(−t/MTBF) = e^(−tλ).",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "fc-008",
+      "tema": "palitelighet",
+      "vanskegrad": "lett",
+      "front": "Hva viser badekarkurven?",
+      "back": "Hvordan sviktintensiteten varierer over tid for tekniske komponenter: høy ved oppstart (innkjøringsfeil), lav i normal drift, og økende mot slutten (slitasje/aldring).",
+      "kilde": "Undervisning dag 1, s.23"
+    },
+    {
+      "id": "fc-009",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hva er forskjellen mellom seriestruktur og parallellstruktur i et pålitelighetsblokkdiagram?",
+      "back": "Seriestruktur: alle komponenter må fungere for at systemet fungerer (svakeste ledd avgjør). Parallellstruktur: minst én komponent må fungere – økt redundans gir høyere pålitelighet.",
+      "kilde": "Undervisning dag 3 + Pålitelighetsblokkdiagram.pdf"
+    },
+    {
+      "id": "fc-010",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "front": "Hva er en minimal sti, og hva er et minimalt kutt i et pålitelighetsblokkdiagram?",
+      "back": "Minimal sti: minste sett komponenter som må alle fungere for at systemet fungerer. Minimalt kutt: minste sett komponenter som alle må svikte for at systemet svikter. Brukes til å identifisere kritiske komponenter.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "fc-011",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva deler Bow tie-modellen barrierene inn i?",
+      "back": "Forhindrende barrierer (forhindrer ulykker fra å skje, plassert før hendelsen) og begrensende/skadereduserende barrierer (begrenser konsekvensene, plassert etter hendelsen).",
+      "kilde": "Undervisning dag 4–5"
+    },
+    {
+      "id": "fc-012",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva viser Reasons sveitserostmodell (Swiss cheese)?",
+      "back": "At ulykker skjer når 'hull' i flere lag av barrierer er på linje samtidig. Hullene representerer latente feil (skjulte, langvarige) og aktive feil (handlinger fra mennesker i frontlinjen).",
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "fc-013",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva er Haddons prinsipper?",
+      "back": "Et sett prinsipper for å finne barrierer mot ulykker, basert på energi- og barrieretenking: redusere mengde energi, hindre frigjøring, separere energi fra mottaker, osv.",
+      "kilde": "Undervisning dag 4–5"
+    },
+    {
+      "id": "fc-014",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva står MTO for?",
+      "back": "Menneske–Teknologi–Organisasjon. Et systemperspektiv som analyserer ulykker som samspill mellom disse tre faktorene.",
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "fc-015",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "front": "Hvilke to faktorer fremheves i Normal Accident Theory (NAT, Perrow)?",
+      "back": "Kompleksitet (komplekse interaksjoner mellom systemkomponenter) og tett kobling (tight coupling – små feil sprer seg raskt og kan ikke stoppes). Når begge er høye, blir ulykker uunngåelige ('normale').",
+      "kilde": "Undervisning dag 5 + Eksamen V23 oppg 3a"
+    },
+    {
+      "id": "fc-016",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva kjennetegner High Reliability Organizations (HRO)?",
+      "back": "Organisasjoner som greier å operere svært sikkert til tross for høy kompleksitet. Kjennetegn: kontinuerlig oppmerksomhet på avvik, motstand mot forenklende forklaringer, sensitivitet for operasjoner, vilje til å tilpasse seg, respekt for ekspertise.",
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "fc-017",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "front": "Hva er heuristikker?",
+      "back": "Mentale snarveier eller tommelfingerregler som mennesker bruker for å ta beslutninger raskt. Eksempler: representativitet, tilgjengelighet, forankring (anchoring). Kan føre til systematiske feil (bias).",
+      "kilde": "Undervisning dag 6 + Eksamen V23 oppg 3c"
+    },
+    {
+      "id": "fc-018",
+      "tema": "beslutninger",
+      "vanskegrad": "vanskelig",
+      "front": "Hva er forskjellen mellom kompenserende og ikke-kompenserende beslutningsmetoder?",
+      "back": "Kompenserende: høy verdi på ett kriterium kan veie opp for lav verdi på et annet (f.eks. vektet sum). Ikke-kompenserende: et alternativ må passere et minstekrav på alle kriterier – svakhet kan ikke kompenseres (f.eks. ELECTRE, leksikografisk metode).",
+      "kilde": "Rangeringsmetoder ELECTRE.pdf"
+    },
+    {
+      "id": "fc-019",
+      "tema": "beslutninger",
+      "vanskegrad": "vanskelig",
+      "front": "Hva er hovedidéen i ELECTRE-metoden?",
+      "back": "Sammenligner alternativer parvis ved å sjekke 'concordance' (i hvilken grad alternativ A er like god eller bedre enn B på de viktige kriteriene) og 'discordance' (om B er sterkt bedre enn A på noe). Bruker en tillitsindeks (terskel) for å avgjøre om A 'utranger' B.",
+      "kilde": "Rangeringsmetoder ELECTRE.pdf"
+    },
+    {
+      "id": "fc-020",
+      "tema": "indikatorer",
+      "vanskegrad": "middels",
+      "front": "Hva er forskjellen mellom ledende og laggende sikkerhetsindikatorer?",
+      "back": "Laggende (etterskudds-) indikatorer måler det som har skjedd – f.eks. antall ulykker, sykefravær, skadestatistikk. Ledende (forutgående) indikatorer måler tilstand som *kan* føre til hendelser – f.eks. antall avvik rapportert, vedlikeholdsetterslep, opplæringstimer.",
+      "kilde": "Undervisning dag 7 + Aven kap.10"
+    }
+  ],
+  "multiplechoice": [
+    {
+      "id": "mc-001",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilke tre delaktiviteter inngår i 'risikovurdering' ifølge ISO 31000?",
+      "alternativer": [
+        "Risikoidentifisering, risikoanalyse, risikoevaluering",
+        "Planlegging, gjennomføring, evaluering",
+        "Kommunikasjon, analyse, behandling",
+        "Identifisering, behandling, overvåking"
+      ],
+      "rett": 0,
+      "forklaring": "Risikovurderingen i ISO 31000 består av risikoidentifisering, risikoanalyse og risikoevaluering. Risikohåndtering er et eget steg som kommer etterpå.",
+      "kilde": "Undervisning dag 2, s.8"
+    },
+    {
+      "id": "mc-002",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "sporsmal": "Hvilken formel uttrykker risiko slik den brukes i kurset?",
+      "alternativer": [
+        "Risiko = sannsynlighet + konsekvens",
+        "Risiko = forventet frekvens × forventet konsekvens",
+        "Risiko = konsekvens / sannsynlighet",
+        "Risiko = sannsynlighet × eksponering"
+      ],
+      "rett": 1,
+      "forklaring": "I kurset brukes definisjonen Risiko = forventet frekvens × forventet konsekvens (eller mer generelt sannsynlighet × konsekvens). Læreboka skriver det også som risiko = f(sannsynlighet, konsekvens).",
+      "kilde": "Undervisning dag 1, s.17"
+    },
+    {
+      "id": "mc-003",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "En komponent har MTBF = 10 000 timer. Hva er sviktintensiteten λ?",
+      "alternativer": [
+        "0,01 per time",
+        "0,001 per time",
+        "0,0001 per time",
+        "10 000 per time"
+      ],
+      "rett": 2,
+      "forklaring": "λ = 1/MTBF = 1/10 000 = 0,0001 per time.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "mc-004",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Et system har to identiske komponenter koblet i parallell, hver med pålitelighet 0,9. Hva er systemets pålitelighet?",
+      "alternativer": [
+        "0,81",
+        "0,90",
+        "0,99",
+        "1,80"
+      ],
+      "rett": 2,
+      "forklaring": "Parallellstruktur: P_system = 1 − (1−P₁)(1−P₂) = 1 − (0,1)(0,1) = 1 − 0,01 = 0,99.",
+      "kilde": "Pålitelighetsblokkdiagram.pdf"
+    },
+    {
+      "id": "mc-005",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Et system har to identiske komponenter koblet i serie, hver med pålitelighet 0,9. Hva er systemets pålitelighet?",
+      "alternativer": [
+        "0,81",
+        "0,90",
+        "0,99",
+        "1,80"
+      ],
+      "rett": 0,
+      "forklaring": "Seriestruktur: P_system = P₁ × P₂ = 0,9 × 0,9 = 0,81. Et system i serie er alltid mindre pålitelig enn den svakeste komponenten.",
+      "kilde": "Pålitelighetsblokkdiagram.pdf"
+    },
+    {
+      "id": "mc-006",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva representerer 'hullene' i Reasons sveitserostmodell?",
+      "alternativer": [
+        "Tilgjengelige barrierer som virker",
+        "Latente og aktive feil som svekker barrierer",
+        "Fysiske skader på utstyr",
+        "Mangel på prosedyrer"
+      ],
+      "rett": 1,
+      "forklaring": "Hullene representerer latente feil (skjulte svakheter som har vært der lenge) og aktive feil (operatørhandlinger). Når hull i flere barrierelag er på linje samtidig, kan ulykken skje.",
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "mc-007",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Hvilke to faktorer fremheves i Perrows Normal Accident Theory som forårsaker uunngåelige ulykker?",
+      "alternativer": [
+        "Menneskelig svikt og dårlig ledelse",
+        "Manglende opplæring og dårlig vedlikehold",
+        "Kompleksitet og tett kobling",
+        "Tidspress og økonomiske krav"
+      ],
+      "rett": 2,
+      "forklaring": "NAT fremhever kompleksitet (uoversiktlige interaksjoner) og tett kobling (små feil sprer seg raskt). Når begge er høye, blir ulykker 'normale' i statistisk forstand.",
+      "kilde": "Undervisning dag 5 + Eksamen V23 oppg 3a"
+    },
+    {
+      "id": "mc-008",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er karakteristisk for en *ikke-kompenserende* beslutningsmetode?",
+      "alternativer": [
+        "Den summerer alle kriterier til én vektet sum",
+        "Et alternativ kan ikke kompensere svakhet på ett kriterium med styrke på et annet",
+        "Den krever at alle kriterier veies likt",
+        "Den brukes kun for binære valg"
+      ],
+      "rett": 1,
+      "forklaring": "Ikke-kompenserende metoder lar ikke en svakhet på ett kriterium oppveies av en styrke på et annet. ELECTRE og leksikografisk metode er eksempler. Vektet sum derimot er kompenserende.",
+      "kilde": "Rangeringsmetoder ELECTRE.pdf"
+    },
+    {
+      "id": "mc-009",
+      "tema": "indikatorer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilket av disse er en *ledende* sikkerhetsindikator?",
+      "alternativer": [
+        "Antall personskader siste år",
+        "H1-verdi (lost time injury frequency)",
+        "Antall sikkerhetsobservasjoner og avviksrapporteringer",
+        "Antall dødsulykker"
+      ],
+      "rett": 2,
+      "forklaring": "Ledende indikatorer måler tilstand før ulykken inntreffer (rapporteringskultur, vedlikehold, opplæring). De andre alternativene er laggende (etterskudds-) indikatorer.",
+      "kilde": "Undervisning dag 7 + Aven kap.10"
+    },
+    {
+      "id": "mc-010",
+      "tema": "risikoidentifisering",
+      "vanskegrad": "lett",
+      "sporsmal": "Hva er hovedformålet med en grovanalyse?",
+      "alternativer": [
+        "Beregne nøyaktig sannsynlighet for hendelser",
+        "Få oversikt over farer og risikomomenter tidlig i en prosess",
+        "Erstatte detaljert risikoanalyse",
+        "Verifisere at alle barrierer fungerer"
+      ],
+      "rett": 1,
+      "forklaring": "Grovanalyse er en innledende, kvalitativ analyse som gir oversikt over farer og risikomomenter. Den brukes typisk tidlig, og kan følges opp av mer detaljerte analyser ved behov.",
+      "kilde": "Undervisning dag 3"
+    }
+  ],
+  "innskriving": [
+    {
+      "id": "in-001",
+      "tema": "palitelighet",
+      "sporsmal": "Hva står forkortelsen MTBF for? (Skriv på engelsk)",
+      "godkjenteSvar": ["Mean Time Between Failures", "mean time between failures", "MTBF"],
+      "forklaring": "MTBF = Mean Time Between Failures. Beregnes som totalt antall driftstimer / antall feil.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "in-002",
+      "tema": "iso-31000",
+      "sporsmal": "Hvilken ISO-standard beskriver risikostyringsprosessen som brukes i kurset?",
+      "godkjenteSvar": ["ISO 31000", "iso 31000", "31000"],
+      "forklaring": "ISO 31000 er den internasjonale standarden for risikostyring og rammeverket vi bruker i kurset.",
+      "kilde": "Undervisning dag 2"
+    },
+    {
+      "id": "in-003",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hvilket akronym brukes om prinsippet 'så lavt som rimelig praktisk mulig'?",
+      "godkjenteSvar": ["ALARP", "alarp"],
+      "forklaring": "ALARP = As Low As Reasonably Practicable. Brukes når en risiko ikke kan elimineres helt, men må holdes på et akseptabelt nivå.",
+      "kilde": "Undervisning dag 2"
+    },
+    {
+      "id": "in-004",
+      "tema": "barrierer",
+      "sporsmal": "Hvilken modell deler barrierer inn i forhindrende og begrensende, og er ofte tegnet som en sløyfe rundt en topphendelse?",
+      "godkjenteSvar": ["Bow tie", "bow tie", "bow-tie", "Bow-tie", "bowtie", "Bowtie"],
+      "forklaring": "Bow tie-modellen ('sløyfemodellen') har topphendelsen i midten, forhindrende barrierer på venstre side og skadereduserende barrierer på høyre side.",
+      "kilde": "Undervisning dag 4–5"
+    },
+    {
+      "id": "in-005",
+      "tema": "organisasjon",
+      "sporsmal": "Hvilken modell på sikkerhet (3 bokstaver) ser på samspill mellom Menneske, Teknologi og Organisasjon?",
+      "godkjenteSvar": ["MTO", "mto", "M-T-O"],
+      "forklaring": "MTO-modellen analyserer ulykker som resultat av samspill mellom menneskelige, tekniske og organisatoriske faktorer.",
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "in-006",
+      "tema": "organisasjon",
+      "sporsmal": "Hva står HRO for?",
+      "godkjenteSvar": ["High Reliability Organizations", "high reliability organizations", "High Reliability Organisations", "HRO"],
+      "forklaring": "HRO = High Reliability Organizations. Organisasjoner som opererer svært sikkert til tross for høy kompleksitet (f.eks. hangarskip, atomkraftverk).",
+      "kilde": "Undervisning dag 5"
+    }
+  ],
+  "matching": [
+    {
+      "id": "ma-001",
+      "tema": "barrierer",
+      "tittel": "Match modell/teori med beskrivelse",
+      "par": [
+        { "venstre": "Bow tie", "hoyre": "Deler barrierer i forhindrende og begrensende rundt en topphendelse" },
+        { "venstre": "Swiss cheese (Reason)", "hoyre": "Viser hvordan latente og aktive feil i flere barrierelag på linje fører til ulykker" },
+        { "venstre": "Haddon", "hoyre": "Prinsipper for å finne barrierer basert på energi- og barrieretenking" },
+        { "venstre": "MTO", "hoyre": "Systemperspektiv: Menneske–Teknologi–Organisasjon" },
+        { "venstre": "NAT (Perrow)", "hoyre": "Kompleksitet + tett kobling gir uunngåelige ulykker" },
+        { "venstre": "HRO", "hoyre": "Organisasjoner som opererer sikkert til tross for høy kompleksitet" }
+      ]
+    },
+    {
+      "id": "ma-002",
+      "tema": "iso-31000",
+      "tittel": "Match steg i risikostyringsprosessen med beskrivelse",
+      "par": [
+        { "venstre": "Risikoidentifisering", "hoyre": "Finne hva som kan gå galt – farekilder og hendelser" },
+        { "venstre": "Risikoanalyse", "hoyre": "Forstå sannsynlighet og konsekvens av identifiserte hendelser" },
+        { "venstre": "Risikoevaluering", "hoyre": "Sammenligne risiko med kriterier – er den akseptabel?" },
+        { "venstre": "Risikohåndtering", "hoyre": "Velge og iverksette tiltak for å påvirke risikoen" },
+        { "venstre": "Kommunikasjon og konsultasjon", "hoyre": "Pågående dialog med interessenter gjennom hele prosessen" },
+        { "venstre": "Overvåking og gjennomgang", "hoyre": "Følge med på om risikobildet og tiltakene fungerer over tid" }
+      ]
+    }
+  ],
+  "regneoppgaver": [
+    {
+      "id": "re-001",
+      "tema": "palitelighet",
+      "tekst": "En dieselgenerator har MTBF = 5000 timer. Bruk forenklingen P = 1 − 1/MTBF. Hva er sviktsannsynligheten i en gitt driftstime, oppgitt i prosent?",
+      "svar": 0.02,
+      "enhet": "%",
+      "toleranse": 0.005,
+      "losning": "Sviktintensitet λ = 1/MTBF = 1/5000 = 0,0002 per time = 0,02 %. (Sviktsannsynligheten i en time er da 1−P = 1/MTBF = 0,02 %.)",
+      "kilde": "Undervisning dag 1, s.24 + Oppgaver dag 1"
+    },
+    {
+      "id": "re-002",
+      "tema": "palitelighet",
+      "tekst": "En dieselgenerator har en oppgitt pålitelighet på 0,9998. Hva er sannsynligheten for at den svikter? Oppgi som desimaltall.",
+      "svar": 0.0002,
+      "enhet": "",
+      "toleranse": 0.00005,
+      "losning": "Sviktsannsynlighet = 1 − P = 1 − 0,9998 = 0,0002.",
+      "kilde": "Oppgaver Mappe dag 1, oppg 1a"
+    },
+    {
+      "id": "re-003",
+      "tema": "palitelighet",
+      "tekst": "To identiske komponenter er koblet i parallell, hver med pålitelighet 0,8. Hva er systemets pålitelighet? Oppgi som desimaltall (4 desimaler).",
+      "svar": 0.96,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "Parallell: P_sys = 1 − (1−P₁)(1−P₂) = 1 − (0,2)(0,2) = 1 − 0,04 = 0,96.",
+      "kilde": "Pålitelighetsblokkdiagram.pdf"
+    },
+    {
+      "id": "re-004",
+      "tema": "palitelighet",
+      "tekst": "Et system består av tre identiske komponenter i serie, hver med pålitelighet 0,95. Hva er systemets pålitelighet? Oppgi som desimaltall.",
+      "svar": 0.857375,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "Serie: P_sys = P₁ × P₂ × P₃ = 0,95³ = 0,857375.",
+      "kilde": "Pålitelighetsblokkdiagram.pdf"
+    },
+    {
+      "id": "re-005",
+      "tema": "palitelighet",
+      "tekst": "Et delsystem har en parallell-blokk med to komponenter (P=0,8 og P=0,6×0,7) som så er i serie med en komponent (P=0,9). Hva er den totale påliteligheten? Oppgi med 4 desimaler.",
+      "svar": 0.7956,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "Først parallell-blokken: P_par = 1 − (1−0,8)(1−0,6·0,7) = 1 − 0,2·0,58 = 1 − 0,116 = 0,884. Så i serie med 0,9: P_total = 0,884 × 0,9 ≈ 0,7956. (Tilsvarer 'krandelen' i Løsningsforslag, oppgave 1b.)",
+      "kilde": "Løsningsforslag.docx, oppg 1b"
+    }
+  ],
+  "eksamen": [],
+  "kildebank": [
+    { "id": "dag1", "navn": "Forelesning 1: Introduksjon", "fil": "Undervisning dag 1.pdf" },
+    { "id": "dag2", "navn": "Forelesning 2: Risikohåndtering", "fil": "Undervisning dag 2.pdf" },
+    { "id": "dag3", "navn": "Forelesning 3: Risikoidentifisering, PBD", "fil": "Undervisning dag 3.pdf" },
+    { "id": "dag4", "navn": "Forelesning 4: Barrierer", "fil": "Undervisning dag4.pdf" },
+    { "id": "dag5", "navn": "Forelesning 5: Organisasjon, NAT, HRO, MTO", "fil": "Undervisning dag 5.pdf" },
+    { "id": "dag6", "navn": "Forelesning 6: Beslutninger og ELECTRE", "fil": "Undervisning dag 6.pdf" },
+    { "id": "dag7", "navn": "Forelesning 7: Indikatorer og rapportering", "fil": "Undervisning dag 7.pdf" },
+    { "id": "rep", "navn": "Repetisjon", "fil": "repetisjon.pdf" },
+    { "id": "eks-v23", "navn": "Eksamen Vår 2023", "fil": "Eksamen Vår 2023.pdf" },
+    { "id": "eks-v24", "navn": "Eksamen Vår 2024 (bokmål)", "fil": "Eksamen V24 bokmål1.pdf" },
+    { "id": "eks-v25", "navn": "Eksamen 2025", "fil": "eksamen 2025.pdf" }
+  ]
+}

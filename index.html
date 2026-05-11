@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="no" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TS200416 – Eksamensøving</title>
+  <meta name="description" content="Øvingsside for TS200416 Risikostyring av maritime operasjoner – NTNU." />
+
+  <script>
+    // Sett dark/light før Tailwind laster, slik at vi unngår "flash"
+    (function () {
+      try {
+        var t = localStorage.getItem('ts200416.theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1d4ed8',
+            accent: '#f59e0b',
+            success: '#16a34a',
+            danger: '#dc2626',
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/style.css?v=4" />
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen font-sans antialiased">
+
+  <!-- Hamburger (kun mobil) -->
+  <button
+    id="menuBtn"
+    type="button"
+    class="md:hidden fixed top-3 left-3 z-50 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 shadow"
+    aria-label="Åpne meny"
+    aria-controls="sidebar"
+    aria-expanded="false"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Backdrop på mobil -->
+  <div id="backdrop" class="fixed inset-0 bg-black/40 z-30 hidden md:hidden"></div>
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="fixed md:static z-40 w-64 h-screen md:h-auto md:min-h-screen bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 flex flex-col -translate-x-full md:translate-x-0 transition-transform"
+      aria-label="Hovednavigasjon"
+    >
+      <div class="p-4 border-b border-slate-200 dark:border-slate-700">
+        <h1 class="text-lg font-bold leading-tight">TS200416</h1>
+        <p class="text-xs opacity-70 leading-tight">Risikostyring av maritime operasjoner</p>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto p-2 space-y-1" aria-label="Sider">
+        <a href="#/dashboard"      data-route="dashboard"      class="nav-link">Dashbord</a>
+        <a href="#/flashcards"     data-route="flashcards"     class="nav-link">Flashcards</a>
+        <a href="#/multiplechoice" data-route="multiplechoice" class="nav-link">Multiple choice</a>
+        <a href="#/innskriving"    data-route="innskriving"    class="nav-link">Innskriving</a>
+        <a href="#/matching"       data-route="matching"       class="nav-link">Matching</a>
+        <a href="#/regneoppgaver"  data-route="regneoppgaver"  class="nav-link">Regneoppgaver</a>
+        <a href="#/eksamen"        data-route="eksamen"        class="nav-link">Eksamen</a>
+        <a href="#/analyse"        data-route="analyse"        class="nav-link">Analyse</a>
+        <a href="#/kildebank"      data-route="kildebank"      class="nav-link">Kildebank</a>
+      </nav>
+
+      <div class="p-3 border-t border-slate-200 dark:border-slate-700 space-y-2">
+        <button
+          id="themeToggle"
+          type="button"
+          class="w-full text-sm px-3 py-2 rounded-lg bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600"
+        >
+          <span class="hidden dark:inline">☀️ Lyst tema</span>
+          <span class="dark:hidden">🌙 Mørkt tema</span>
+        </button>
+        <button
+          id="resetBtn"
+          type="button"
+          class="w-full text-sm px-3 py-2 rounded-lg bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-900/60"
+        >
+          Nullstill data
+        </button>
+      </div>
+    </aside>
+
+    <!-- Hovedinnhold -->
+    <main class="flex-1 px-4 md:px-8 py-6 md:py-10">
+      <div id="app" class="max-w-3xl mx-auto"></div>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

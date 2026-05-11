@@ -3,18 +3,84 @@
     "course": "TS200416 Risikostyring av maritime operasjoner",
     "institution": "NTNU",
     "examDate": "2026-05-28",
-    "version": "0.1.0",
-    "lastUpdated": "2026-05-09"
+    "version": "0.2.0",
+    "lastUpdated": "2026-05-11"
   },
   "temaer": [
-    { "id": "risiko-grunnlag", "navn": "Risikobegreper og grunnlag", "beskrivelse": "Definisjon av risiko, sannsynlighet vs. frekvens, ALARP, akseptabel risiko.", "kilder": ["dag1", "dag2", "Aven kap.6", "Aven kap.7"] },
-    { "id": "iso-31000", "navn": "ISO 31000 og risikostyringsprosessen", "beskrivelse": "Risikostyring som rammeverk: planlegging, risikovurdering (identifisering, analyse, evaluering), risikohåndtering, kommunikasjon og overvåking.", "kilder": ["dag2", "dag3"] },
-    { "id": "risikoidentifisering", "navn": "Risikoidentifisering – grov analyse, HAZID, PBD", "beskrivelse": "Metoder for å finne farer: grov analyse, HAZID, pålitelighetsblokkdiagram.", "kilder": ["dag3"] },
-    { "id": "palitelighet", "navn": "Pålitelighet og blokkdiagram", "beskrivelse": "MTBF, sviktintensitet, badekarkurve, serie- og parallellstruktur, minimale stier og kutt.", "kilder": ["dag1", "dag3", "dag4"] },
-    { "id": "barrierer", "navn": "Barrierer og ulykkesmodeller", "beskrivelse": "Energi/barriere-modellen, Bow tie, Swiss cheese (Reason), Haddon, MTO.", "kilder": ["dag4", "dag5"] },
-    { "id": "organisasjon", "navn": "Organisasjon, NAT, HRO, MTO", "beskrivelse": "Normal Accident Theory, High Reliability Organizations, Man Made Disasters, systemperspektiv.", "kilder": ["dag5"] },
-    { "id": "beslutninger", "navn": "Beslutninger, heuristikker, ELECTRE", "beskrivelse": "Beslutningsteori, heuristikker og bias, kompenserende vs ikke-kompenserende metoder, ELECTRE.", "kilder": ["dag6", "Rangeringsmetoder ELECTRE"] },
-    { "id": "indikatorer", "navn": "Sikkerhetsindikatorer og rapportering", "beskrivelse": "Ledende og laggende indikatorer, hendelsesstatistikk, rapporteringskultur.", "kilder": ["dag7", "Aven kap.9", "Aven kap.10"] }
+    {
+      "id": "risiko-grunnlag",
+      "navn": "Risikobegreper og grunnlag",
+      "beskrivelse": "Definisjon av risiko, sannsynlighet vs. frekvens, ALARP, akseptabel risiko.",
+      "kilder": [
+        "dag1",
+        "dag2",
+        "Aven kap.6",
+        "Aven kap.7"
+      ]
+    },
+    {
+      "id": "iso-31000",
+      "navn": "ISO 31000 og risikostyringsprosessen",
+      "beskrivelse": "Risikostyring som rammeverk: planlegging, risikovurdering (identifisering, analyse, evaluering), risikohåndtering, kommunikasjon og overvåking.",
+      "kilder": [
+        "dag2",
+        "dag3"
+      ]
+    },
+    {
+      "id": "risikoidentifisering",
+      "navn": "Risikoidentifisering – grov analyse, HAZID, PBD",
+      "beskrivelse": "Metoder for å finne farer: grov analyse, HAZID, pålitelighetsblokkdiagram.",
+      "kilder": [
+        "dag3"
+      ]
+    },
+    {
+      "id": "palitelighet",
+      "navn": "Pålitelighet og blokkdiagram",
+      "beskrivelse": "MTBF, sviktintensitet, badekarkurve, serie- og parallellstruktur, minimale stier og kutt.",
+      "kilder": [
+        "dag1",
+        "dag3",
+        "dag4"
+      ]
+    },
+    {
+      "id": "barrierer",
+      "navn": "Barrierer og ulykkesmodeller",
+      "beskrivelse": "Energi/barriere-modellen, Bow tie, Swiss cheese (Reason), Haddon, MTO.",
+      "kilder": [
+        "dag4",
+        "dag5"
+      ]
+    },
+    {
+      "id": "organisasjon",
+      "navn": "Organisasjon, NAT, HRO, MTO",
+      "beskrivelse": "Normal Accident Theory, High Reliability Organizations, Man Made Disasters, systemperspektiv.",
+      "kilder": [
+        "dag5"
+      ]
+    },
+    {
+      "id": "beslutninger",
+      "navn": "Beslutninger, heuristikker, ELECTRE",
+      "beskrivelse": "Beslutningsteori, heuristikker og bias, kompenserende vs ikke-kompenserende metoder, ELECTRE.",
+      "kilder": [
+        "dag6",
+        "Rangeringsmetoder ELECTRE"
+      ]
+    },
+    {
+      "id": "indikatorer",
+      "navn": "Sikkerhetsindikatorer og rapportering",
+      "beskrivelse": "Ledende og laggende indikatorer, hendelsesstatistikk, rapporteringskultur.",
+      "kilder": [
+        "dag7",
+        "Aven kap.9",
+        "Aven kap.10"
+      ]
+    }
   ],
   "flashcards": [
     {
@@ -176,6 +242,350 @@
       "front": "Hva er forskjellen mellom ledende og laggende sikkerhetsindikatorer?",
       "back": "Laggende (etterskudds-) indikatorer måler det som har skjedd – f.eks. antall ulykker, sykefravær, skadestatistikk. Ledende (forutgående) indikatorer måler tilstand som *kan* føre til hendelser – f.eks. antall avvik rapportert, vedlikeholdsetterslep, opplæringstimer.",
       "kilde": "Undervisning dag 7 + Aven kap.10"
+    },
+    {
+      "id": "fc-021",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "front": "Hva er forskjellen på Safety og Security?",
+      "back": "Safety beskriver generelle tiltak mot ukjente hendelser (kan også beskrive en tilstand). Security retter seg mot spesifikke trusler. På norsk dekker 'sikkerhet' begge.",
+      "kilde": "Undervisning dag 1, s.11"
+    },
+    {
+      "id": "fc-022",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "front": "Hva er forskjellen på sannsynlighet og frekvens?",
+      "back": "Sannsynlighet P(x) er et matematisk tall mellom 0 og 1 uten tidsavgrensning. Frekvens sier noe om hvor ofte en hendelse vil skje i løpet av en tidsperiode.",
+      "kilde": "Undervisning dag 1, s.21"
+    },
+    {
+      "id": "fc-023",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "front": "Hva er kursets definisjon av risiko?",
+      "back": "Risiko = forventet frekvens × forventet konsekvens. Mer generelt: risiko = f(sannsynlighet, konsekvens). De to grunnelementene er sannsynlighet (eller frekvens) og konsekvens.",
+      "kilde": "Undervisning dag 1, s.17"
+    },
+    {
+      "id": "fc-024",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "front": "Hva betyr ALARP, og hvorfor brukes prinsippet?",
+      "back": "ALARP = As Low As Reasonably Practicable. Et 'nullmål' for risiko er ofte ikke praktisk mulig. ALARP innebærer en kost-nytte-vurdering: risikoen skal holdes så lav som rimelig praktisk mulig.",
+      "kilde": "Undervisning dag 1, s.35"
+    },
+    {
+      "id": "fc-025",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "front": "Beskriv badekarkurvens tre faser.",
+      "back": "1) Tidlig svikt (innkjøringsfeil — høy sviktintensitet), 2) Normal drift (lav og konstant sviktintensitet), 3) Slitasjefasen (stigende sviktintensitet mot slutten av levetiden).",
+      "kilde": "Undervisning dag 1, s.23"
+    },
+    {
+      "id": "fc-026",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "vanskelig",
+      "front": "Hvorfor kan man ikke nødvendigvis bruke samme metode for vurdering av økonomisk risiko som risiko for liv og helse?",
+      "back": "Økonomisk risiko kan ofte vurderes med kost-nytte (kostnad × forventet frekvens vs. tiltakets pris). Når liv/helse eller omdømme skal vurderes blir det vanskeligere, fordi konsekvensene ikke har en gitt pris og personlige preferanser/akseptkriterier varierer.",
+      "kilde": "Undervisning dag 1, s.38–39"
+    },
+    {
+      "id": "fc-027",
+      "tema": "palitelighet",
+      "vanskegrad": "lett",
+      "front": "Hva er MTBF og hvordan beregnes det?",
+      "back": "MTBF (Mean Time Between Failures) = totalt antall driftstimer / antall feil. Brukes som mål på pålitelighet.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "fc-028",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hva er sammenhengen mellom sviktintensitet (λ) og MTBF?",
+      "back": "Sviktintensitet er det inverse av MTBF: λ = 1/MTBF. Det betyr at hvis MTBF dobles, halveres sviktintensiteten.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "fc-029",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hvilken forenklet formel for pålitelighet brukes i dette kurset?",
+      "back": "Kurset forenkler den nøyaktige formelen P = e^(−t/MTBF) til P = 1 − 1/MTBF. Dette er en omtrentlig komplement-tilnærming som er enkel å regne med.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "fc-030",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hva er formelen for pålitelighet i en seriestruktur?",
+      "back": "P_serie = P(a) × P(b). Pålitelighet i serie er produktet av komponentenes pålitelighet. Alle pålitelighetsblokkdiagram kan forenkles ned til en seriestruktur.",
+      "kilde": "Undervisning dag 4, s.3"
+    },
+    {
+      "id": "fc-031",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "front": "Hva er formelen for pålitelighet i en parallellstruktur?",
+      "back": "P_parallell = 1 − (1 − P(a)) × (1 − P(b)). Tanken er: feilsannsynligheten er produktet av at begge feiler, og pålitelighet er komplementet.",
+      "kilde": "Undervisning dag 4, s.3"
+    },
+    {
+      "id": "fc-032",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "front": "Hva er formelen for en 2-av-3 strukturpålitelighet?",
+      "back": "P = P(M1)·P(M2) + P(M1)·P(M3) + P(M2)·P(M3) − 2·P(M1)·P(M2)·P(M3). Systemet fungerer hvis minst 2 av 3 moduler er OK.",
+      "kilde": "Undervisning dag 4, s.3"
+    },
+    {
+      "id": "fc-033",
+      "tema": "iso-31000",
+      "vanskegrad": "lett",
+      "front": "Hvilke fem hovedaktiviteter inngår i ISO 31000-prosessen?",
+      "back": "Planlegging → Risikovurdering (risikoidentifisering, risikoanalyse, risikoevaluering) → Risikohåndtering, med Kommunikasjon og konsultasjon samt Overvåkning og gjennomgang som løpende aktiviteter.",
+      "kilde": "Undervisning dag 2, s.8"
+    },
+    {
+      "id": "fc-034",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hva er forskjellen på risikovurdering og risikohåndtering?",
+      "back": "Risikovurdering = risikoidentifisering + risikoanalyse + risikoevaluering (vurdere hva som kan gå galt og hvor alvorlig). Risikohåndtering = velge og iverksette tiltak. Forveksles ofte, men det er to ulike steg i ISO 31000.",
+      "kilde": "Undervisning dag 2, s.8"
+    },
+    {
+      "id": "fc-035",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hvilke tre typer tiltak deler sikkerhetsstyring vanligvis tiltak inn i?",
+      "back": "Fysiske/tekniske tiltak, Organisatoriske tiltak og Personrettede tiltak.",
+      "kilde": "Undervisning dag 2, s.21"
+    },
+    {
+      "id": "fc-036",
+      "tema": "iso-31000",
+      "vanskegrad": "lett",
+      "front": "Hva er en SJA (Sikker Jobb Analyse)?",
+      "back": "En enkel og effektiv metode for å identifisere risikomoment før en arbeidsoperasjon, ofte gjort som en kort gruppediskusjon (toolbox talk) på arbeidsstedet.",
+      "kilde": "Undervisning dag 2, s.23"
+    },
+    {
+      "id": "fc-037",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hvilken ulykke ledet til innføringen av SOLAS?",
+      "back": "Titanic-forliset (1912). SOLAS (Safety Of Life At Sea) kom i 1914 og er senere oppdatert flere ganger (1929, 1948, 1960, 1974).",
+      "kilde": "Undervisning dag 2, s.11–12"
+    },
+    {
+      "id": "fc-038",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hvorfor kom ISM-koden i 1993?",
+      "back": "Flere store ulykker på 1980-tallet — særlig Herald of Free Enterprise — viste at SOLAS-regelverket alene ikke klarte å forhindre ulykker. ISM krever et styringssystem som kontinuerlig sikrer at sikkerheten ivaretas.",
+      "kilde": "Undervisning dag 2, s.13–14"
+    },
+    {
+      "id": "fc-039",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hva er hovedprinsippet i Demings sirkel for sikkerhetsstyring?",
+      "back": "Feedback / tilbakeføring — sikrer kontinuerlig læring av feil. Brukes ofte som PDCA (Plan-Do-Check-Act) og er kjernen i ethvert styringssystem.",
+      "kilde": "Undervisning dag 2, s.15"
+    },
+    {
+      "id": "fc-040",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hva sa Deming om Heinrichs ulykkespyramide?",
+      "back": "Deming mente at Heinrichs påstand om at menneskelig handling var årsaken til de fleste ulykker var feil. Det er først og fremst dårlige styringssystemer (management systems) som forårsaker flertallet av ulykker.",
+      "kilde": "Undervisning dag 2, s.33"
+    },
+    {
+      "id": "fc-041",
+      "tema": "iso-31000",
+      "vanskegrad": "vanskelig",
+      "front": "Hva er forskjellen på en HAZOP, FMECA og ROS-analyse?",
+      "back": "HAZOP — strukturert analyse av prosesser av tverrfaglig ekspertgruppe. FMECA — identifiserer alle feilmoduser i tekniske enheter og konsekvensene. ROS — forenklet risiko- og sårbarhetsanalyse mye brukt offentlig, uten standardisert mal.",
+      "kilde": "Undervisning dag 2, s.50–52"
+    },
+    {
+      "id": "fc-042",
+      "tema": "iso-31000",
+      "vanskegrad": "lett",
+      "front": "Hva er en KPI?",
+      "back": "Key Performance Indicator — et mål for å vurdere ytelse. I sikkerhetssammenheng brukes H-verdier (H1, H2) og F-verdi som vanlige KPIer, særlig i kontrakter offshore.",
+      "kilde": "Undervisning dag 2, s.26–27"
+    },
+    {
+      "id": "fc-043",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "front": "Hvilke fire endringsstrategier ble presentert i dag 2?",
+      "back": "Evolusjon (inkrementell), Revolusjon (deltakende, bottom-up), Tvungen utvikling (diktatorisk, top-down) og Karismatisk omforming (leder som redningsmann).",
+      "kilde": "Undervisning dag 2, s.19"
+    },
+    {
+      "id": "fc-044",
+      "tema": "barrierer",
+      "vanskegrad": "lett",
+      "front": "Hva er Haddons energi/barriere-modell?",
+      "back": "En modell popularisert av William Haddon (1970-tallet, baseres på Gibson 1961). Den ser ulykker som ukontrollert utløsning av energi, og barrierer som det som kan hindre energien i å nå et offer.",
+      "kilde": "Undervisning dag 4, s.5"
+    },
+    {
+      "id": "fc-045",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Gi tre eksempler fra Haddons 10 prinsipper.",
+      "back": "Eksempler: 1) Forebygge oppsamling av energi (unngå å kjøre bil), 2) Redusere mengden energi (lavere fart), 4) Endre hastigheten/fordelingen (bildesign, setebelte), 6) Skille offer fra energi med fysiske barrierer (midtdeler), 9) Begrense skadens virkninger (førstehjelp).",
+      "kilde": "Undervisning dag 4, s.7"
+    },
+    {
+      "id": "fc-046",
+      "tema": "barrierer",
+      "vanskegrad": "lett",
+      "front": "Hva er forskjellen på aktive og passive barrierer?",
+      "back": "Passive barrierer krever ingen aktiv handling (midtdeler, deformasjonssoner). Aktive barrierer krever at noe iverksettes (airbag, varslingssystem, automatisk shutdown ved gasslekkasje).",
+      "kilde": "Undervisning dag 4, s.10"
+    },
+    {
+      "id": "fc-047",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva er et barriereelement, og hvilke fire typer nevnes?",
+      "back": "Et barriereelement er en byggekloss i en barrierefunksjon. De fire typene: Fysiske (vegg), Menneskelige ressurser, Prosedyrer, Datasystem. Når flere elementer settes sammen kalles det et barrieresystem.",
+      "kilde": "Undervisning dag 4, s.11"
+    },
+    {
+      "id": "fc-048",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva er Bow tie-modellen?",
+      "back": "En visualisering av barrierer rundt en uønsket hendelse: forhindrende barrierer på venstre side (skal stoppe at hendelsen oppstår), begrensende barrierer på høyre side (skal begrense konsekvensene hvis den oppstår). Hendelsen er knuten i midten.",
+      "kilde": "Undervisning dag 4, s.16"
+    },
+    {
+      "id": "fc-049",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva er James Reasons Swiss cheese-modell?",
+      "back": "Hvert lag i osten er en barriere med 'hull' — aktive feil eller latente forhold. Ulykker oppstår når hullene i flere barrierer ligger på linje slik at fare → forsvar → tap-banen blir åpen.",
+      "kilde": "Undervisning dag 4, s.17–18"
+    },
+    {
+      "id": "fc-050",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva er forskjellen på aktive feil og latente forhold (Reason)?",
+      "back": "Aktive feil skjer i den skarpe enden under operasjon, og er ofte (tilsynelatende) menneskelige feil. Latente forhold er organisatoriske/designmessige svakheter som dårlig vedlikehold eller dårlig design, som ligger 'sovende' i systemet.",
+      "kilde": "Undervisning dag 4, s.19"
+    },
+    {
+      "id": "fc-051",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "front": "Hva betyr dybdeforsvar (defence in depth)?",
+      "back": "Et barrieresystem med flere barrierer etter hverandre, brukt mot farer med høyt energiinnhold. Eksempel gassanlegg: prosesskontroll, oppdemming, gass-deteksjon, isolering av tennkilder, brannvarsling, brannvegger, aktiv brannslukking, nødutganger.",
+      "kilde": "Undervisning dag 4, s.13–15"
+    },
+    {
+      "id": "fc-052",
+      "tema": "barrierer",
+      "vanskegrad": "vanskelig",
+      "front": "Hvilke svakheter har barrieremodellen?",
+      "back": "1) Mindre egnet for systemer uten tydelig analogi til energi/barriere (f.eks. rene mellommenneskelige risiko). 2) Tendens til å legge på flere prosedyre-barrierer som 'billig forsikring', noe som kan gjøre systemet uoversiktlig. 3) Avhengighet mellom barrierer (strømbrudd kan ta ut mange aktive barrierer).",
+      "kilde": "Undervisning dag 4, s.20–22"
+    },
+    {
+      "id": "fc-053",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er Perrows Normal Accident Theory (NAT)?",
+      "back": "Teorien sier at i systemer med høy interaktiv kompleksitet OG tette koblinger er ulykker uunngåelige. Eksempel: Three Mile Island. Kompleksitet krever desentralisering, tette koblinger krever sentralisering — en kan ikke ha begge samtidig.",
+      "kilde": "Undervisning dag 4, s.33–38"
+    },
+    {
+      "id": "fc-054",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er forskjellen mellom mindre ulykker og systemulykker ifølge Perrow?",
+      "back": "Mindre ulykker skyldes feil på en eller to komponenter. Systemulykker skyldes en uforutsett kombinasjon av aktive feil og latente forhold i et komplekst system. 'Uforutsett' er en sentral forutsetning for normale ulykker.",
+      "kilde": "Undervisning dag 4, s.34"
+    },
+    {
+      "id": "fc-055",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "front": "Hvilke risiko-strategier følger ifølge Perrow av NAT?",
+      "back": "1) Reduser interaktiv kompleksitet, 2) Løs opp tette koblinger, 3) Desentraliser hvis du må ha mye kompleksitet, 4) Sentraliser hvis du må ha tette koblinger, 5) Hvis systemet har katastrofepotensial → kvitt deg med teknologien (f.eks. atomvåpen).",
+      "kilde": "Undervisning dag 4, s.43"
+    },
+    {
+      "id": "fc-056",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er en High Reliability Organization (HRO)?",
+      "back": "Organisasjoner som mestrer sikkerhet til tross for NAT-pessimismen. Typiske eksempler: hangarskip, atomubåt, lufttrafikkontroll. La Porte & Consolini (1991) viste at slike organisasjoner kombinerer redundans, åpen kommunikasjon, kompetanse og en kultur av mindfulness.",
+      "kilde": "Undervisning dag 5, s.7–12"
+    },
+    {
+      "id": "fc-057",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "List opp de fem elementene i collective mindfulness i en HRO.",
+      "back": "1) Opptatthet av feil (forventning om det uventede), 2) Motvillighet til å forenkle fortolkninger, 3) Påpasselighet under operasjoner, 4) Forpliktelse til feiltoleranse, 5) Forsvarer ekspertise (beslutninger tas der ekspertisen er).",
+      "kilde": "Undervisning dag 5, s.17"
+    },
+    {
+      "id": "fc-058",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er Man Made Disasters (MMD) / informasjonssviktperspektivet?",
+      "back": "Barry Turners modell der ulykker forklares ved informasjonssvikt over tid. Informasjon kan være ukjent, oversett, ikke i sammenheng, eller passer ikke fortolkningsrammen. Modellen har fasene: Normal → Inkubasjon → Utløsende hendelse → Krise → Krisehåndtering → Gjenoppretting/kulturell omstilling.",
+      "kilde": "Undervisning dag 5, s.22–24"
+    },
+    {
+      "id": "fc-059",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er Westrums tre kulturer for å håndtere informasjon?",
+      "back": "Patologisk (vil ikke vite — budbringere blir 'skutt'). Byråkratisk (lytter hvis info dukker opp, men brobygging blir oversett). Generativ (aktiv informasjonshenting, brobygging oppmuntres, nye ideer ønskes velkommen).",
+      "kilde": "Undervisning dag 5, s.26"
+    },
+    {
+      "id": "fc-060",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hvordan skiller HRO seg fra NAT i synet på redundans?",
+      "back": "NAT: redundans kan øke kompleksiteten og dermed ulykkesrisiko. HRO: redundans (i mannskap, kompetanse, prosedyrer) ER selve nøkkelen til sikkerhet i komplekse systemer.",
+      "kilde": "Undervisning dag 5, s.20"
+    },
+    {
+      "id": "fc-061",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er den 'skarpe enden' og den 'butte enden'?",
+      "back": "Skarpe enden = der operasjonen faktisk skjer (matros, kaptein). Butte enden = langt fra operasjonen (rederi-styre, departement, IMO). Sikkerhet avhenger av beslutninger på begge ender (Rasmussen 1997).",
+      "kilde": "Undervisning dag 5, s.28–29"
+    },
+    {
+      "id": "fc-062",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "front": "Hva betyr ETTO-prinsippet, og hvordan er det knyttet til 'practical drift'?",
+      "back": "ETTO (Efficiency-Thoroughness Trade Off, Hollnagel): under press må man ofte gå på akkord med grundighet for å holde effektivitet. Praktisk drift = avvik mellom prosedyre og faktisk arbeid normaliseres over tid. Begge undergraver sikkerhetsstyring.",
+      "kilde": "Undervisning dag 5, s.32"
+    },
+    {
+      "id": "fc-063",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "front": "Hva er Resilience Engineering (RE), og hva er Safety 1 vs Safety 2?",
+      "back": "RE (Hollnagel): sikkerhet er evnen til å håndtere og tilpasse seg den nåværende situasjonen, ikke bare fravær av ulykker. Safety 1 = unngå at ting går galt. Safety 2 = sikre at ting går bra. RE ligner HRO men er ikke knyttet til spesifikke organisasjonstyper.",
+      "kilde": "Undervisning dag 5, s.34–36"
     }
   ],
   "multiplechoice": [
@@ -328,6 +738,351 @@
       "rett": 1,
       "forklaring": "Grovanalyse er en innledende, kvalitativ analyse som gir oversikt over farer og risikomomenter. Den brukes typisk tidlig, og kan følges opp av mer detaljerte analyser ved behov.",
       "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "mc-011",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "sporsmal": "Hva er de to grunnelementene i kursets definisjon av risiko?",
+      "alternativer": [
+        "Sannsynlighet og konsekvens",
+        "Konsekvens og kostnad",
+        "Frekvens og fare",
+        "Sårbarhet og trussel"
+      ],
+      "rett": 0,
+      "forklaring": "I dette kurset er risiko = sannsynlighet × konsekvens (eller mer generelt f(sannsynlighet, konsekvens)). De øvrige svarene blander inn begreper fra security-domenet eller risikoanalyse i bredere forstand.",
+      "kilde": "Undervisning dag 1, s.17"
+    },
+    {
+      "id": "mc-012",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken påstand om ALARP er riktig?",
+      "alternativer": [
+        "ALARP betyr at risikoen alltid skal være null",
+        "ALARP innebærer en kost-nytte-vurdering der risikoen holdes så lav som rimelig praktisk mulig",
+        "ALARP er det samme som risikoaksept uten tiltak",
+        "ALARP er en metode for risikoidentifisering"
+      ],
+      "rett": 1,
+      "forklaring": "ALARP (As Low As Reasonably Practicable) anerkjenner at et nullmål ofte ikke er praktisk mulig, og krever en kost-nytte-vurdering. Det er ikke en risikoidentifiseringsmetode, og det er ikke det samme som å akseptere risiko uten tiltak.",
+      "kilde": "Undervisning dag 1, s.35"
+    },
+    {
+      "id": "mc-013",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva beskriver badekarkurven?",
+      "alternativer": [
+        "Hvordan konsekvens varierer med fart",
+        "Hvordan sviktintensiteten varierer over et komponents levetid",
+        "Akseptabel risiko som funksjon av kostnad",
+        "Sammenhengen mellom alvorlige og mindre ulykker"
+      ],
+      "rett": 1,
+      "forklaring": "Badekarkurven viser sviktintensitet over levetid: høy ved oppstart (innkjøringsfeil), lav i normal drift, og høy mot slutten (slitasje). Det siste alternativet beskriver Heinrichs pyramide, ikke badekarkurven.",
+      "kilde": "Undervisning dag 1, s.23"
+    },
+    {
+      "id": "mc-014",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er forholdet mellom sviktintensitet λ og MTBF?",
+      "alternativer": [
+        "λ = MTBF",
+        "λ = MTBF / 2",
+        "λ = 1 / MTBF",
+        "λ = MTBF × t"
+      ],
+      "rett": 2,
+      "forklaring": "Sviktintensitet er det inverse av MTBF: λ = 1/MTBF. Hvis MTBF er 5000 timer, er sviktintensiteten 1/5000 per time = 0,0002.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "mc-015",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken formel for pålitelighet bruker kurset (forenkling)?",
+      "alternativer": [
+        "P = e^(−t/MTBF)",
+        "P = 1 − 1/MTBF",
+        "P = MTBF × t",
+        "P = 1 − t × MTBF"
+      ],
+      "rett": 1,
+      "forklaring": "Kurset bruker forenklingen P = 1 − 1/MTBF i stedet for den nøyaktige eksponentialformelen P = e^(−t/MTBF). Den nøyaktige formelen er korrekt, men kurset velger den enkle.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "mc-016",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilke tre delaktiviteter inngår i risikovurdering ifølge ISO 31000?",
+      "alternativer": [
+        "Identifisering, analyse, evaluering",
+        "Planlegging, gjennomføring, evaluering",
+        "Kommunikasjon, analyse, behandling",
+        "Identifisering, behandling, overvåking"
+      ],
+      "rett": 0,
+      "forklaring": "Risikovurdering = risikoidentifisering + risikoanalyse + risikoevaluering. Risikohåndtering er et eget steg (ikke en del av risikovurderingen), og kommunikasjon/overvåkning er løpende aktiviteter.",
+      "kilde": "Undervisning dag 2, s.8"
+    },
+    {
+      "id": "mc-017",
+      "tema": "iso-31000",
+      "vanskegrad": "lett",
+      "sporsmal": "Hvilken ulykke utløste innføringen av SOLAS?",
+      "alternativer": [
+        "Herald of Free Enterprise",
+        "Titanic",
+        "Piper Alpha",
+        "Three Mile Island"
+      ],
+      "rett": 1,
+      "forklaring": "SOLAS (1914) kom etter Titanic-forliset (1912). Herald of Free Enterprise på 1980-tallet bidro til ISM-koden (1993). Piper Alpha (1988) er en oljerelatert ulykke, og Three Mile Island er kjernekraft.",
+      "kilde": "Undervisning dag 2, s.11–12"
+    },
+    {
+      "id": "mc-018",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva måler H1-verdien?",
+      "alternativer": [
+        "Antall fraværsskader per million arbeidstimer",
+        "Totalt antall skader per million arbeidstimer",
+        "Antall fraværsdager per million arbeidstimer",
+        "Antall ulykker per ansatt"
+      ],
+      "rett": 0,
+      "forklaring": "H1 = antall fraværsskader per million arbeidstimer (skader som gjør at arbeider ikke kan arbeide). H2 inkluderer også skader uten fravær. F-verdien måler antall fraværsdager.",
+      "kilde": "Undervisning dag 2, s.27"
+    },
+    {
+      "id": "mc-019",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken risikoanalysemetode benyttes typisk på prosessanlegg av en tverrfaglig ekspertgruppe?",
+      "alternativer": [
+        "FMECA",
+        "ROS-analyse",
+        "HAZOP",
+        "SJA"
+      ],
+      "rett": 2,
+      "forklaring": "HAZOP (Hazard and Operability) brukes typisk på prosesser og krever en tverrfaglig gruppe. FMECA er en feiltype-analyse av tekniske enheter. ROS er en forenklet metode. SJA er en kort jobbspesifikk analyse.",
+      "kilde": "Undervisning dag 2, s.50"
+    },
+    {
+      "id": "mc-020",
+      "tema": "iso-31000",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Hva var Demings hovedkritikk av Heinrichs ulykkespyramide?",
+      "alternativer": [
+        "Pyramiden manglet matematisk grunnlag",
+        "Heinrich ignorerte mindre ulykker",
+        "Heinrich tilskrev menneskelig handling som hovedårsak, men det er ofte dårlige styringssystemer",
+        "Pyramiden inkluderte for mange nivåer"
+      ],
+      "rett": 2,
+      "forklaring": "Deming hevdet at Heinrichs påstand om menneskelig handling som hovedårsak var feil; det er ofte dårlige styringssystemer (management systems) som ligger bak. Senere kritikere har også pekt på at fokus på små ulykker har ført til at man overser sjeldne men alvorlige hendelser.",
+      "kilde": "Undervisning dag 2, s.33"
+    },
+    {
+      "id": "mc-021",
+      "tema": "barrierer",
+      "vanskegrad": "lett",
+      "sporsmal": "Hvem populariserte energi/barriere-modellen?",
+      "alternativer": [
+        "James Reason",
+        "William Haddon",
+        "Charles Perrow",
+        "Erik Hollnagel"
+      ],
+      "rett": 1,
+      "forklaring": "William Haddon populariserte energi/barriere-modellen på 1970-tallet (baseres på Gibson 1961). Reason står bak Swiss cheese, Perrow bak NAT, Hollnagel bak ETTO og Resilience Engineering.",
+      "kilde": "Undervisning dag 4, s.5"
+    },
+    {
+      "id": "mc-022",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er hovedforskjellen på aktive og passive barrierer?",
+      "alternativer": [
+        "Aktive barrierer er fysiske, passive er prosedyremessige",
+        "Aktive krever at noe iverksettes, passive krever ingen handling",
+        "Aktive barrierer er menneskelige, passive er datatekniske",
+        "Aktive er forhindrende, passive er begrensende"
+      ],
+      "rett": 1,
+      "forklaring": "Aktive barrierer krever en aktiv handling (airbag, automatisk shutdown). Passive barrierer fungerer uten handling (midtdeler, deformasjonssoner). Skillet aktiv/passiv handler ikke om type eller plassering i Bow tie.",
+      "kilde": "Undervisning dag 4, s.10"
+    },
+    {
+      "id": "mc-023",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "sporsmal": "I Reasons Swiss cheese-modell, hva kalles 'hullene' som skyldes organisatoriske svakheter som dårlig vedlikehold eller designfeil?",
+      "alternativer": [
+        "Aktive feil",
+        "Latente forhold",
+        "Risikomoment",
+        "Energi-utløsninger"
+      ],
+      "rett": 1,
+      "forklaring": "Latente forhold er bakenforliggende organisatoriske svakheter som ligger 'sovende' i systemet. Aktive feil skjer i den skarpe enden under operasjon (ofte menneskelige).",
+      "kilde": "Undervisning dag 4, s.19"
+    },
+    {
+      "id": "mc-024",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva kjennetegner Bow tie-modellen?",
+      "alternativer": [
+        "Den viser sviktintensitet over tid",
+        "Den deler barrierer i forhindrende (venstre) og begrensende (høyre) rundt en uønsket hendelse",
+        "Den klassifiserer organisasjoner som HRO eller NAT",
+        "Den måler informasjonsflyt i en organisasjon"
+      ],
+      "rett": 1,
+      "forklaring": "Bow tie viser uønsket hendelse som knuten i midten; venstre side er forhindrende barrierer (skal stoppe at hendelsen oppstår), høyre side er begrensende barrierer (skal redusere konsekvensene).",
+      "kilde": "Undervisning dag 4, s.16"
+    },
+    {
+      "id": "mc-025",
+      "tema": "barrierer",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Hvilken av disse er IKKE et eksempel på et barriereelement?",
+      "alternativer": [
+        "Fysisk vegg",
+        "Prosedyre",
+        "Sviktintensitet",
+        "Datasystem"
+      ],
+      "rett": 2,
+      "forklaring": "Barriereelement er byggekloss i en barrierefunksjon: fysiske, menneskelige, prosedyrer og datasystem. Sviktintensitet er et pålitelighetsmål — ikke et barriereelement.",
+      "kilde": "Undervisning dag 4, s.11"
+    },
+    {
+      "id": "mc-026",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er de to kjennetegnene på systemer som er utsatt for normale ulykker ifølge Perrow?",
+      "alternativer": [
+        "Aktive feil og latente forhold",
+        "Høy interaktiv kompleksitet og tette koblinger",
+        "Lav redundans og dårlig kultur",
+        "Stor størrelse og sentralisert styring"
+      ],
+      "rett": 1,
+      "forklaring": "Perrow identifiserte høy interaktiv kompleksitet OG tette koblinger som de to kjennetegnene. Aktive feil og latente forhold er Reasons Swiss cheese-begreper, ikke NAT.",
+      "kilde": "Undervisning dag 4, s.35"
+    },
+    {
+      "id": "mc-027",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Ifølge Perrows NAT, hvordan bør en organisere et system med tette koblinger?",
+      "alternativer": [
+        "Desentralisert",
+        "Sentralisert",
+        "Det spiller ingen rolle",
+        "Med flat struktur"
+      ],
+      "rett": 1,
+      "forklaring": "Tette koblinger krever raske, koordinerte handlinger og dermed sentralisert kontroll. Kompleksitet krever derimot desentralisering. Dilemmaet er at en kan ikke ha begge samtidig — derav 'normale' ulykker.",
+      "kilde": "Undervisning dag 4, s.36"
+    },
+    {
+      "id": "mc-028",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Hva er hovedforskjellen mellom NAT og HRO når det gjelder redundans?",
+      "alternativer": [
+        "NAT og HRO mener begge at redundans alltid øker sikkerheten",
+        "NAT mener redundans kan øke kompleksitet og dermed ulykkesrisiko, HRO mener redundans er nøkkelen til sikkerhet",
+        "Begge mener redundans er irrelevant",
+        "HRO mener redundans bare passer for ikke-tekniske systemer"
+      ],
+      "rett": 1,
+      "forklaring": "NAT er kritisk til redundans fordi det øker kompleksiteten og kan oppmuntre til risikoadferd. HRO-perspektivet ser tvert imot på redundans (i kompetanse, mannskap, overlappende prosedyrer) som nøkkelen til pålitelighet — analogi til parallellpålitelighet i blokkdiagram.",
+      "kilde": "Undervisning dag 5, s.20"
+    },
+    {
+      "id": "mc-029",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken er IKKE et eksempel på en typisk HRO-organisasjon i forelesning?",
+      "alternativer": [
+        "Hangarskip",
+        "Atomubåt",
+        "Lufttrafikkontrollsenter",
+        "Internett-startup"
+      ],
+      "rett": 3,
+      "forklaring": "Hangarskip, atomubåt og lufttrafikkontroll er klassiske HRO-eksempler. En startup er ikke en HRO — HRO-litteraturen har et tydelig militært preg, og forelesningen påpekte at det er vanskelig å bygge en HRO fra scratch.",
+      "kilde": "Undervisning dag 5, s.7"
+    },
+    {
+      "id": "mc-030",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva kjennetegner en 'generativ' kultur ifølge Westrum?",
+      "alternativer": [
+        "Budbringere blir 'skutt' (straffet for å rapportere)",
+        "Ansvaret legges på bestemte roller, info kan bli oversett",
+        "Aktiv informasjonshenting, brobygging oppmuntres, nye ideer ønskes velkommen",
+        "Fokus på sentralisert kontroll og tvang"
+      ],
+      "rett": 2,
+      "forklaring": "Generative kulturer søker aktivt informasjon, deler ansvar, oppmuntrer brobygging og ønsker nye ideer velkommen. Patologiske kulturer 'skyter budbringeren' og motarbeider nye ideer.",
+      "kilde": "Undervisning dag 5, s.26"
+    },
+    {
+      "id": "mc-031",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er den 'skarpe enden' av sikkerhetsarbeidet?",
+      "alternativer": [
+        "Internasjonale konvensjoner og IMO",
+        "Reguleringsmyndigheter",
+        "Der den faktiske operasjonen foregår (f.eks. kaptein, matros)",
+        "Styret i rederiet"
+      ],
+      "rett": 2,
+      "forklaring": "Den skarpe enden er der operasjonen faktisk skjer. Den butte enden er langt unna (myndigheter, departementer, IMO, styre). Begge ender påvirker sikkerheten (Rasmussen 1997).",
+      "kilde": "Undervisning dag 5, s.28–29"
+    },
+    {
+      "id": "mc-032",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "lett",
+      "sporsmal": "Hvilken av disse er ikke en typisk konsekvenskategori i risikomatriser?",
+      "alternativer": [
+        "Liv og helse",
+        "Økonomi",
+        "Miljø",
+        "Antall ansatte"
+      ],
+      "rett": 3,
+      "forklaring": "Liv og helse, økonomi, miljø og omdømme er typiske konsekvenskategorier. Antall ansatte er ikke en konsekvensdimensjon for risiko.",
+      "kilde": "Undervisning dag 1, s.29"
+    },
+    {
+      "id": "mc-033",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Hva er ETTO-prinsippet?",
+      "alternativer": [
+        "Sikkerhetsindikator for hendelsesstatistikk",
+        "Trade-off mellom effektivitet og grundighet",
+        "Modell for risikoidentifisering",
+        "Standard for risikohåndtering"
+      ],
+      "rett": 1,
+      "forklaring": "ETTO (Efficiency-Thoroughness Trade Off, Hollnagel) er en observasjon om at under press må man ofte velge effektivitet på bekostning av grundighet. Bidrar til 'practical drift' og normalisering av avvik over tid.",
+      "kilde": "Undervisning dag 5, s.32"
     }
   ],
   "innskriving": [
@@ -335,7 +1090,11 @@
       "id": "in-001",
       "tema": "palitelighet",
       "sporsmal": "Hva står forkortelsen MTBF for? (Skriv på engelsk)",
-      "godkjenteSvar": ["Mean Time Between Failures", "mean time between failures", "MTBF"],
+      "godkjenteSvar": [
+        "Mean Time Between Failures",
+        "mean time between failures",
+        "MTBF"
+      ],
       "forklaring": "MTBF = Mean Time Between Failures. Beregnes som totalt antall driftstimer / antall feil.",
       "kilde": "Undervisning dag 1, s.24"
     },
@@ -343,7 +1102,11 @@
       "id": "in-002",
       "tema": "iso-31000",
       "sporsmal": "Hvilken ISO-standard beskriver risikostyringsprosessen som brukes i kurset?",
-      "godkjenteSvar": ["ISO 31000", "iso 31000", "31000"],
+      "godkjenteSvar": [
+        "ISO 31000",
+        "iso 31000",
+        "31000"
+      ],
       "forklaring": "ISO 31000 er den internasjonale standarden for risikostyring og rammeverket vi bruker i kurset.",
       "kilde": "Undervisning dag 2"
     },
@@ -351,7 +1114,10 @@
       "id": "in-003",
       "tema": "risiko-grunnlag",
       "sporsmal": "Hvilket akronym brukes om prinsippet 'så lavt som rimelig praktisk mulig'?",
-      "godkjenteSvar": ["ALARP", "alarp"],
+      "godkjenteSvar": [
+        "ALARP",
+        "alarp"
+      ],
       "forklaring": "ALARP = As Low As Reasonably Practicable. Brukes når en risiko ikke kan elimineres helt, men må holdes på et akseptabelt nivå.",
       "kilde": "Undervisning dag 2"
     },
@@ -359,7 +1125,14 @@
       "id": "in-004",
       "tema": "barrierer",
       "sporsmal": "Hvilken modell deler barrierer inn i forhindrende og begrensende, og er ofte tegnet som en sløyfe rundt en topphendelse?",
-      "godkjenteSvar": ["Bow tie", "bow tie", "bow-tie", "Bow-tie", "bowtie", "Bowtie"],
+      "godkjenteSvar": [
+        "Bow tie",
+        "bow tie",
+        "bow-tie",
+        "Bow-tie",
+        "bowtie",
+        "Bowtie"
+      ],
       "forklaring": "Bow tie-modellen ('sløyfemodellen') har topphendelsen i midten, forhindrende barrierer på venstre side og skadereduserende barrierer på høyre side.",
       "kilde": "Undervisning dag 4–5"
     },
@@ -367,7 +1140,11 @@
       "id": "in-005",
       "tema": "organisasjon",
       "sporsmal": "Hvilken modell på sikkerhet (3 bokstaver) ser på samspill mellom Menneske, Teknologi og Organisasjon?",
-      "godkjenteSvar": ["MTO", "mto", "M-T-O"],
+      "godkjenteSvar": [
+        "MTO",
+        "mto",
+        "M-T-O"
+      ],
       "forklaring": "MTO-modellen analyserer ulykker som resultat av samspill mellom menneskelige, tekniske og organisatoriske faktorer.",
       "kilde": "Undervisning dag 5"
     },
@@ -375,9 +1152,582 @@
       "id": "in-006",
       "tema": "organisasjon",
       "sporsmal": "Hva står HRO for?",
-      "godkjenteSvar": ["High Reliability Organizations", "high reliability organizations", "High Reliability Organisations", "HRO"],
+      "godkjenteSvar": [
+        "High Reliability Organizations",
+        "high reliability organizations",
+        "High Reliability Organisations",
+        "HRO"
+      ],
       "forklaring": "HRO = High Reliability Organizations. Organisasjoner som opererer svært sikkert til tross for høy kompleksitet (f.eks. hangarskip, atomkraftverk).",
       "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "in-007",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva står forkortelsen ALARP for?",
+      "godkjenteSvar": [
+        "As Low As Reasonably Practicable",
+        "as low as reasonably practicable",
+        "ALARP"
+      ],
+      "forklaring": "ALARP = As Low As Reasonably Practicable: så lavt som rimelig praktisk mulig. Brukes når en risiko ikke kan elimineres helt og må holdes på et nivå hvor ytterligere reduksjon ikke står i forhold til kostnaden.",
+      "kilde": "Undervisning dag 1, s.35"
+    },
+    {
+      "id": "in-008",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva står forkortelsen ALARA for?",
+      "godkjenteSvar": [
+        "As Low As Reasonably Achievable",
+        "as low as reasonably achievable",
+        "ALARA"
+      ],
+      "forklaring": "ALARA = As Low As Reasonably Achievable. Brukes ofte synonymt med ALARP, særlig i kontekst av stråling og radioaktivitet.",
+      "kilde": "Undervisning dag 1, s.35"
+    },
+    {
+      "id": "in-009",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva kalles det systemperspektivet på sikkerhet som ser samspillet mellom Menneske, Teknologi og Organisasjon?",
+      "godkjenteSvar": [
+        "MTO",
+        "mto",
+        "Menneske-Teknologi-Organisasjon",
+        "Menneske Teknologi Organisasjon",
+        "HTO",
+        "Human-Technology-Organisation"
+      ],
+      "forklaring": "MTO (Menneske-Teknologi-Organisasjon, på engelsk HTO eller HOT) er det moderne systemperspektivet på sikkerhet. Det betyr at sikkerhet vurderes i samspillet mellom de tre.",
+      "kilde": "Undervisning dag 1, s.16"
+    },
+    {
+      "id": "in-010",
+      "tema": "palitelighet",
+      "sporsmal": "Hva står forkortelsen MTBF for?",
+      "godkjenteSvar": [
+        "Mean Time Between Failures",
+        "mean time between failures",
+        "MTBF"
+      ],
+      "forklaring": "MTBF = Mean Time Between Failures. Beregnes som MTBF = totalt antall driftstimer / antall feil. Brukes som mål på pålitelighet.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "in-011",
+      "tema": "palitelighet",
+      "sporsmal": "Hva er formelen for å beregne MTBF?",
+      "godkjenteSvar": [
+        "totalt antall driftstimer / antall feil",
+        "driftstimer / antall feil",
+        "totale driftstimer/antall feil",
+        "T / N",
+        "totalt antall driftstimer/antall feil"
+      ],
+      "forklaring": "MTBF = Totalt antall driftstimer / Antall feil. Dette gir et gjennomsnittstall for hvor lenge utstyret er i drift mellom hver feil.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "in-012",
+      "tema": "palitelighet",
+      "sporsmal": "Hva er sammenhengen mellom sviktintensitet (λ) og MTBF? (Skriv som formel)",
+      "godkjenteSvar": [
+        "λ = 1/MTBF",
+        "lambda = 1/MTBF",
+        "1/MTBF",
+        "λ=1/MTBF"
+      ],
+      "forklaring": "Sviktintensitet er det inverse av MTBF: λ = 1/MTBF. Hvis MTBF øker, går sviktintensiteten ned.",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "in-013",
+      "tema": "palitelighet",
+      "sporsmal": "Hvilken forenklet formel for pålitelighet bruker kurset (i stedet for P = e^(−t/MTBF))?",
+      "godkjenteSvar": [
+        "P = 1 - 1/MTBF",
+        "P=1-1/MTBF",
+        "1 - 1/MTBF",
+        "1-1/MTBF"
+      ],
+      "forklaring": "I kurset bruker vi forenklingen P = 1 − 1/MTBF i stedet for den nøyaktige eksponentialformelen P = e^(−t/MTBF).",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "in-014",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva kalles kurven som viser hvordan sviktintensiteten varierer over et komponents levetid (høy i starten, lav i midten, høy mot slutten)?",
+      "godkjenteSvar": [
+        "Badekarkurven",
+        "Badekarkurve",
+        "badekarkurven",
+        "badekarkurve",
+        "Bathtub curve",
+        "bathtub curve"
+      ],
+      "forklaring": "Badekarkurven viser tre faser i en komponents levetid: tidlig svikt (innkjøringsfeil), normal drift med konstant lav sviktintensitet, og slitasjefasen mot slutten.",
+      "kilde": "Undervisning dag 1, s.23"
+    },
+    {
+      "id": "in-015",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva kalles uventede, usannsynlige hendelser med store konsekvenser som ingen forutså?",
+      "godkjenteSvar": [
+        "Sorte svaner",
+        "Sort svane",
+        "sort svane",
+        "sorte svaner",
+        "Black swan",
+        "black swan"
+      ],
+      "forklaring": "Sort svane-teori (Taleb): hendelser som er svært usannsynlige, ikke forutsett, men som får store konsekvenser. Brukes som motvekt til en kvantitativ risikoforståelse.",
+      "kilde": "Undervisning dag 1, s.32"
+    },
+    {
+      "id": "in-016",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva kalles begrepet som beskriver pålitelighet som komplementet til sannsynlighet for feil? (matematisk forhold)",
+      "godkjenteSvar": [
+        "Komplement",
+        "komplement",
+        "P(A)' = 1 - P(A)",
+        "1 - P(A)",
+        "komplementet"
+      ],
+      "forklaring": "Pålitelighet kan uttrykkes som komplementet til feilsannsynlighet: pålitelighet = 1 − sannsynlighet for feil. Summen er alltid 1.",
+      "kilde": "Undervisning dag 1, s.20"
+    },
+    {
+      "id": "in-017",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hvilke fire kategorier av konsekvenser ble brukt som eksempel i forelesning dag 1?",
+      "godkjenteSvar": [
+        "Liv og helse, Økonomi, Miljø, Omdømme",
+        "liv og helse, økonomi, miljø, omdømme",
+        "Liv/helse, økonomi, miljø, omdømme",
+        "Liv og helse, økonomi, miljø, omdømme"
+      ],
+      "forklaring": "Konsekvenser bør kategoriseres for å unngå å sammenligne 'epler og pærer'. Eksempelkategoriene var Liv og helse, Økonomi, Miljø og Omdømme.",
+      "kilde": "Undervisning dag 1, s.29"
+    },
+    {
+      "id": "in-018",
+      "tema": "risiko-grunnlag",
+      "sporsmal": "Hva kalles tilnærmingen Safety som beskriver generelle tiltak mot ukjente hendelser, i motsetning til Security?",
+      "godkjenteSvar": [
+        "Safety",
+        "safety"
+      ],
+      "forklaring": "Safety beskriver generelle tiltak som kan hindre ukjente hendelser som kan skade. Security retter seg derimot mot spesifikke trusler.",
+      "kilde": "Undervisning dag 1, s.11"
+    },
+    {
+      "id": "in-019",
+      "tema": "iso-31000",
+      "sporsmal": "Hvilken internasjonal standard gir generelle retningslinjer for risikohåndtering i bedrifter og organisasjoner?",
+      "godkjenteSvar": [
+        "ISO 31000",
+        "iso 31000",
+        "ISO-31000"
+      ],
+      "forklaring": "ISO 31000 er den generelle internasjonale standarden for risikohåndtering, og beskriver risikostyringsprosessen med planlegging, risikovurdering, risikohåndtering, kommunikasjon og overvåkning.",
+      "kilde": "Undervisning dag 2, s.7"
+    },
+    {
+      "id": "in-020",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står forkortelsen ISM for (i maritim sammenheng)?",
+      "godkjenteSvar": [
+        "International Safety Management",
+        "international safety management",
+        "ISM",
+        "ISM-koden"
+      ],
+      "forklaring": "ISM (International Safety Management) er en kode som kom i 1993 etter at SOLAS-regelverket ikke klarte å forhindre ulykker som Herald of Free Enterprise. Den krever et styringssystem som sikrer kontinuerlig sikkerhetsstyring.",
+      "kilde": "Undervisning dag 2, s.14"
+    },
+    {
+      "id": "in-021",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står forkortelsen SOLAS for?",
+      "godkjenteSvar": [
+        "Safety Of Life At Sea",
+        "safety of life at sea",
+        "SOLAS"
+      ],
+      "forklaring": "SOLAS (Safety Of Life At Sea) ble innført i 1914 etter Titanic-forliset og definerer minimumsstandarder for sikkerhet som flaggstatene må følge på sine skip.",
+      "kilde": "Undervisning dag 2, s.12"
+    },
+    {
+      "id": "in-022",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står forkortelsen SJA for?",
+      "godkjenteSvar": [
+        "Sikker Jobb Analyse",
+        "sikker jobb analyse",
+        "SJA",
+        "Sikker jobb-analyse"
+      ],
+      "forklaring": "SJA (Sikker Jobb Analyse) eller toolbox talk er en enkel og effektiv metode for å identifisere risikomoment før en arbeidsoperasjon, typisk gjennomført som en kort gruppediskusjon på arbeidsstedet.",
+      "kilde": "Undervisning dag 2, s.23"
+    },
+    {
+      "id": "in-023",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står H1-verdien for som KPI i sikkerhetsstatistikk?",
+      "godkjenteSvar": [
+        "Antall fraværsskader per million arbeidstimer",
+        "antall fraværsskader per million arbeidstimer",
+        "fraværsskader per million arbeidstimer"
+      ],
+      "forklaring": "H1 = antall fraværsskader (skader som medfører at arbeideren ikke kan arbeide) per million arbeidstimer. H2 inkluderer i tillegg skader uten fravær.",
+      "kilde": "Undervisning dag 2, s.27"
+    },
+    {
+      "id": "in-024",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står H2-verdien for som KPI i sikkerhetsstatistikk?",
+      "godkjenteSvar": [
+        "Totalt antall skader per million arbeidstimer",
+        "totalt antall skader per million arbeidstimer",
+        "alle skader per million arbeidstimer"
+      ],
+      "forklaring": "H2 = totalt antall skader per million arbeidstimer, inkludert skader som ikke krever fravær. H1 dekker bare fraværsskader.",
+      "kilde": "Undervisning dag 2, s.27"
+    },
+    {
+      "id": "in-025",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står F-verdien for som KPI i sikkerhetsstatistikk?",
+      "godkjenteSvar": [
+        "Totalt antall fraværsdager per million arbeidstimer",
+        "totalt antall fraværsdager per million arbeidstimer",
+        "fraværsdager per million arbeidstimer"
+      ],
+      "forklaring": "F-verdien måler totalt antall fraværsdager på grunn av skader per million arbeidstimer. Gir et bilde av alvorlighetsgraden av skadene, ikke bare antallet.",
+      "kilde": "Undervisning dag 2, s.27"
+    },
+    {
+      "id": "in-026",
+      "tema": "iso-31000",
+      "sporsmal": "Hvem lanserte i 1931 pyramidemodellen som viser sammenheng mellom alvorlige ulykker, mindre ulykker, nestenulykker og usikker tilstand?",
+      "godkjenteSvar": [
+        "Heinrich",
+        "heinrich",
+        "H.W. Heinrich",
+        "Herbert Heinrich"
+      ],
+      "forklaring": "Heinrich (1931) introduserte ulykkespyramiden som postulerer et matematisk forhold mellom usikre tilstander, nestenulykker, mindre ulykker og alvorlige ulykker. Senere kritisert av bl.a. Deming.",
+      "kilde": "Undervisning dag 2, s.32"
+    },
+    {
+      "id": "in-027",
+      "tema": "iso-31000",
+      "sporsmal": "Hva kalles risikoidentifiseringsmetoden som typisk brukes på prosesser og utføres av en tverrfaglig ekspertgruppe?",
+      "godkjenteSvar": [
+        "HAZOP",
+        "hazop",
+        "Hazard and operability study",
+        "Hazard and Operability Study"
+      ],
+      "forklaring": "HAZOP (Hazard and Operability) er en strukturert risikoidentifiseringsmetode for prosessanlegg. En tverrfaglig gruppe går systematisk gjennom prosessen og identifiserer avvik som kan føre til uønskede hendelser.",
+      "kilde": "Undervisning dag 2, s.50"
+    },
+    {
+      "id": "in-028",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står forkortelsen FMECA for?",
+      "godkjenteSvar": [
+        "Failure Mode, Effects and Criticality Analysis",
+        "failure mode effects and criticality analysis",
+        "FMECA",
+        "Failure mode effects and criticality analysis"
+      ],
+      "forklaring": "FMECA = Failure Mode, Effects and Criticality Analysis. Opprinnelig brukt for tekniske systemer for å identifisere alle måter enhetene kan svikte på og konsekvensene av disse feilene.",
+      "kilde": "Undervisning dag 2, s.51"
+    },
+    {
+      "id": "in-029",
+      "tema": "iso-31000",
+      "sporsmal": "Hva står forkortelsen ROS for i risikoanalyse-sammenheng?",
+      "godkjenteSvar": [
+        "Risiko og sårbarhetsanalyse",
+        "risiko og sårbarhetsanalyse",
+        "ROS",
+        "ROS-analyse",
+        "Risiko- og sårbarhetsanalyse"
+      ],
+      "forklaring": "ROS = Risiko og sårbarhetsanalyse. En forenklet metode mye brukt i det offentlige, kommune og samfunnsberedskap. Bruker sannsynlighet (ikke frekvens) i skjemaer, men tenk på den som forventet frekvens.",
+      "kilde": "Undervisning dag 2, s.52"
+    },
+    {
+      "id": "in-030",
+      "tema": "barrierer",
+      "sporsmal": "Hvem populariserte energi- og barrieremodellen på 1970-tallet?",
+      "godkjenteSvar": [
+        "Haddon",
+        "haddon",
+        "William Haddon"
+      ],
+      "forklaring": "William Haddon populariserte energi/barriere-modellen på 1970-tallet. Modellen baseres på Gibson (1961). Haddons 10 prinsipper er en velkjent strategi for å redusere skader.",
+      "kilde": "Undervisning dag 4, s.5"
+    },
+    {
+      "id": "in-031",
+      "tema": "barrierer",
+      "sporsmal": "Hva kalles barrierer som krever aktiv handling for å fungere (motsatt av passive)?",
+      "godkjenteSvar": [
+        "Aktive barrierer",
+        "aktive barrierer",
+        "aktiv barriere",
+        "Aktiv barriere"
+      ],
+      "forklaring": "Aktive barrierer krever at noe iverksettes for at de skal fungere (f.eks. airbag, varslingssystem). Passive barrierer krever ingen aktiv handling (f.eks. midtdeler, deformasjonssoner).",
+      "kilde": "Undervisning dag 4, s.10"
+    },
+    {
+      "id": "in-032",
+      "tema": "barrierer",
+      "sporsmal": "Hva kalles barrierer som ikke krever aktiv handling for å fungere?",
+      "godkjenteSvar": [
+        "Passive barrierer",
+        "passive barrierer",
+        "Passiv barriere",
+        "passiv barriere"
+      ],
+      "forklaring": "Passive barrierer fungerer uten at noe må iverksettes — for eksempel midtdeler på vei eller deformasjonssoner i en bil.",
+      "kilde": "Undervisning dag 4, s.10"
+    },
+    {
+      "id": "in-033",
+      "tema": "barrierer",
+      "sporsmal": "Hva kalles modellen som deler barrierer i forhindrende (left side) og begrensende (right side) rundt en uønsket hendelse?",
+      "godkjenteSvar": [
+        "Bow tie",
+        "bow tie",
+        "Bow-tie",
+        "sløyfe",
+        "Bow Tie"
+      ],
+      "forklaring": "Bow tie-modellen visualiserer barrierer både før (forhindrende) og etter (begrensende) en uønsket hendelse, med hendelsen som knuten i midten.",
+      "kilde": "Undervisning dag 4, s.16"
+    },
+    {
+      "id": "in-034",
+      "tema": "barrierer",
+      "sporsmal": "Hvem står bak Swiss cheese-modellen for ulykker?",
+      "godkjenteSvar": [
+        "Reason",
+        "reason",
+        "James Reason"
+      ],
+      "forklaring": "James Reason utviklet Swiss cheese-modellen. Den viser hvordan ulykker oppstår når 'hull' i flere barrierer ligger på linje, og skiller mellom aktive feil og latente forhold.",
+      "kilde": "Undervisning dag 4, s.17"
+    },
+    {
+      "id": "in-035",
+      "tema": "barrierer",
+      "sporsmal": "Hva kalles feilene som skjer i den 'skarpe enden' (under operasjon) i Reasons Swiss cheese-modell?",
+      "godkjenteSvar": [
+        "Aktive feil",
+        "aktive feil",
+        "Aktiv feil",
+        "active failures"
+      ],
+      "forklaring": "Aktive feil skjer i den skarpe enden av operasjonen og er ofte (tilsynelatende) menneskelige feil. De skilles fra latente forhold, som er organisatoriske/designmessige svakheter.",
+      "kilde": "Undervisning dag 4, s.19"
+    },
+    {
+      "id": "in-036",
+      "tema": "barrierer",
+      "sporsmal": "Hva kalles bakenforliggende organisatoriske forhold (dårlig vedlikehold, designfeil osv.) i Swiss cheese-modellen?",
+      "godkjenteSvar": [
+        "Latente forhold",
+        "latente forhold",
+        "Latent forhold",
+        "Latente feil",
+        "latente feil"
+      ],
+      "forklaring": "Latente forhold (eller latente feil) er bakenforliggende organisatoriske forhold som dårlig vedlikehold eller designfeil. De ligger 'sovende' i systemet til en aktiv feil i den skarpe enden utløser ulykken.",
+      "kilde": "Undervisning dag 4, s.19"
+    },
+    {
+      "id": "in-037",
+      "tema": "barrierer",
+      "sporsmal": "Hva kalles et barrieresystem med flere barrierer plassert etter hverandre, brukt mot farer med høyt energiinnhold?",
+      "godkjenteSvar": [
+        "Dybdeforsvar",
+        "dybdeforsvar",
+        "Defence in depth",
+        "defence in depth"
+      ],
+      "forklaring": "Dybdeforsvar (defence in depth) brukes for kompliserte risikomoment eller farer med høyt energiinnhold — typisk på gass- eller atomanlegg — med flere barrierer i serie.",
+      "kilde": "Undervisning dag 4, s.13"
+    },
+    {
+      "id": "in-038",
+      "tema": "organisasjon",
+      "sporsmal": "Hva står forkortelsen NAT for?",
+      "godkjenteSvar": [
+        "Normal Accident Theory",
+        "normal accident theory",
+        "NAT"
+      ],
+      "forklaring": "NAT = Normal Accident Theory, lansert av Charles Perrow som svar på Three Mile Island-ulykken. Påstanden er at i visse system er ulykker uunngåelige på grunn av høy interaktiv kompleksitet og tette koblinger.",
+      "kilde": "Undervisning dag 4, s.33"
+    },
+    {
+      "id": "in-039",
+      "tema": "organisasjon",
+      "sporsmal": "Hvem står bak Normal Accident Theory?",
+      "godkjenteSvar": [
+        "Perrow",
+        "perrow",
+        "Charles Perrow"
+      ],
+      "forklaring": "Charles Perrow lanserte NAT etter Three Mile Island-ulykken. Han mente at noen teknologier (atomkraft, atomvåpen) er så farlige at vi ikke kan klare å lage en organisasjon som håndterer dem.",
+      "kilde": "Undervisning dag 4, s.34"
+    },
+    {
+      "id": "in-040",
+      "tema": "organisasjon",
+      "sporsmal": "Hva er de to kjennetegnene på systemer som er utsatt for normale ulykker ifølge Perrow?",
+      "godkjenteSvar": [
+        "Høy interaktiv kompleksitet og tette koblinger",
+        "høy interaktiv kompleksitet og tette koblinger",
+        "interaktiv kompleksitet og tette koblinger",
+        "Interaktiv kompleksitet og tett kobling"
+      ],
+      "forklaring": "Perrow identifiserte to kjennetegn: (1) Høy interaktiv kompleksitet — mange systemer kan samvirke uventet, og (2) Tette koblinger — ingen naturlige buffer mot uventede hendelser.",
+      "kilde": "Undervisning dag 4, s.35"
+    },
+    {
+      "id": "in-041",
+      "tema": "organisasjon",
+      "sporsmal": "Hva står forkortelsen HRO for?",
+      "godkjenteSvar": [
+        "High Reliability Organizations",
+        "high reliability organizations",
+        "HRO",
+        "High Reliability Organisation"
+      ],
+      "forklaring": "HRO = High Reliability Organizations. Eksempler: hangarskip, atomubåt, lufttrafikkontrollsenter. Disse organisasjonene håndterer både sentralisert og desentralisert kontroll til tross for NAT-pessimismen.",
+      "kilde": "Undervisning dag 5, s.7"
+    },
+    {
+      "id": "in-042",
+      "tema": "organisasjon",
+      "sporsmal": "Hva står forkortelsen MMD for (i sikkerhetsteori)?",
+      "godkjenteSvar": [
+        "Man Made Disasters",
+        "man made disasters",
+        "MMD"
+      ],
+      "forklaring": "MMD = Man Made Disasters. Et perspektiv utviklet av Barry Turner basert på studier av Aberfan-, Hixon- og Summerland-ulykkene. Også kalt informasjonssviktperspektivet.",
+      "kilde": "Undervisning dag 5, s.22"
+    },
+    {
+      "id": "in-043",
+      "tema": "organisasjon",
+      "sporsmal": "Hvem utviklet teorien om Man Made Disasters (MMD)?",
+      "godkjenteSvar": [
+        "Turner",
+        "turner",
+        "Barry Turner"
+      ],
+      "forklaring": "Barry Turner utviklet MMD-perspektivet på slutten av 1970-årene basert på studier av Aberfan kullslagg-ras, Hixon togulykke og Summerland brann.",
+      "kilde": "Undervisning dag 5, s.22"
+    },
+    {
+      "id": "in-044",
+      "tema": "organisasjon",
+      "sporsmal": "Hva kalles fasen i Turners MMD-modell hvor svakheter og avvik bygger seg opp uten å bli oppfattet av organisasjonen?",
+      "godkjenteSvar": [
+        "Inkubasjonsperiode",
+        "inkubasjonsperiode",
+        "Inkubasjon",
+        "inkubasjonsfase",
+        "Inkubasjonsfasen"
+      ],
+      "forklaring": "Inkubasjonsperioden er fasen mellom 'antatt normal' og 'utløsende hendelse'. Her bygger latente svakheter og avvik seg opp uten å bli identifisert.",
+      "kilde": "Undervisning dag 5, s.24"
+    },
+    {
+      "id": "in-045",
+      "tema": "organisasjon",
+      "sporsmal": "Hva står forkortelsen ETTO for?",
+      "godkjenteSvar": [
+        "Efficiency-Thoroughness Trade Off",
+        "efficiency-thoroughness trade off",
+        "ETTO",
+        "Efficiency Thoroughness Trade Off"
+      ],
+      "forklaring": "ETTO = Efficiency-Thoroughness Trade Off (Hollnagel). Beskriver at man ofte må gå på akkord med grundighet for å oppnå effektivitet — en kilde til normalisering av avvik over tid.",
+      "kilde": "Undervisning dag 5, s.32"
+    },
+    {
+      "id": "in-046",
+      "tema": "organisasjon",
+      "sporsmal": "Hva står forkortelsen RE for i sikkerhetsteori?",
+      "godkjenteSvar": [
+        "Resilience Engineering",
+        "resilience engineering",
+        "RE"
+      ],
+      "forklaring": "RE = Resilience Engineering, knyttet til Hollnagel. RE ser ikke sikkerhet som fravær av ulykker, men som et system som klarer å håndtere og tilpasse seg den nåværende situasjonen.",
+      "kilde": "Undervisning dag 5, s.34"
+    },
+    {
+      "id": "in-047",
+      "tema": "organisasjon",
+      "sporsmal": "Hva kaller Hollnagel henholdsvis 'unngå at ting går galt' og 'sikre at ting går bra'?",
+      "godkjenteSvar": [
+        "Safety 1 og Safety 2",
+        "safety 1 og safety 2",
+        "Safety I og Safety II",
+        "Safety-I og Safety-II"
+      ],
+      "forklaring": "Safety 1 = unngå at ting går galt (klassisk perspektiv). Safety 2 = sikre at ting går bra (resilience-perspektivet). Begrepene kommer fra Erik Hollnagel.",
+      "kilde": "Undervisning dag 5, s.34"
+    },
+    {
+      "id": "in-048",
+      "tema": "organisasjon",
+      "sporsmal": "Hva kalles skillet mellom beslutninger nær der operasjonen foregår (kapteinen) og langt unna (departement, IMO)?",
+      "godkjenteSvar": [
+        "Skarpe og butte ende",
+        "skarpe og butte ende",
+        "Skarpe enden og butte enden",
+        "Sharp end and blunt end",
+        "skarpe ende vs butte ende"
+      ],
+      "forklaring": "Den skarpe enden er der operasjonen faktisk skjer (f.eks. kaptein, matros). Den butte enden er langt unna (rederi-styre, departement, IMO). Begrepet brukes mye i sikkerhetsteori (Rasmussen 1997).",
+      "kilde": "Undervisning dag 5, s.28"
+    },
+    {
+      "id": "in-049",
+      "tema": "organisasjon",
+      "sporsmal": "Hva kaller Westrum (1993) henholdsvis kulturer som 'ikke vil vite', 'lar budbringere fortelle dersom de dukker opp', og 'aktivt søker informasjon'?",
+      "godkjenteSvar": [
+        "Patologisk, byråkratisk og generativ",
+        "patologisk, byråkratisk og generativ",
+        "Patologisk, byråkratisk, generativ",
+        "Patologiske byråkratiske generative"
+      ],
+      "forklaring": "Westrums tre kulturer beskriver hvor godt en organisasjon behandler informasjon: Patologisk (vil ikke vite), Byråkratisk (lytter hvis det dukker opp), Generativ (aktiv informasjonshenting). Generative organisasjoner håndterer ny informasjon best.",
+      "kilde": "Undervisning dag 5, s.26"
+    },
+    {
+      "id": "in-050",
+      "tema": "organisasjon",
+      "sporsmal": "Hva kalles begrepet som beskriver kollektiv 'oppmerksomhet og påpasselighet' i en HRO?",
+      "godkjenteSvar": [
+        "Mindfulness",
+        "mindfulness",
+        "Collective mindfulness",
+        "collective mindfulness"
+      ],
+      "forklaring": "Mindfulness, eller collective mindfulness, brukes for å beskrive en HRO. Det handler om å akseptere at feil kan skje og hele tiden være på vakt — særlig knyttet til Weick (1987).",
+      "kilde": "Undervisning dag 5, s.16"
     }
   ],
   "matching": [
@@ -386,12 +1736,30 @@
       "tema": "barrierer",
       "tittel": "Match modell/teori med beskrivelse",
       "par": [
-        { "venstre": "Bow tie", "hoyre": "Deler barrierer i forhindrende og begrensende rundt en topphendelse" },
-        { "venstre": "Swiss cheese (Reason)", "hoyre": "Viser hvordan latente og aktive feil i flere barrierelag på linje fører til ulykker" },
-        { "venstre": "Haddon", "hoyre": "Prinsipper for å finne barrierer basert på energi- og barrieretenking" },
-        { "venstre": "MTO", "hoyre": "Systemperspektiv: Menneske–Teknologi–Organisasjon" },
-        { "venstre": "NAT (Perrow)", "hoyre": "Kompleksitet + tett kobling gir uunngåelige ulykker" },
-        { "venstre": "HRO", "hoyre": "Organisasjoner som opererer sikkert til tross for høy kompleksitet" }
+        {
+          "venstre": "Bow tie",
+          "hoyre": "Deler barrierer i forhindrende og begrensende rundt en topphendelse"
+        },
+        {
+          "venstre": "Swiss cheese (Reason)",
+          "hoyre": "Viser hvordan latente og aktive feil i flere barrierelag på linje fører til ulykker"
+        },
+        {
+          "venstre": "Haddon",
+          "hoyre": "Prinsipper for å finne barrierer basert på energi- og barrieretenking"
+        },
+        {
+          "venstre": "MTO",
+          "hoyre": "Systemperspektiv: Menneske–Teknologi–Organisasjon"
+        },
+        {
+          "venstre": "NAT (Perrow)",
+          "hoyre": "Kompleksitet + tett kobling gir uunngåelige ulykker"
+        },
+        {
+          "venstre": "HRO",
+          "hoyre": "Organisasjoner som opererer sikkert til tross for høy kompleksitet"
+        }
       ]
     },
     {
@@ -399,12 +1767,30 @@
       "tema": "iso-31000",
       "tittel": "Match steg i risikostyringsprosessen med beskrivelse",
       "par": [
-        { "venstre": "Risikoidentifisering", "hoyre": "Finne hva som kan gå galt – farekilder og hendelser" },
-        { "venstre": "Risikoanalyse", "hoyre": "Forstå sannsynlighet og konsekvens av identifiserte hendelser" },
-        { "venstre": "Risikoevaluering", "hoyre": "Sammenligne risiko med kriterier – er den akseptabel?" },
-        { "venstre": "Risikohåndtering", "hoyre": "Velge og iverksette tiltak for å påvirke risikoen" },
-        { "venstre": "Kommunikasjon og konsultasjon", "hoyre": "Pågående dialog med interessenter gjennom hele prosessen" },
-        { "venstre": "Overvåking og gjennomgang", "hoyre": "Følge med på om risikobildet og tiltakene fungerer over tid" }
+        {
+          "venstre": "Risikoidentifisering",
+          "hoyre": "Finne hva som kan gå galt – farekilder og hendelser"
+        },
+        {
+          "venstre": "Risikoanalyse",
+          "hoyre": "Forstå sannsynlighet og konsekvens av identifiserte hendelser"
+        },
+        {
+          "venstre": "Risikoevaluering",
+          "hoyre": "Sammenligne risiko med kriterier – er den akseptabel?"
+        },
+        {
+          "venstre": "Risikohåndtering",
+          "hoyre": "Velge og iverksette tiltak for å påvirke risikoen"
+        },
+        {
+          "venstre": "Kommunikasjon og konsultasjon",
+          "hoyre": "Pågående dialog med interessenter gjennom hele prosessen"
+        },
+        {
+          "venstre": "Overvåking og gjennomgang",
+          "hoyre": "Følge med på om risikobildet og tiltakene fungerer over tid"
+        }
       ]
     }
   ],
@@ -425,7 +1811,7 @@
       "tekst": "En dieselgenerator har en oppgitt pålitelighet på 0,9998. Hva er sannsynligheten for at den svikter? Oppgi som desimaltall.",
       "svar": 0.0002,
       "enhet": "",
-      "toleranse": 0.00005,
+      "toleranse": 5e-05,
       "losning": "Sviktsannsynlighet = 1 − P = 1 − 0,9998 = 0,0002.",
       "kilde": "Oppgaver Mappe dag 1, oppg 1a"
     },
@@ -458,20 +1844,141 @@
       "toleranse": 0.005,
       "losning": "Først parallell-blokken: P_par = 1 − (1−0,8)(1−0,6·0,7) = 1 − 0,2·0,58 = 1 − 0,116 = 0,884. Så i serie med 0,9: P_total = 0,884 × 0,9 ≈ 0,7956. (Tilsvarer 'krandelen' i Løsningsforslag, oppgave 1b.)",
       "kilde": "Løsningsforslag.docx, oppg 1b"
+    },
+    {
+      "id": "re-006",
+      "tema": "palitelighet",
+      "vanskegrad": "lett",
+      "tekst": "En dieselgenerator har MTBF = 5000 timer. Hva er sviktintensiteten λ (per time)?",
+      "svar": 0.0002,
+      "enhet": "per time",
+      "toleranse": 1e-05,
+      "losning": "Sviktintensitet er det inverse av MTBF:\nλ = 1 / MTBF\nλ = 1 / 5000\nλ = 0,0002 per time",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "re-007",
+      "tema": "palitelighet",
+      "vanskegrad": "lett",
+      "tekst": "En komponent har MTBF = 2000 timer. Bruk kursets forenkling P = 1 − 1/MTBF og beregn påliteligheten.",
+      "svar": 0.9995,
+      "enhet": "",
+      "toleranse": 0.0005,
+      "losning": "Forenklet formel:\nP = 1 − 1/MTBF\nP = 1 − 1/2000\nP = 1 − 0,0005\nP = 0,9995",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "re-008",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "To pumper står i serie. P(A) = 0,98 og P(B) = 0,95. Hva er systempåliteligheten?",
+      "svar": 0.931,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "Seriestruktur:\nP_serie = P(A) × P(B)\nP_serie = 0,98 × 0,95\nP_serie = 0,931",
+      "kilde": "Undervisning dag 4, s.3"
+    },
+    {
+      "id": "re-009",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "To redundante pumper står i parallell, hver med pålitelighet P = 0,9. Hva er systempåliteligheten?",
+      "svar": 0.99,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "Parallellstruktur:\nP_parallell = 1 − (1 − P(a)) × (1 − P(b))\nP_parallell = 1 − (1 − 0,9) × (1 − 0,9)\nP_parallell = 1 − 0,1 × 0,1\nP_parallell = 1 − 0,01\nP_parallell = 0,99",
+      "kilde": "Undervisning dag 4, s.3"
+    },
+    {
+      "id": "re-010",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "En bedrift har registrert 12 feil totalt over 60 000 driftstimer fordelt på flere identiske komponenter. Hva er MTBF (i timer)?",
+      "svar": 5000,
+      "enhet": "timer",
+      "toleranse": 50,
+      "losning": "MTBF = totalt antall driftstimer / antall feil\nMTBF = 60 000 / 12\nMTBF = 5000 timer",
+      "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "re-011",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "tekst": "En 2-av-3 struktur har tre identiske moduler hver med pålitelighet P = 0,9. Bruk formelen P = P1·P2 + P1·P3 + P2·P3 − 2·P1·P2·P3 og beregn systempåliteligheten.",
+      "svar": 0.972,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "2-av-3 struktur:\nP = P1·P2 + P1·P3 + P2·P3 − 2·P1·P2·P3\nP = 0,9·0,9 + 0,9·0,9 + 0,9·0,9 − 2·0,9·0,9·0,9\nP = 0,81 + 0,81 + 0,81 − 2·0,729\nP = 2,43 − 1,458\nP = 0,972",
+      "kilde": "Undervisning dag 4, s.3"
+    },
+    {
+      "id": "re-012",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "En komponent har sviktintensitet λ = 0,001 per time. Hva er MTBF?",
+      "svar": 1000,
+      "enhet": "timer",
+      "toleranse": 1,
+      "losning": "MTBF er det inverse av sviktintensitet:\nMTBF = 1 / λ\nMTBF = 1 / 0,001\nMTBF = 1000 timer",
+      "kilde": "Undervisning dag 1, s.24"
     }
   ],
   "eksamen": [],
   "kildebank": [
-    { "id": "dag1", "navn": "Forelesning 1: Introduksjon", "fil": "Undervisning dag 1.pdf" },
-    { "id": "dag2", "navn": "Forelesning 2: Risikohåndtering", "fil": "Undervisning dag 2.pdf" },
-    { "id": "dag3", "navn": "Forelesning 3: Risikoidentifisering, PBD", "fil": "Undervisning dag 3.pdf" },
-    { "id": "dag4", "navn": "Forelesning 4: Barrierer", "fil": "Undervisning dag4.pdf" },
-    { "id": "dag5", "navn": "Forelesning 5: Organisasjon, NAT, HRO, MTO", "fil": "Undervisning dag 5.pdf" },
-    { "id": "dag6", "navn": "Forelesning 6: Beslutninger og ELECTRE", "fil": "Undervisning dag 6.pdf" },
-    { "id": "dag7", "navn": "Forelesning 7: Indikatorer og rapportering", "fil": "Undervisning dag 7.pdf" },
-    { "id": "rep", "navn": "Repetisjon", "fil": "repetisjon.pdf" },
-    { "id": "eks-v23", "navn": "Eksamen Vår 2023", "fil": "Eksamen Vår 2023.pdf" },
-    { "id": "eks-v24", "navn": "Eksamen Vår 2024 (bokmål)", "fil": "Eksamen V24 bokmål1.pdf" },
-    { "id": "eks-v25", "navn": "Eksamen 2025", "fil": "eksamen 2025.pdf" }
+    {
+      "id": "dag1",
+      "navn": "Forelesning 1: Introduksjon",
+      "fil": "Undervisning dag 1.pdf"
+    },
+    {
+      "id": "dag2",
+      "navn": "Forelesning 2: Risikohåndtering",
+      "fil": "Undervisning dag 2.pdf"
+    },
+    {
+      "id": "dag3",
+      "navn": "Forelesning 3: Risikoidentifisering, PBD",
+      "fil": "Undervisning dag 3.pdf"
+    },
+    {
+      "id": "dag4",
+      "navn": "Forelesning 4: Barrierer",
+      "fil": "Undervisning dag4.pdf"
+    },
+    {
+      "id": "dag5",
+      "navn": "Forelesning 5: Organisasjon, NAT, HRO, MTO",
+      "fil": "Undervisning dag 5.pdf"
+    },
+    {
+      "id": "dag6",
+      "navn": "Forelesning 6: Beslutninger og ELECTRE",
+      "fil": "Undervisning dag 6.pdf"
+    },
+    {
+      "id": "dag7",
+      "navn": "Forelesning 7: Indikatorer og rapportering",
+      "fil": "Undervisning dag 7.pdf"
+    },
+    {
+      "id": "rep",
+      "navn": "Repetisjon",
+      "fil": "repetisjon.pdf"
+    },
+    {
+      "id": "eks-v23",
+      "navn": "Eksamen Vår 2023",
+      "fil": "Eksamen Vår 2023.pdf"
+    },
+    {
+      "id": "eks-v24",
+      "navn": "Eksamen Vår 2024 (bokmål)",
+      "fil": "Eksamen V24 bokmål1.pdf"
+    },
+    {
+      "id": "eks-v25",
+      "navn": "Eksamen 2025",
+      "fil": "eksamen 2025.pdf"
+    }
   ]
 }

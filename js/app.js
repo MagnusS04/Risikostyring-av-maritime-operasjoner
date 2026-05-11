@@ -3,6 +3,7 @@ import * as storage from './storage.js';
 import { render as renderFlashcards } from './flashcards.js';
 import { render as renderMultipleChoice } from './multiplechoice.js';
 import { render as renderInnskriving } from './innskriving.js';
+import { render as renderLangsvar } from './langsvar.js';
 import { render as renderMatching } from './matching.js';
 import { render as renderRegneoppgaver } from './regneoppgaver.js';
 import { render as renderEksamen } from './eksamen.js';
@@ -16,6 +17,7 @@ const routes = {
   flashcards: renderFlashcards,
   multiplechoice: renderMultipleChoice,
   innskriving: renderInnskriving,
+  langsvar: renderLangsvar,
   matching: renderMatching,
   regneoppgaver: renderRegneoppgaver,
   eksamen: renderEksamen,
@@ -125,6 +127,7 @@ function renderDashboard(container, s) {
     flashcards: count(d.flashcards),
     multiplechoice: count(d.multiplechoice),
     innskriving: count(d.innskriving),
+    langsvar: count(d.langsvar),
     matching: count(d.matching),
     regneoppgaver: count(d.regneoppgaver),
     eksamen: count(d.eksamen),
@@ -168,9 +171,9 @@ function renderDashboard(container, s) {
         ${statTile('Flashcards', antall.flashcards, '#/flashcards')}
         ${statTile('Multiple choice', antall.multiplechoice, '#/multiplechoice')}
         ${statTile('Innskriving', antall.innskriving, '#/innskriving')}
+        ${statTile('Langsvar', antall.langsvar, '#/langsvar')}
         ${statTile('Matching', antall.matching, '#/matching')}
         ${statTile('Regneoppgaver', antall.regneoppgaver, '#/regneoppgaver')}
-        ${statTile('Eksamen', antall.eksamen, '#/eksamen')}
       </div>
       <p class="mt-6 text-sm opacity-60">
         <span class="placeholder-pill mr-2">Steg 2</span>

@@ -91,6 +91,7 @@ function collectKildeStrings(data) {
     { key: 'flashcards', label: 'Flashcard' },
     { key: 'multiplechoice', label: 'MC' },
     { key: 'innskriving', label: 'Innskriving' },
+    { key: 'langsvar', label: 'Langsvar' },
     { key: 'matching', label: 'Matching' },
     { key: 'regneoppgaver', label: 'Regneoppgave' },
   ];

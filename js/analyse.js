@@ -7,6 +7,7 @@ const TYPES = [
   { key: 'flashcards', label: 'Flashcards', dataKey: 'flashcards', storageKey: 'flashcards.progress', route: '#/flashcards' },
   { key: 'multiplechoice', label: 'Multiple choice', dataKey: 'multiplechoice', storageKey: 'multiplechoice.progress', route: '#/multiplechoice' },
   { key: 'innskriving', label: 'Innskriving', dataKey: 'innskriving', storageKey: 'innskriving.progress', route: '#/innskriving' },
+  { key: 'langsvar', label: 'Langsvar', dataKey: 'langsvar', storageKey: 'langsvar.progress', route: '#/langsvar' },
   { key: 'regneoppgaver', label: 'Regneoppgaver', dataKey: 'regneoppgaver', storageKey: 'regneoppgaver.progress', route: '#/regneoppgaver' },
 ];
 
@@ -66,6 +67,9 @@ function aggregate() {
         const w = e.weight ?? 1;
         isCorrect = (e.correct || 0) > 0 && w <= 0.5;
         isWrong = (e.wrong || 0) > 0 && w > 1;
+      } else if (t.key === 'langsvar') {
+        isCorrect = e.lastEval === 'godt';
+        isWrong = e.lastEval === 'oveMer';
       } else {
         isCorrect = !!e.lastCorrect;
         isWrong = e.lastCorrect === false;

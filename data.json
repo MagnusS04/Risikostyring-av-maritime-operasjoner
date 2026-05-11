@@ -3,7 +3,7 @@
     "course": "TS200416 Risikostyring av maritime operasjoner",
     "institution": "NTNU",
     "examDate": "2026-05-28",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "lastUpdated": "2026-05-11"
   },
   "temaer": [
@@ -1083,6 +1083,291 @@
       "rett": 1,
       "forklaring": "ETTO (Efficiency-Thoroughness Trade Off, Hollnagel) er en observasjon om at under press må man ofte velge effektivitet på bekostning av grundighet. Bidrar til 'practical drift' og normalisering av avvik over tid.",
       "kilde": "Undervisning dag 5, s.32"
+    },
+    {
+      "id": "mc-034",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken type redundans er det når back-up overtar automatisk, feilfritt og umiddelbart etter at en enhet har sviktet?",
+      "alternativer": [
+        "Varm redundans",
+        "Kald redundans",
+        "Passiv redundans",
+        "Aktiv redundans"
+      ],
+      "rett": 0,
+      "forklaring": "Varm redundans betyr at back-up overtar AUTOMATISK, FEILFRITT og UMIDDELBART. Kald redundans krever et signal eller en handling for å aktivere back-up. Varm/kald skiller på hvor raskt overgangen skjer; aktiv/passiv skiller på om back-up er i funksjon samtidig.",
+      "kilde": "Undervisning dag 3, s.30"
+    },
+    {
+      "id": "mc-035",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er en 'minimal sti' i et pålitelighetsblokkdiagram?",
+      "alternativer": [
+        "Den korteste fysiske ruten gjennom diagrammet",
+        "Det minste settet av enheter som ved svikt får systemet til å svikte",
+        "Det minste settet av enheter som ved å være funksjonsdyktige sikrer at systemet er funksjonsdyktig",
+        "Den raskeste databehandlingsruten"
+      ],
+      "rett": 2,
+      "forklaring": "En sti er en mengde enheter som — ved å være funksjonsdyktige — sikrer at systemet er funksjonsdyktig. Den er minimal hvis ingen kan fjernes uten å miste status som sti. Definisjonen av et minimalt kutt er motsatt (svikte i stedet for fungere).",
+      "kilde": "Undervisning dag 3, s.43"
+    },
+    {
+      "id": "mc-036",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er en 'single point failure' i et pålitelighetsblokkdiagram?",
+      "alternativer": [
+        "En komponent som er alene i et minimalt kutt — svikt i den alene tar ned systemet",
+        "En komponent med lav pålitelighet",
+        "En komponent som er duplisert",
+        "Den siste komponenten i en seriestruktur"
+      ],
+      "rett": 0,
+      "forklaring": "En single point failure er en komponent som alene utgjør et minimalt kutt: hvis den svikter, svikter hele systemet. Identifiseres lett ved å lete etter minimale kutt med kun ett element.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "mc-037",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "Hvilken forutsetning ligger til grunn for å beregne pålitelighet med standardformlene for serie og parallell?",
+      "alternativer": [
+        "At alle komponenter har lik pålitelighet",
+        "At komponentene er uavhengige av hverandre",
+        "At systemet har minst tre lag",
+        "At det ikke finnes single point failures"
+      ],
+      "rett": 1,
+      "forklaring": "Standardformlene forutsetter at komponentene er UAVHENGIGE. Avhengighet (felles strømforsyning, felles vedlikehold) bryter forutsetningen og krever mer kompliserte modeller.",
+      "kilde": "Undervisning dag 3, s.41"
+    },
+    {
+      "id": "mc-038",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "Et fly med to piloter der begge er i drift, og styrmann tar automatisk over hvis kaptein blir handlingsudyktig — hva slags redundans er dette?",
+      "alternativer": [
+        "Kald passiv",
+        "Kald aktiv",
+        "Varm passiv",
+        "Varm aktiv"
+      ],
+      "rett": 3,
+      "forklaring": "Begge piloter er aktive (i drift) hele tiden = aktiv. Overtakelsen skjer automatisk og umiddelbart = varm. Altså VARM AKTIV redundans.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "mc-039",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "sporsmal": "En båt har påhengsmotor, og hvis den svikter må man begynne å ro med årer. Hva slags redundans er årene?",
+      "alternativer": [
+        "Varm aktiv",
+        "Varm passiv",
+        "Kald aktiv",
+        "Kald passiv"
+      ],
+      "rett": 3,
+      "forklaring": "Årene er ikke i bruk når motoren går (passiv) og krever aktivt inngrep / signal å ta i bruk (kald). Altså KALD PASSIV redundans.",
+      "kilde": "Undervisning dag 3, s.34"
+    },
+    {
+      "id": "mc-040",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er hovedformålet med en rangeringsmetode som ELECTRE I?",
+      "alternativer": [
+        "Å beregne sannsynligheter for ulike utfall",
+        "Å strukturere beslutningsproblemet og hjelpe beslutningstakeren å identifisere preferanser og finne optimal beslutning",
+        "Å erstatte heuristikker med matematisk presisjon",
+        "Å automatisere alle beslutninger"
+      ],
+      "rett": 1,
+      "forklaring": "Mål med rangeringsmetode er å strukturere problemstillingen og gi beslutningstakeren en systematisk prosedyre for å identifisere preferanser og finne optimal beslutning. Det er ikke en sannsynlighetsmetode, og den fjerner ikke helt heuristikker.",
+      "kilde": "Undervisning dag 6, s.12"
+    },
+    {
+      "id": "mc-041",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "sporsmal": "I ELECTRE I, hva betyr at d1 P d2?",
+      "alternativer": [
+        "Beslutningstakeren foretrekker d1 fremfor d2",
+        "Beslutningstakeren er indifferent mellom d1 og d2",
+        "Beslutningstakeren kan ikke sammenligne d1 og d2",
+        "d1 og d2 har lik pålitelighet"
+      ],
+      "rett": 0,
+      "forklaring": "d1 P d2 betyr 'preferanse': d1 foretrekkes fremfor d2. d1 I d2 betyr indifferent. d1 J d2 betyr ikke-sammenlignbar. Grafisk vises preferansen som en pil fra d1 til d2.",
+      "kilde": "Undervisning dag 6, s.20"
+    },
+    {
+      "id": "mc-042",
+      "tema": "beslutninger",
+      "vanskegrad": "lett",
+      "sporsmal": "Hva er en heuristikk?",
+      "alternativer": [
+        "En matematisk formel for å regne ut sannsynlighet",
+        "En mental snarvei eller tommelfingerregel hjernen bruker for å ta beslutninger raskt",
+        "En type pålitelighetsanalyse",
+        "En standard for risikohåndtering"
+      ],
+      "rett": 1,
+      "forklaring": "Heuristikker er mentale snarveier (tommelfingerregler) som hjernen bruker for å ta raske beslutninger uten omfattende analyse. Eksempler: representativitet, forankring, tilgjengelighet, sunk costs. De er nyttige men kan også føre til systematiske feil.",
+      "kilde": "Undervisning dag 6, s.13"
+    },
+    {
+      "id": "mc-043",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er 'forankring' som heuristikk?",
+      "alternativer": [
+        "At første informasjonen vi får fungerer som anker for videre vurdering",
+        "At vi vurderer hvor lett vi husker tilsvarende hendelser",
+        "At vi tar med tidligere kostnader i fremtidsvalg",
+        "At vi bedømmer sannsynlighet ut fra hvor godt noe ligner en stereotyp"
+      ],
+      "rett": 0,
+      "forklaring": "Forankring betyr at den første informasjonen vi får (typisk det første tallet) blir et referansepunkt som vi justerer for lite fra. De andre alternativene beskriver henholdsvis tilgjengelighetsheuristikken, sunk costs og representativitetsheuristikken.",
+      "kilde": "Undervisning dag 6"
+    },
+    {
+      "id": "mc-044",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "sporsmal": "Når egner Bow tie-modellen seg best?",
+      "alternativer": [
+        "I forklaring av storulykker i etterkant",
+        "I planlegging av risikohåndtering og som workshopverktøy for å vise forhindrende og begrensende barrierer",
+        "Til kvantitativ pålitelighetsberegning",
+        "Til organisasjonsanalyse"
+      ],
+      "rett": 1,
+      "forklaring": "Bow tie er primært et PROAKTIVT verktøy for planlegging — viser uønsket hendelse i midten med forhindrende (venstre) og begrensende (høyre) barrierer. Swiss cheese (Reason) er mer egnet for retrospektiv ulykkesforklaring.",
+      "kilde": "Undervisning dag 4, s.16"
+    },
+    {
+      "id": "mc-045",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken barriere-modell skiller spesielt tydelig mellom 'fare', 'forsvar' og 'tap'?",
+      "alternativer": [
+        "Bow tie",
+        "Swiss cheese-modellen (Reason)",
+        "Haddons energi/barriere-modell",
+        "Dybdeforsvar"
+      ],
+      "rett": 1,
+      "forklaring": "Swiss cheese-modellen (Reason) introduserer eksplisitt tre begrep: Fare, Forsvar, Tap. Bow tie bruker uønsket hendelse i midten med barrierer på sidene. Haddons modell er bredere og strukturerer barrieretiltak i 10 prinsipper.",
+      "kilde": "Undervisning dag 4, s.17"
+    },
+    {
+      "id": "mc-046",
+      "tema": "indikatorer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva måler en 'ledende indikator' i motsetning til en 'laggende indikator'?",
+      "alternativer": [
+        "Ledende = etter-indikatorer som måler skader som har skjedd",
+        "Ledende = før-indikatorer som måler sikkerhetsadferd og barriere-tilstand før skade",
+        "Ledende og laggende er det samme",
+        "Ledende = kun H1, laggende = kun H2"
+      ],
+      "rett": 1,
+      "forklaring": "Ledende indikatorer er proaktive — måler aktivitet som forventes å påvirke fremtidig sikkerhet (gjennomførte inspeksjoner, opplæring, prosent oppdaterte prosedyrer). Laggende indikatorer er reaktive (H1, H2, F-verdi) — måler det som har skjedd.",
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "mc-047",
+      "tema": "indikatorer",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er en hovedkritikk av å bruke H- og F-verdier som primære sikkerhets-KPI-er?",
+      "alternativer": [
+        "De er for kompliserte å regne ut",
+        "Tallene er for objektive",
+        "De har innebygd bias mot lett-målbare småskader og sier lite om risikoen for storulykker",
+        "De krever spesialprogramvare"
+      ],
+      "rett": 2,
+      "forklaring": "H- og F-verdiene måler typisk hyppige men mindre alvorlige skader. En oljeplattform kan ha lave H-verdier rett før en storulykke. 2010-studien viste at fokus på små skader ikke korrelerte med reduksjon i dødsfall i olje/gass-industrien.",
+      "kilde": "Undervisning dag 2 og dag 7"
+    },
+    {
+      "id": "mc-048",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Hvilken fase i Turners MMD-modell karakteriseres av at svakheter og avvik bygger seg opp uten å bli oppfattet?",
+      "alternativer": [
+        "Antatt normalsituasjon",
+        "Inkubasjonsperiode",
+        "Utløsende hendelse",
+        "Krisehåndtering"
+      ],
+      "rett": 1,
+      "forklaring": "Inkubasjonsperioden er fasen der latente forhold og avvik akkumuleres uten at organisasjonen oppfatter dem. Den utløsende hendelsen kommer senere og er ofte triviell, men setter i gang katastrofen fordi systemet er allerede skadet.",
+      "kilde": "Undervisning dag 5, s.24"
+    },
+    {
+      "id": "mc-049",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er IKKE et element i collective mindfulness (Weick)?",
+      "alternativer": [
+        "Opptatthet av feil",
+        "Forsvarer ekspertise",
+        "Standardisering av alle prosesser",
+        "Motvillighet til å forenkle fortolkninger"
+      ],
+      "rett": 2,
+      "forklaring": "Collective mindfulness omfatter (1) opptatthet av feil, (2) motvillighet til å forenkle fortolkninger, (3) påpasselighet under operasjoner, (4) forpliktelse til feiltoleranse, (5) forsvarer ekspertise. Streng standardisering er ikke en del; tvert imot legges det vekt på å motvirke forenklinger.",
+      "kilde": "Undervisning dag 5, s.17"
+    },
+    {
+      "id": "mc-050",
+      "tema": "risikoidentifisering",
+      "vanskegrad": "lett",
+      "sporsmal": "Hvilket verktøy i granskingsprosessen brukes til å klarlegge hendelsesforløp minutt for minutt?",
+      "alternativer": [
+        "STEP-analyse",
+        "Fiskebeindiagram (Ishikawa)",
+        "5 Why",
+        "Bow tie"
+      ],
+      "rett": 0,
+      "forklaring": "STEP (Sequential Time Event Plot) brukes i trinn 1 av granskingsprosessen for å klarlegge hendelsesforløp og omstendigheter. Ishikawa og 5 Why brukes i trinn 4 for å kartlegge risikofaktorer.",
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "mc-051",
+      "tema": "risikoidentifisering",
+      "vanskegrad": "middels",
+      "sporsmal": "Hva er hovedformålet med en gransking i regi av Havarikommisjonen?",
+      "alternativer": [
+        "Å fastslå skyld i en ulykke",
+        "Å gi grunnlag for straffeforfølgelse",
+        "Å lære av ulykken og foreslå tiltak som kan forhindre nye",
+        "Å gi økonomisk kompensasjon til berørte"
+      ],
+      "rett": 2,
+      "forklaring": "Statens Havarikommisjon skal undersøke om det er grunnlag for å endre regelverk/lovverk — altså lære av hendelsen. SHT skal IKKE ta stilling til sivilrettslig eller strafferettslig skyld. Politi og påtalemyndighet håndterer straffespor separat.",
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "mc-052",
+      "tema": "beslutninger",
+      "vanskegrad": "vanskelig",
+      "sporsmal": "I et ELECTRE I-eksempel med 4 alternativer, hva betyr det grafisk hvis alternativ X ikke har noen innkommende piler?",
+      "alternativer": [
+        "X er det dårligste alternativet",
+        "X er foreslått som det beste alternativet (ingen andre slår det)",
+        "X er likeverdig med alle de andre",
+        "X må forkastes"
+      ],
+      "rett": 1,
+      "forklaring": "I ELECTRE-pildiagrammet betyr en pil fra A til B at A er foretrukket fremfor B. Et alternativ uten innkommende piler er ikke 'slått' av noen — altså det beste valget gitt valgt tillitsindeks c*.",
+      "kilde": "Undervisning dag 6"
     }
   ],
   "innskriving": [
@@ -1728,6 +2013,234 @@
       ],
       "forklaring": "Mindfulness, eller collective mindfulness, brukes for å beskrive en HRO. Det handler om å akseptere at feil kan skje og hele tiden være på vakt — særlig knyttet til Weick (1987).",
       "kilde": "Undervisning dag 5, s.16"
+    },
+    {
+      "id": "in-051",
+      "tema": "palitelighet",
+      "sporsmal": "Hva kalles redundans der back-up overtar automatisk, feilfritt og umiddelbart?",
+      "godkjenteSvar": [
+        "Varm redundans",
+        "varm redundans",
+        "Varm",
+        "varm"
+      ],
+      "forklaring": "Varm redundans betyr automatisk, feilfri og umiddelbar overtakelse. Kald redundans krever et signal eller manuell handling.",
+      "kilde": "Undervisning dag 3, s.30"
+    },
+    {
+      "id": "in-052",
+      "tema": "palitelighet",
+      "sporsmal": "Hva kalles redundans der back-up trenger et signal før den kan overta funksjonen?",
+      "godkjenteSvar": [
+        "Kald redundans",
+        "kald redundans",
+        "Kald",
+        "kald"
+      ],
+      "forklaring": "Kald redundans krever et signal eller manuell handling før back-up tar over. Eksempel: årer som må tas i bruk hvis påhengsmotor svikter.",
+      "kilde": "Undervisning dag 3, s.30"
+    },
+    {
+      "id": "in-053",
+      "tema": "palitelighet",
+      "sporsmal": "Hva kalles en komponent som alene utgjør et minimalt kutt, slik at systemet svikter dersom denne ene komponenten svikter?",
+      "godkjenteSvar": [
+        "Single point failure",
+        "single point failure",
+        "Single Point Failure",
+        "SPF",
+        "Enkeltpunktfeil",
+        "enkeltpunktfeil"
+      ],
+      "forklaring": "En single point failure (SPF) eller enkeltpunktfeil er en komponent som alene utgjør et minimalt kutt — svikt i den alene tar ned systemet. Identifiseres som minimalt kutt med kun ett element.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "in-054",
+      "tema": "palitelighet",
+      "sporsmal": "Hva kalles det minste settet av enheter som ved å være funksjonsdyktige sikrer at systemet er funksjonsdyktig?",
+      "godkjenteSvar": [
+        "Minimal sti",
+        "minimal sti",
+        "Minimal sti",
+        "Sti"
+      ],
+      "forklaring": "En sti er en mengde enheter som — ved å være funksjonsdyktige — sikrer at systemet er funksjonsdyktig. Stien er minimal hvis ingen kan fjernes uten at den mister status som sti.",
+      "kilde": "Undervisning dag 3, s.43"
+    },
+    {
+      "id": "in-055",
+      "tema": "palitelighet",
+      "sporsmal": "Hva kalles det minste settet av enheter som ved å svikte sikrer at systemet svikter?",
+      "godkjenteSvar": [
+        "Minimalt kutt",
+        "minimalt kutt",
+        "Kutt"
+      ],
+      "forklaring": "Et kutt er en mengde enheter som — ved å svikte — sikrer at systemet selv svikter. Kuttet er minimalt hvis ingen kan fjernes uten å miste status som kutt.",
+      "kilde": "Undervisning dag 3, s.44"
+    },
+    {
+      "id": "in-056",
+      "tema": "beslutninger",
+      "sporsmal": "Hva kalles rangeringsmetoden som brukes til å sammenligne alternativer ved hjelp av vektede attributter og en tillitsindeks c*?",
+      "godkjenteSvar": [
+        "ELECTRE",
+        "electre",
+        "Electre",
+        "ELECTRE I",
+        "Electre 1"
+      ],
+      "forklaring": "ELECTRE I er en rangeringsmetode / elimineringsmetode som beregner en tillitsindeks c(d1,d2) ∈ [0,1] for hver par av alternativer. Med en valgt tillitsindeks c* tegnes et pildiagram for å finne det beste alternativet.",
+      "kilde": "Undervisning dag 6"
+    },
+    {
+      "id": "in-057",
+      "tema": "beslutninger",
+      "sporsmal": "Hva kalles tendensen til å tillegge tidligere kostnader vekt i fremtidsbeslutninger ('vi har investert så mye allerede, vi må fullføre')?",
+      "godkjenteSvar": [
+        "Sunk cost",
+        "sunk cost",
+        "Sunk costs",
+        "sunk costs"
+      ],
+      "forklaring": "Sunk costs / sunk-cost-effekten er en heuristikk der vi tar med tidligere kostnader i fremtidige beslutninger, selv om disse kostnadene ikke skal påvirke valget rasjonelt.",
+      "kilde": "Undervisning dag 6"
+    },
+    {
+      "id": "in-058",
+      "tema": "beslutninger",
+      "sporsmal": "Hva heter heuristikken som beskriver at vi bedømmer sannsynlighet ut fra hvor godt noe ligner et stereotyp eller en mental modell (Linda-eksempelet)?",
+      "godkjenteSvar": [
+        "Representativitet",
+        "representativitet",
+        "Representativitetsheuristikken"
+      ],
+      "forklaring": "Representativitetsheuristikken (Tversky & Kahneman) gjør at vi vurderer sannsynlighet basert på likhet med mental modell. Linda-eksperimentet viste at 85 % feilaktig mente det var mer sannsynlig at Linda var bankansatt OG feminist enn bare bankansatt.",
+      "kilde": "Undervisning dag 6, s.9"
+    },
+    {
+      "id": "in-059",
+      "tema": "beslutninger",
+      "sporsmal": "Hva heter heuristikken der det første tallet eller informasjonen man får, fungerer som referansepunkt for videre vurderinger?",
+      "godkjenteSvar": [
+        "Forankring",
+        "forankring",
+        "Forankrings-heuristikken"
+      ],
+      "forklaring": "Forankring (anchoring) er heuristikken der første informasjon blir et anker. Vi justerer for lite fra ankeret. Brukes bevisst i forhandlinger.",
+      "kilde": "Undervisning dag 6"
+    },
+    {
+      "id": "in-060",
+      "tema": "risikoidentifisering",
+      "sporsmal": "Hva heter granskningsverktøyet som klarlegger hendelsesforløp i tidssekvenser?",
+      "godkjenteSvar": [
+        "STEP",
+        "step",
+        "STEP-analyse",
+        "Step-analyse",
+        "Sequential Time Event Plot"
+      ],
+      "forklaring": "STEP (Sequential Time Event Plot) brukes i Trinn 1 av granskingsprosessen for å klarlegge hva som skjedde minutt for minutt.",
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "in-061",
+      "tema": "risikoidentifisering",
+      "sporsmal": "Hva heter diagrammet som brukes i kartlegging av risikofaktorer og som ofte tegnes som et fiskebein?",
+      "godkjenteSvar": [
+        "Fiskebeindiagram",
+        "fiskebeindiagram",
+        "Ishikawa",
+        "ishikawa",
+        "Ishikawa-diagram",
+        "Fiskeben"
+      ],
+      "forklaring": "Ishikawa-diagram, også kjent som fiskebeindiagram, brukes i Trinn 4 av granskingsprosessen for å organisere mulige årsakskategorier. Sammen med 5 Why hjelper det å kartlegge bakenforliggende risikofaktorer.",
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "in-062",
+      "tema": "risikoidentifisering",
+      "sporsmal": "Hva heter teknikken der man stiller spørsmålet 'Hvorfor?' i flere lag for å finne grunnårsaken til et problem?",
+      "godkjenteSvar": [
+        "5 Why",
+        "5 why",
+        "5-why",
+        "5 hvorfor",
+        "Five whys"
+      ],
+      "forklaring": "5 Why er en enkel årsaksanalyseteknikk: still 'Hvorfor?' fem ganger for å grave seg ned til rotårsaken. Brukes i Trinn 4 av granskingsprosessen.",
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "in-063",
+      "tema": "organisasjon",
+      "sporsmal": "Hvilken type kultur er ifølge Westrum best egnet til å motvirke informasjonssvikt og MMD?",
+      "godkjenteSvar": [
+        "Generativ",
+        "generativ",
+        "Generativ kultur",
+        "generativ kultur"
+      ],
+      "forklaring": "Generativ kultur kjennetegnes ved aktiv informasjonshenting, delt ansvar, brobygging mellom enheter og at nye ideer ønskes velkommen. Den motvirker MMD-inkubasjonsperioden.",
+      "kilde": "Undervisning dag 5, s.26"
+    },
+    {
+      "id": "in-064",
+      "tema": "organisasjon",
+      "sporsmal": "Hvilken type kultur kjennetegnes ifølge Westrum av at 'budbringere blir skutt'?",
+      "godkjenteSvar": [
+        "Patologisk",
+        "patologisk",
+        "Patologisk kultur",
+        "patologisk kultur"
+      ],
+      "forklaring": "Patologisk kultur (Westrum) viser seg ved at de som rapporterer problemer blir straffet/avvist. Ingen tar ansvar, brobygging aksepteres ikke, nye ideer motarbeides. Største risiko for MMD.",
+      "kilde": "Undervisning dag 5, s.26"
+    },
+    {
+      "id": "in-065",
+      "tema": "iso-31000",
+      "sporsmal": "Hva er den engelske oversettelsen av 'forventet frekvens × forventet konsekvens', altså kursets definisjon av risiko (skriv den korte formelen)?",
+      "godkjenteSvar": [
+        "Risk = probability × consequence",
+        "risk = probability x consequence",
+        "P x C",
+        "probability times consequence",
+        "Sannsynlighet × konsekvens",
+        "sannsynlighet x konsekvens"
+      ],
+      "forklaring": "I kurset definerer vi risiko som forventet frekvens × forventet konsekvens. Engelsk: risk = probability × consequence (eller frequency × consequence).",
+      "kilde": "Undervisning dag 1"
+    },
+    {
+      "id": "in-066",
+      "tema": "barrierer",
+      "sporsmal": "Hva heter den engelske termen for 'dybdeforsvar' — flere barrierer plassert etter hverandre?",
+      "godkjenteSvar": [
+        "Defence in depth",
+        "defence in depth",
+        "Defense in depth",
+        "defense in depth",
+        "DiD"
+      ],
+      "forklaring": "'Defence in depth' (eller defense in depth) er den engelske termen for dybdeforsvar — flere barrierer i serie mot farer med høyt energiinnhold.",
+      "kilde": "Undervisning dag 4, s.13"
+    },
+    {
+      "id": "in-067",
+      "tema": "organisasjon",
+      "sporsmal": "Hvem skrev studien som ledet til Man Made Disasters-perspektivet (informasjonssviktperspektivet)?",
+      "godkjenteSvar": [
+        "Turner",
+        "turner",
+        "Barry Turner",
+        "barry turner"
+      ],
+      "forklaring": "Barry Turner studerte tre ulykker (Aberfan kullslagg, Hixon togulykke, Summerland brann) på slutten av 1970-tallet og utviklet MMD-perspektivet.",
+      "kilde": "Undervisning dag 5, s.22"
     }
   ],
   "matching": [
@@ -1921,6 +2434,61 @@
       "toleranse": 1,
       "losning": "MTBF er det inverse av sviktintensitet:\nMTBF = 1 / λ\nMTBF = 1 / 0,001\nMTBF = 1000 timer",
       "kilde": "Undervisning dag 1, s.24"
+    },
+    {
+      "id": "re-013",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "tekst": "Et fly fra selskapet MF må ha: flyet funksjonsdyktig (P=0,9999), minst én av to piloter funksjonsdyktige (hver P=0,99), og minst 2 av 3 motorer funksjonsdyktige (hver P=0,999). Beregn systempåliteligheten.",
+      "svar": 0.99979701,
+      "enhet": "",
+      "toleranse": 0.0005,
+      "losning": "Steg 1 — Modul O (pilotene, parallell, 1-av-2):\nP_O = 1 - (1-0,99)(1-0,99) = 1 - 0,01 × 0,01 = 0,9999\n\nSteg 2 — Modul M (motorer, 2-av-3 struktur):\nP_M = p1·p2 + p1·p3 + p2·p3 - 2·p1·p2·p3\nP_M = 3·(0,999·0,999) - 2·(0,999·0,999·0,999)\nP_M = 3·0,998001 - 2·0,997002999\nP_M = 2,994003 - 1,994005998\nP_M = 0,999997\n\nSteg 3 — Hele systemet i serie (Fly × O × M):\nP_system = 0,9999 × 0,9999 × 0,999997 ≈ 0,99979701",
+      "kilde": "Undervisning dag 3, s.38"
+    },
+    {
+      "id": "re-014",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "Et seriesystem består av tre komponenter med pålitelighet P = 0,9 hver. Beregn systempåliteligheten.",
+      "svar": 0.729,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "Seriestruktur: P_serie = p1 × p2 × p3 = 0,9 × 0,9 × 0,9 = 0,729\n\nLæringspoeng: pålitelighet i serie reduseres raskt med flere komponenter. Tre 90 %-komponenter gir bare ca 73 % systempålitelighet.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "re-015",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "Et 1-av-2 parallellsystem består av to identiske komponenter med pålitelighet P = 0,9. Beregn systempåliteligheten.",
+      "svar": 0.99,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "1-av-2 parallellsystem:\nP = 1 - (1-p)² = 1 - (1-0,9)² = 1 - 0,01 = 0,99\n\nLæringspoeng: redundans løfter to 90 %-komponenter til 99 % systempålitelighet — derfor er parallellstruktur så verdifull.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "re-016",
+      "tema": "palitelighet",
+      "vanskegrad": "vanskelig",
+      "tekst": "Et 2-av-3 system har komponenter med pålitelighet P = 0,9 hver. Bruk formelen P = p1·p2 + p1·p3 + p2·p3 - 2·p1·p2·p3 og beregn systempåliteligheten. Sammenlign med 1-av-2 og seriestruktur for samme komponenter.",
+      "svar": 0.972,
+      "enhet": "",
+      "toleranse": 0.005,
+      "losning": "2-av-3 struktur med p = 0,9:\nP = 3·(0,9·0,9) - 2·(0,9·0,9·0,9)\nP = 3·0,81 - 2·0,729\nP = 2,43 - 1,458\nP = 0,972\n\nSammenligning (samme komponentpålitelighet 0,9):\n- Serie (3 komponenter): 0,729\n- 1-av-2 parallell: 0,99\n- 2-av-3: 0,972\n\nMerk at 1-av-2 er marginalt bedre enn 2-av-3 her, fordi 2-av-3 krever to samtidige funksjonsdyktige.",
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "re-017",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tekst": "En forsyningskjede har to autonome skip i parallell (P_A = 0,999, P_B = 0,995) i serie med fire laste/lossekraner (hver P = 0,95) som alle må fungere. Hva er systempåliteligheten?",
+      "svar": 0.81,
+      "enhet": "",
+      "toleranse": 0.01,
+      "losning": "Steg 1 — Skip i parallell (1-av-2):\nP_skip = 1 - (1-0,999)(1-0,995) = 1 - 0,001 × 0,005 = 1 - 0,000005 ≈ 0,999995\n\nSteg 2 — Fire kraner i serie (alle må fungere):\nP_kraner = 0,95⁴ = 0,8145\n\nSteg 3 — Hele systemet i serie:\nP_system = P_skip × P_kraner = 0,999995 × 0,8145 ≈ 0,8145\n\nKonklusjon: de fire kranene i serie er den dominerende svakheten. Skip-redundansen er svært god.",
+      "kilde": "Eksamen V23, basert på oppgave 1"
     }
   ],
   "eksamen": [],
@@ -1979,6 +2547,472 @@
       "id": "eks-v25",
       "navn": "Eksamen 2025",
       "fil": "eksamen 2025.pdf"
+    }
+  ],
+  "langsvar": [
+    {
+      "id": "ls-001",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V23, oppgave 3a — NAT",
+      "sporsmal": "Normal Accident Theory, eller på norsk teorien om uunngåelige ulykker, har gitt et stort bidrag til sikkerhetsfaget. Hvilke to faktorer er det som fremheves i denne teorien, og hvordan kan disse forårsake ulykker?",
+      "modellsvar": "Normal Accident Theory (NAT) ble lansert av Charles Perrow som et svar på ulykker som Three Mile Island. Teorien fremhever to faktorer som gjør ulykker uunngåelige i visse systemer:\n\n1) HØY INTERAKTIV KOMPLEKSITET — systemet har mange delsystemer som samvirker på måter som ikke alltid er forutsigbare. Unormale tilstander i ett system fører ofte til at reguleringen gir uforutsette tilstander i andre. Operatører får ikke fullt overblikk.\n\n2) TETTE KOBLINGER — det er ingen naturlige buffer mot uventede hendelser. Restriksjoner som 'just in time'-produksjon eller plassbegrensninger offshore gjør at problemer forplanter seg raskt.\n\nFAKTORENE FORÅRSAKER ULYKKER fordi de skaper et organisatorisk dilemma: kompleksitet krever desentralisert beslutningstaking (operatørene nærmest situasjonen må kunne handle på egen hånd), mens tette koblinger krever sentralisert styring (raske koordinerte handlinger). En kan ikke organisere et system slik at man har begge samtidig — derav 'normale' ulykker.\n\nPerrow konkluderte med strategier: redusere interaktiv kompleksitet, løse opp koblingene, eller — om systemet har katastrofepotensial — kvitte seg med teknologien (f.eks. atomvåpen, kjernekraft).",
+      "stikkord": [
+        "Perrow",
+        "Three Mile Island",
+        "interaktiv kompleksitet",
+        "tette koblinger",
+        "sentralisert vs desentralisert",
+        "dilemma",
+        "katastrofepotensial"
+      ],
+      "kilde": "Eksamen Vår 2023, oppgave 3a"
+    },
+    {
+      "id": "ls-002",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V23, oppgave 3b — Moderne systemperspektiv",
+      "sporsmal": "Det moderne systemperspektivet på sikkerhet tar med seg de viktigste retningene innen risikohåndtering og sikkerhetsstyring. Beskriv hvordan du kan bruke dette i en analyse av en hendelse.",
+      "modellsvar": "Det moderne systemperspektivet er MTO-modellen (Menneske–Teknologi–Organisasjon), også kjent som HTO eller HOT på engelsk og brukt av DNV. Sikkerhet vurderes som et samspill mellom tre dimensjoner, ikke en isolert egenskap ved én av dem.\n\nI EN HENDELSESANALYSE bruker man MTO slik:\n\n• MENNESKE — kompetanse, helse, motivasjon, fatigue, beslutninger i øyeblikket, kommunikasjon. Hvilken rolle spilte aktørene i den skarpe enden? Hva visste de? Hva var deres mentale modell?\n\n• TEKNOLOGI — utstyr, automatikk, design, vedlikehold, alarmer. Var teknologien pålitelig? Var brukergrensesnittet egnet? Var det skjulte enkeltpunktfeil?\n\n• ORGANISASJON — prosedyrer, ledelse, kultur, ressurser, opplæring, kommunikasjon mellom ledd. Var det latente forhold (Reason) som dårlig vedlikehold eller utdaterte prosedyrer? Hvordan tok 'butte ende' (rederi/myndighet) beslutninger som påvirket den skarpe enden?\n\nVED Å BRUKE ALLE TRE NIVÅENE unngår man å låse seg fast i 'menneskelig feil' som forklaring (kritikken av Heinrich). Reasons Swiss cheese-modell passer godt inn: aktive feil i den skarpe enden samvirker med latente forhold lenger inne i organisasjonen. Eksempler: KNM Helge Ingstad — vaktsjefens situasjonsforståelse (M), AIS/kommunikasjonsutstyr (T) og treningssystem/operasjonsplanlegging (O).",
+      "stikkord": [
+        "MTO",
+        "HTO",
+        "DNV",
+        "Menneske",
+        "Teknologi",
+        "Organisasjon",
+        "skarpe og butte ende",
+        "latente forhold",
+        "Reason"
+      ],
+      "kilde": "Eksamen Vår 2023, oppgave 3b"
+    },
+    {
+      "id": "ls-003",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V23, oppgave 3c — Heuristikker",
+      "sporsmal": "Menneskers beslutninger er ofte påvirket av heuristikker. Hva er heuristikker og gi eksempler på hvordan heuristikker kan påvirke en beslutning.",
+      "modellsvar": "HEURISTIKKER er mentale snarveier — raske, intuitive 'tommelfingerregler' hjernen bruker for å ta beslutninger uten en grundig rasjonell analyse. Mennesket har begrenset rasjonalitet: hjernen er mer rettet inn på å filtrere, ordne og koble informasjon ut fra tidligere erfaringer enn å analysere den på fritt grunnlag.\n\nKlassiske heuristikker (Tversky og Kahneman):\n\n• REPRESENTATIVITET — vi bedømmer sannsynlighet ut fra hvor godt noe ligner et stereotyp eller en mental modell. Linda-eksemplet: 85 % mente det var mer sannsynlig at Linda var feminist OG kasserer i bank enn bare kasserer i bank, selv om gruppen 'kasserer' er større.\n\n• FORANKRING — første tall eller informasjon man får, fungerer som anker for videre vurdering. Vi justerer for lite fra ankeret. Eks: et høyt 'utgangspris' i forhandlinger.\n\n• TILGJENGELIGHET — det vi husker lettest virker mer sannsynlig. Mediaomtalte ulykker (fly) oppleves som farligere enn statistisk farligere hendelser (bil).\n\n• SUNK COSTS — vi tar med kostnader vi allerede har 'lagt i' selv om de ikke skal påvirke fremtidige beslutninger ('vi har investert så mye, vi må fullføre').\n\nANDRE FAKTORER som påvirker: stress, sinnstilstand, behov (sult, søvnmangel).\n\nKONSEKVENS FOR RISIKO: I sikkerhetskritiske vurderinger kan heuristikker føre til feilvurdering av risiko. Strukturerte rangeringsmetoder (f.eks. ELECTRE) tvinger beslutningstakeren til å bli eksplisitt om preferanser og vekting, og motvirker rene magefølelser.",
+      "stikkord": [
+        "mentale snarveier",
+        "begrenset rasjonalitet",
+        "representativitet",
+        "forankring",
+        "tilgjengelighet",
+        "sunk costs",
+        "Tversky og Kahneman",
+        "Linda-eksempel"
+      ],
+      "kilde": "Eksamen Vår 2023, oppgave 3c"
+    },
+    {
+      "id": "ls-004",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V24, oppgave 4a — Demings sirkel og Jurans sløyfe",
+      "sporsmal": "Sikkerhetsstyringssystem kan beskrives med f.eks. Demings sirkel og Jurans prosesstyringssløyfe. Hva kjennetegner disse systemene, og hva er viktig å passe på når en skal lage et sikkerhetsstyringssystem?",
+      "modellsvar": "DEMINGS SIRKEL (PDCA — Plan, Do, Check, Act) og JURANS PROSESSTYRINGSSLØYFE (Måle–Tiltak–Vurdere) er kontinuerlige forbedringsmodeller. Felles kjennetegn:\n\n• FEEDBACK / TILBAKEFØRING er hovedprinsippet — sikrer læring av feil.\n• De er sykliske og aldri ferdige — systemet skal kontinuerlig forbedres.\n• Tiltak skal alltid vurderes opp mot en NORMALTILSTAND.\n• Læring og endring skal være innebygd som en prosess.\n\nVIKTIG Å PASSE PÅ NÅR EN BYGGER ET SIKKERHETSSTYRINGSSYSTEM:\n\n1) GODE MÅLEPUNKTER — Hva måler vi? KPI-er som H1, H2 og F-verdi er nyttige, men det er en innebygd bias mot det som er lett å måle (typisk mindre ulykker og nestenulykker). Det kan være vanskelig å si om man er sikret mot STORE ulykker.\n\n2) UNNGÅ NORMALISERING AV AVVIK — ETTO-prinsippet (Efficiency-Thoroughness Trade Off) og 'practical drift' gjør at prosedyrer over tid kan tøyes uten at noen merker det.\n\n3) PASSE PÅ MENNESKE/SYSTEMFEIL — Tilsynelatende menneskelige feil er ofte systemfeil. Hvis prosedyrer er for kompliserte eller utdaterte, vil feil komme uansett intensjoner.\n\n4) PROSEDYRER MÅ VEDLIKEHOLDES — De har tendens til å bli mer kompliserte over tid (lettere å legge til enn å fjerne). Må holdes oppdaterte mot ny teknologi og 'best practice'.\n\n5) UNNGÅ Å INTRODUSERE SEKUNDÆREFFEKTER — Skadeforebyggende tiltak kan skape nye risikoer (Boeing 737 MAX MCAS er et eksempel) som ikke synliggjøres hvis de ikke vurderes.\n\n6) KOMMUNISER PÅ BEGGE NIVÅER — Den 'butte enden' (ledelse, regulator) må forstå at deres beslutninger former rammene for den 'skarpe enden' (operasjon).",
+      "stikkord": [
+        "PDCA",
+        "feedback",
+        "Jurans sløyfe",
+        "normaltilstand",
+        "KPI",
+        "ETTO",
+        "practical drift",
+        "sekundæreffekter",
+        "Heinrichs kritikk"
+      ],
+      "kilde": "Eksamen V24, oppgave 4a"
+    },
+    {
+      "id": "ls-005",
+      "tema": "barrierer",
+      "vanskegrad": "lett",
+      "tittel": "Eksamen V24, oppgave 4b — Aktive og latente feil",
+      "sporsmal": "Aktive og latente feil er to begrep som blir brukt når en vurderer barrierer. Hva betyr disse to begrepene?",
+      "modellsvar": "AKTIVE FEIL og LATENTE FORHOLD er sentrale begreper i James Reasons Swiss cheese-modell for ulykker, der hver 'osteskive' representerer en barriere med 'hull'.\n\nAKTIVE FEIL\n• Skjer i den 'skarpe enden' av operasjonen — der det faktisk arbeides.\n• Er ofte (tilsynelatende) menneskelige feil — feilbetjening, feilkommunikasjon, oversett alarm.\n• Konsekvensene viser seg umiddelbart.\n• Eksempel: vaktsjef glemmer å sjekke radarposisjon, operatør trykker feil knapp.\n\nLATENTE FORHOLD\n• Ligger 'sovende' i systemet, ofte i lang tid før de bidrar til ulykke.\n• Er organisatoriske eller designmessige svakheter — dårlig vedlikehold, designfeil, mangelfull opplæring, uklare prosedyrer, ressursmangel.\n• Skapes som regel av beslutninger i den 'butte enden' (ledelse, regulator) langt unna selve operasjonen.\n• Synliggjøres først når en aktiv feil aktiverer dem.\n• Eksempel: en designsvakhet på en sensor som gir falske utslag under sjeldne forhold, eller en prosedyre som ikke har blitt oppdatert etter en teknologiendring.\n\nPOENGET ER at storulykker sjelden skyldes én enkel feil. De skjer når flere hull i barrierene ligger på linje — typisk én aktiv feil som utløser det, kombinert med flere latente forhold som har bygd seg opp over tid. Derfor er det viktig å rette tiltak også mot de latente forholdene, ikke bare straffe den enkelte operatøren.",
+      "stikkord": [
+        "Swiss cheese",
+        "Reason",
+        "skarpe ende",
+        "butte ende",
+        "menneskelige feil",
+        "organisatoriske forhold",
+        "barrierer"
+      ],
+      "kilde": "Eksamen V24, oppgave 4b"
+    },
+    {
+      "id": "ls-006",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "tittel": "Eksamen V24, oppgave 4c — Resilience Engineering",
+      "sporsmal": "Resilience og Resilience Engineering har blitt et viktig begrep innen sikkerhet de siste årene. Hva er de viktigste prinsippene innen denne retningen?",
+      "modellsvar": "RESILIENCE ENGINEERING (RE), særlig knyttet til Erik Hollnagel, har dukket opp som et alternativ til klassisk sikkerhetstenkning.\n\nKJERNETANKE — Sikkerhet er IKKE fravær av ulykker, men evnen til et system å håndtere og tilpasse seg den nåværende situasjonen. Et resilient system fortsetter å fungere selv når det utsettes for uventede hendelser.\n\nSAFETY 1 vs SAFETY 2 (Hollnagel)\n• Safety 1: tradisjonelt perspektiv — unngå at ting går galt. Fokuserer på avvik og ulykker.\n• Safety 2: RE-perspektivet — sikre at ting går bra. Fokuserer på dagligdags suksess.\n\nFIRE KJERNEKAPASITETER i et resilient system:\n\n1) LÆRE — av både gode og dårlige hendelser. Forstå hvorfor ting går bra og dårlig.\n\n2) HANDLE / RESPONDERE — håndtere uventede situasjoner i øyeblikket. Krever fleksibilitet og kompetanse hos den skarpe enden.\n\n3) FORUTSE — se for seg fremtidige trusler og muligheter. Bygge mental beredskap mot scenarier man ikke har sett før.\n\n4) MONITORERE — kontinuerlig overvåke egen tilstand og omgivelsene. Tidlig identifisering av endringer.\n\nLIKHETER MED HRO\n• Begge fokuserer på det som går bra, ikke bare det som går galt.\n• Begge legger vekt på kultur, kompetanse og åpenhet.\n\nFORSKJELLER FRA HRO\n• RE er mer generisk — ikke bundet til militære eller hyperteknologiske organisasjoner (atomubåt, hangarskip).\n• RE har flere teknikker og brukes bredere i sivile virksomheter.\n• RE setter tilpasning og fleksibilitet høyere; klassisk sikkerhetsstyring (ISM, ISO 31000) er mer regelbasert.",
+      "stikkord": [
+        "Hollnagel",
+        "Safety 1 og Safety 2",
+        "lære",
+        "handle",
+        "forutse",
+        "monitorere",
+        "HRO",
+        "tilpasningsdyktighet"
+      ],
+      "kilde": "Eksamen V24, oppgave 4c"
+    },
+    {
+      "id": "ls-007",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V25, oppgave 3a — Barrieremodellens grenser",
+      "sporsmal": "Barriere- og energimodellen er en mye brukt metode for å analysere og redusere risiko. Hva har stor betydning for hvor godt denne metoden fungerer i ulike situasjoner?",
+      "modellsvar": "Energi/barriere-modellen ble popularisert av William Haddon på 1970-tallet (basert på Gibson 1961). Den ser ulykker som ukontrollert utløsning av energi, og barrierer som det som hindrer energien i å nå et offer.\n\nMODELLEN FUNGERER BEST når man kan SAMMENLIGNE FAREMOMENTET MED EN FORM FOR ENERGI-UTLØSNING:\n• Bilkjøring (kinetisk energi)\n• Eksplosiver, gasslekkasje (kjemisk/trykk-energi)\n• Trykktanker (trykk-energi)\n• Stråling (elektromagnetisk energi)\n• Fall fra høyde (potensiell energi)\n\nDA KAN HADDONS 10 PRINSIPPER brukes systematisk: forebygge oppsamling av energi, redusere mengden, hindre ukontrollert utløsing, fysiske barrierer (midtdeler, hjelm), førstehjelp osv.\n\nMODELLEN FUNGERER DÅRLIGERE NÅR\n• Faren ikke har tydelig analogi til energi-utløsning (mellommenneskelige risiko, kulturelle risiko, organisatoriske risiko som mobbing eller diskriminering).\n• System er svært komplekst og barrierene har avhengighet seg imellom (f.eks. felles strømforsyning).\n• Risiko er drevet av informasjonssvikt (MMD) eller organisasjonskultur i stedet for fysisk energi.\n\nANDRE FORHOLD AV BETYDNING\n• Erfaring med tilsvarende systemer — store ulykker er sjeldne, så man må ofte planlegge barrierer uten erfaringsgrunnlag og bruke pålitelighetsblokkdiagram.\n• Vurdering av sekundæreffekter — nye barrierer kan introdusere nye risikoer.\n• Tendensen til å legge til prosedyre-barrierer som 'billig forsikring' gjør barriereoversikten uoversiktlig.\n• Aktive barrierer er sårbare for organisatoriske latente forhold (mangelfullt vedlikehold).",
+      "stikkord": [
+        "Haddon",
+        "energi-utløsning",
+        "Haddons 10 prinsipper",
+        "sekundæreffekter",
+        "avhengighet",
+        "passive vs aktive barrierer"
+      ],
+      "kilde": "Eksamen Vår 2025, oppgave 3a"
+    },
+    {
+      "id": "ls-008",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V25, oppgave 3b — Barriere-metoder",
+      "sporsmal": "Det er flere ulike metoder en kan bruke når en skal bruke barrierer i forhold til sikkerhet og risikostyring. Beskriv minst to av måtene vi har diskutert i faget som handler om barrierer.",
+      "modellsvar": "I faget har vi diskutert flere måter å bruke barrierer på:\n\n1) ENERGI/BARRIERE-MODELLEN (HADDON)\n• Ser ulykker som ukontrollert utløsning av energi.\n• Haddons 10 prinsipper gir en systematisk sjekkliste — fra å forebygge oppsamling av energi (1), redusere mengden (2), fysiske barrierer (5–6), styrke sårbare mål (8), til rehabilitering (10).\n• Skiller mellom forebyggende og skadereduserende tiltak.\n\n2) BOW TIE-MODELLEN\n• Visualiserer en uønsket hendelse som knuten i en sløyfe.\n• Forhindrende barrierer på venstre side skal stoppe at hendelsen oppstår.\n• Begrensende barrierer på høyre side skal redusere konsekvensene hvis den oppstår.\n• Brukes i ROS-analyse for å vise tiltak og restrisiko.\n\n3) SWISS CHEESE-MODELLEN (REASON)\n• Hver barriere er en 'osteskive' med hull — aktive feil og latente forhold.\n• Ulykker oppstår når hullene ligger på linje slik at fare → forsvar → tap-banen blir åpen.\n• Brukes som forklaringsmodell etter ulykker (f.eks. Helge Ingstad).\n\n4) DYBDEFORSVAR (DEFENCE IN DEPTH)\n• Flere barrierer plassert etter hverandre, særlig mot farer med høyt energiinnhold.\n• Eksempel — gassanlegg: prosesskontroll → oppdemming → gass-deteksjon → isolering av tennkilder → brannvarsling → brannvegger → aktiv slukking → evakueringsmuligheter.\n\n5) AKTIVE vs PASSIVE BARRIERER\n• Passive (midtdeler, deformasjonssoner) krever ingen handling.\n• Aktive (airbag, automatisk shutdown) krever at noe iverksettes — sårbare for vedlikehold og organisatoriske forhold.\n\nFelles for alle metodene er at de hjelper oss å systematisere og kommunisere hvilke barrierer som er på plass, og hvor det er behov for å styrke beskyttelsen.",
+      "stikkord": [
+        "Haddon energi/barriere",
+        "Bow tie",
+        "Swiss cheese",
+        "dybdeforsvar",
+        "aktive og passive barrierer",
+        "forhindrende og begrensende"
+      ],
+      "kilde": "Eksamen Vår 2025, oppgave 3b"
+    },
+    {
+      "id": "ls-009",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V25, oppgave 3c — Systemperspektiv",
+      "sporsmal": "Beskriv kort hvorfor det er viktig å ha et systemperspektiv på sikkerhet.",
+      "modellsvar": "Et SYSTEMPERSPEKTIV ser ikke sikkerhet som en isolert egenskap ved menneske, teknologi eller organisasjon hver for seg, men som et SAMSPILL mellom de tre (MTO/HTO).\n\nVIKTIG FORDI\n\n• ULYKKER ER SJELDEN ENKLE — Storulykker (Helge Ingstad, Three Mile Island, Boeing 737 MAX) skyldes nesten alltid en kombinasjon av menneskelige beslutninger, tekniske svakheter og organisatoriske forhold. Hvis vi bare ser på én dimensjon mister vi de virkelige årsakene.\n\n• MENNESKELIGE FEIL ER OFTE SYSTEMFEIL — Tilsynelatende menneskelige feil skyldes ofte at prosedyrer, opplæring, design eller arbeidsbelastning ikke er tilpasset oppgaven. Å bare straffe operatøren løser ikke problemet.\n\n• LATENTE FORHOLD (Reason) — Beslutninger i den 'butte enden' (rederi, myndighet) skaper rammer som først blir synlige når en aktiv feil utløser ulykken.\n\n• SEKUNDÆREFFEKTER — Tekniske tiltak kan skape nye risikoer (MCAS-systemet på 737 MAX). Et systemperspektiv tvinger oss til å vurdere ringvirkninger.\n\n• AVHENGIGHET MELLOM BARRIERER — Ingen barriere virker isolert. Strømbrudd kan ta ut mange aktive barrierer; dårlig vedlikehold kan svekke flere lag i Swiss cheese-modellen samtidig.\n\n• HELHETLIG LÆRING — Et systemperspektiv legger grunnlag for resilience: organisasjoner som klarer å lære, handle, forutse og monitorere.\n\nKONKRET — i en hendelsesanalyse betyr det å bruke MTO-rammeverket, kartlegge både den 'skarpe enden' og 'butte enden', og se etter sammenheng mellom aktive feil og latente forhold.",
+      "stikkord": [
+        "MTO",
+        "HTO",
+        "Swiss cheese",
+        "latente forhold",
+        "systemfeil vs menneskelig feil",
+        "sekundæreffekter",
+        "barriereavhengighet"
+      ],
+      "kilde": "Eksamen Vår 2025, oppgave 3c"
+    },
+    {
+      "id": "ls-010",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "tittel": "Eksamen V25, oppgave 3d — Resilience Engineering elementer",
+      "sporsmal": "Resilience engineering er en del av det som har blitt beskrevet som Safety 2, der en fokuserer på hva som går bra i stedet for hva som går galt. Beskriv de viktigste elementene som inngår i resilience engineering.",
+      "modellsvar": "RESILIENCE ENGINEERING (RE) — Erik Hollnagel\n\nSentral idé: sikkerhet er ikke fravær av ulykker, men evnen til et system å håndtere og tilpasse seg den nåværende situasjonen. RE legger vekt på SAFETY 2 — sikre at ting går bra, ikke bare unngå at ting går galt (Safety 1).\n\nDE FIRE KJERNEKAPASITETENE\n\n1) LÆRE — Forstå hvorfor ting går bra OG dårlig. Hente erfaring fra både normaldrift og avvik. Læringen må omsettes til endring.\n\n2) RESPONDERE / HANDLE — Håndtere uventede situasjoner når de oppstår. Krever fleksibilitet, kompetanse og lokal beslutningsmyndighet i den skarpe enden.\n\n3) FORUTSE — Se for seg fremtidige trusler og muligheter. Bygge mental beredskap mot scenarier man ikke har sett. Inkluderer scenario-tenking og 'forestillingsevne' (jf. Westrums generative kultur).\n\n4) MONITORERE — Kontinuerlig overvåke egen tilstand, kritiske parametre og endringer i omgivelsene. Tidlig deteksjon før mindre avvik blir store.\n\nFELLES FOR ELEMENTENE\n\n• En LÆRENDE ORGANISASJON som åpner for tilpasning og endring av prosedyrer.\n• ÅPEN INFORMASJONSFLYT — generativ kultur (Westrum), lav terskel for å si fra.\n• Sammenheng med HRO sin organisatoriske redundans og collective mindfulness.\n\nFORDELER FREMFOR KLASSISK SIKKERHET\n• Egnet for komplekse, dynamiske systemer der prosedyrer aldri kan dekke alle scenarier.\n• Gir et språk for det som faktisk gjør at det går bra (operatørenes tilpasningsevne).\n\nULEMPER / UTFORDRINGER\n• Vanskelig å konkretisere — hva er egentlig 'resilience'?\n• Krever moden organisasjonskultur for å fungere.\n• Kan komme i konflikt med stramt regelverk (ISM, ISO).",
+      "stikkord": [
+        "Hollnagel",
+        "Safety 2",
+        "lære",
+        "respondere",
+        "forutse",
+        "monitorere",
+        "tilpasningsevne",
+        "generativ kultur",
+        "HRO"
+      ],
+      "kilde": "Eksamen Vår 2025, oppgave 3d"
+    },
+    {
+      "id": "ls-011",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "tittel": "Eksamen V24, oppgave 2 — Grovanalyse",
+      "sporsmal": "Du har fått i oppdrag å planlegge og sikkerhetsvurdere en sykkeltur i Pyreneene med telting og full bagasje. Identifiser fem hovedutfordringer. Bruk en grovanalyse til å vurdere risikoen til utfordringene og eventuelle tiltak. Det er ikke nødvendig å grafisk vise risikoen i en matrise, bare ta med vurderingene for opprinnelig risiko, eventuelle tiltak og sluttrisiko.",
+      "modellsvar": "GROVANALYSE — SYKKELTUR I PYRENEENE\n\nForutsetninger: 14 dagers tur, høyfjell opp til 2500 m, varierende vær, telting hver natt, ca 60–80 km/dag med 15–20 kg bagasje. Skala for risiko: lav / middels / høy.\n\n1) TRAFIKK / SAMMENSTØT MED KJØRETØY\n• Opprinnelig risiko: Høy. Smale fjellveier, tunge biler, lite skulder.\n• Tiltak: Reflekterende klær og synlige lys, hjelm, planlegge ruter med sykkelvei der mulig, unngå rushtid og dårlig vær.\n• Sluttrisiko: Middels.\n\n2) FALL / SKADE I NEDOVERBAKKE\n• Opprinnelig risiko: Høy. Lange nedstigninger, høyt tempo, baglast forskyver tyngdepunkt.\n• Tiltak: Bremsekontroll før turen, riktig dekkvalg, lav fart i bratt nedoverbakke, hjelm, skadeforsikring, førstehjelpsutstyr.\n• Sluttrisiko: Middels.\n\n3) DEHYDRERING / VARMESLAG\n• Opprinnelig risiko: Middels–høy. Høy fysisk belastning, varme sommerdager.\n• Tiltak: Minst 3 liter vann tilgjengelig, salt-tabletter, sykle tidlig morgen og sen kveld, planlegge etterfylling.\n• Sluttrisiko: Lav.\n\n4) MEKANISK SVIKT (PUNKTERING, KJEDEBREDDE)\n• Opprinnelig risiko: Middels. Lang strekning, fjernt fra verksteder.\n• Tiltak: Service før turen, reservedekk, dekkplugger, multitool, ekstra kjede-ledd, kjenne grunnleggende reparasjon.\n• Sluttrisiko: Lav.\n\n5) UVÆR I FJELLET (LYNNEDSLAG, KULDE)\n• Opprinnelig risiko: Høy. Plutselig værskifte i høyfjell, telt ikke fullgod beskyttelse mot lyn.\n• Tiltak: Sjekke værvarsel daglig, evakuere fra åskammer ved torden, ull og vannfast bekledning, ekstra dyner, isolert sovepose.\n• Sluttrisiko: Middels.\n\nKONKLUSJON — Selv etter tiltak gjenstår middels risiko på flere punkter. Akseptabelt risikonivå vurderes ut fra individuell preferanse (ALARP). Anbefaler reiseforsikring med dekning for fjellsport og en kommunikasjons-PLB i tilfelle nødssituasjon i avsidesliggende områder.",
+      "stikkord": [
+        "grovanalyse",
+        "ROS",
+        "opprinnelig risiko",
+        "tiltak",
+        "sluttrisiko",
+        "ALARP"
+      ],
+      "kilde": "Eksamen V24, oppgave 2"
+    },
+    {
+      "id": "ls-012",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "tittel": "HRO — High Reliability Organizations",
+      "sporsmal": "Beskriv hva som kjennetegner en High Reliability Organization (HRO) og forklar hvordan en HRO håndterer dilemmaet som NAT peker på.",
+      "modellsvar": "HRO (HIGH RELIABILITY ORGANIZATIONS) — La Porte & Consolini (1991) i artikkelen 'Working in practice but not in theory'.\n\nKjernen er at det FINNES organisasjoner som mestrer sikkerhet til tross for at NAT sier ulykker er uunngåelige. Klassiske eksempler: hangarskip, atomubåt, lufttrafikkontroll.\n\nKJENNETEGN\n\n• ORGANISATORISK REDUNDANS — i to dimensjoner: struktur (overlappende kompetanse, fysisk tilrettelegging) og kultur (åpenhet, deling av informasjon, tilbakemeldinger). Husk parallellpålitelighet fra blokkdiagram: dubelering kan lage pålitelige system av upålitelige deler.\n\n• ÅPEN, RIK KOMMUNIKASJON — lav terskel for å si i fra, kollegaer observerer og korrigerer hverandre uten at det tas ille opp.\n\n• KOMPETANSEFOKUS — bevisst på å bygge kompetanse både individuelt og kollektivt.\n\n• BESLUTNINGER FØLGER EKSPERTISEN — i kritiske situasjoner gis ordrer av dem som har kunnskapen, uavhengig av rang.\n\n• KONTINUERLIG OPPDATERTE PROSEDYRER — viljer fra de ansatte til å bidra.\n\n• COLLECTIVE MINDFULNESS (Weick) — kollektiv oppmerksomhet, godtar at feil kan skje og er hele tiden på vakt:\n  1) Opptatthet av feil (forventning om det uventede)\n  2) Motvillighet til å forenkle fortolkninger\n  3) Påpasselighet under operasjoner\n  4) Forpliktelse til feiltoleranse\n  5) Forsvarer ekspertise\n\nHRO OG NAT-DILEMMAET\nPerrows NAT hevder at man ikke kan ha både sentralisert og desentralisert styring. HRO løser dette ved at KULTUREN erstatter mye av den sentraliserte styringen (Weick 1987). Felles forståelse, standardisert opplæring og verdier gir orden og forutsigbarhet — samtidig som lokal ekspertise håndterer kompleksiteten.\n\nSVAKHETER VED HRO\n• Eksemplene er ofte militære eller hyperteknologiske — vanskelig å overføre til sivile organisasjoner.\n• Vanskelig å bygge en HRO fra scratch.\n• Krever stabil, langvarig kultur.",
+      "stikkord": [
+        "La Porte og Consolini",
+        "organisatorisk redundans",
+        "collective mindfulness",
+        "Weick",
+        "kultur",
+        "ekspertise overstyrer rang"
+      ],
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "ls-013",
+      "tema": "organisasjon",
+      "vanskegrad": "middels",
+      "tittel": "Westrums tre kulturer",
+      "sporsmal": "Westrum (1993) skiller mellom tre typer organisasjonskultur for å håndtere informasjon. Beskriv de tre kulturene og hvilke konsekvenser hver type har for sikkerhet.",
+      "modellsvar": "Westrum knytter sikkerhet til organisasjonens evne til å hente, dele og tolke informasjon. Tre arketypiske kulturer:\n\n1) PATOLOGISK\n• Aktiv informasjonshenting: 'Vil ikke vite'.\n• Budbringere blir 'skutt' — straffet for å rapportere problemer.\n• Ingen tar ansvar.\n• Brobygging mellom enheter aksepteres ikke.\n• Feilhandlinger straffes eller skjules.\n• Nye ideer blir aktivt motarbeidet.\n• Konsekvens: skjult risiko bygger seg opp under radaren. Klassisk MMD-inkubasjonsperiode.\n\n2) BYRÅKRATISK\n• 'Lytter til budbringere dersom de dukker opp'.\n• Ansvar er lagt til bestemte roller.\n• Brobygging tillates, men informasjon kan bli oversett mellom enheter.\n• Feilhandlinger vurderes rettferdig — men ofte langsomt.\n• Nye ideer = problemer.\n• Konsekvens: tilstrekkelig for normal drift, men sårbar for uventede signaler og tverrgående risiko.\n\n3) GENERATIV\n• AKTIV informasjonshenting — leter etter signaler.\n• Budbringere TRENES og verdsettes.\n• Ansvar DELES på tvers av nivåer.\n• Brobygging mellom enheter oppmuntres.\n• Kontinuerlige vurderinger og endringer.\n• Nye ideer ønskes velkommen.\n• Konsekvens: best evne til 'tilstrekkelig forestillingsevne' — å se sammenheng mellom signaler og uventede situasjoner. Knyttes til HRO og Resilience Engineering.\n\nWestrum kobler dette til Turners MMD-perspektiv: storulykker oppstår i inkubasjonsperioden fordi informasjon ikke blir tatt på alvor. Den generative kulturen er den eneste som har sjanse til å bryte dette mønsteret.",
+      "stikkord": [
+        "Westrum 1993",
+        "patologisk",
+        "byråkratisk",
+        "generativ",
+        "informasjonssvikt",
+        "MMD",
+        "Turner",
+        "HRO"
+      ],
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "ls-014",
+      "tema": "iso-31000",
+      "vanskegrad": "middels",
+      "tittel": "Granskingsprosessen (havarikommisjonen)",
+      "sporsmal": "Beskriv trinnene i granskingsprosessen til Statens Havarikommisjon, og forklar hvorfor en gransking har et annet formål enn en strafferettslig etterforskning.",
+      "modellsvar": "GRANSKING — Statens Havarikommisjon for transport (SHT/SHK) har fem avdelinger (luftfart, jernbane, veitrafikk, sjøfart, forsvaret) og skal undersøke om regelverk/lovverk bør endres. SHT skal ikke ta stilling til sivilrettslig eller strafferettslig skyld.\n\nFORMÅL — LÆRE av hendelser, identifisere systemiske svakheter, gi tilrådinger om tiltak. Før 2008 hadde Norge 'sjøforklaring' som var rettslig avhør og fokuserte på straffbare forhold. Havarikommisjonen ble opprettet for å skille læring fra straffespor.\n\nDE SYV TRINNENE\n\nTrinn 1 — KLARLEGGE HENDELSESFORLØP OG OMSTENDIGHETER. STEP-analyse (Sequential Time Event Plot) brukes for å kartlegge hva som skjedde minutt for minutt.\n\nTrinn 2 — IDENTIFISERE LOKALE SIKKERHETSPROBLEMER. Foreløpig rapport. Hva sviktet i akkurat denne hendelsen?\n\nTrinn 3 — BARRIEREANALYSE. Bruk av Haddons energi/barriere-modell. Hvilke barrierer fantes, hvilke ble brutt, hvilke manglet?\n\nTrinn 4 — KARTLEGGE RISIKOFAKTORER. Verktøy som 5 Why, Ishikawa-/fiskebeindiagram. Anbefales å se det som et system — bruke HTO/MTO-metoden. Også se til HRO for 'best practice' i undersøkelsene.\n\nTrinn 5 — VURDERE KAUSALITET OG VIKTIGHET. Årsak-virkning-sammenhenger. Hvilke faktorer bidro avgjørende?\n\nTrinn 6 — UTREDE SYSTEMISKE SIKKERHETSPROBLEMER. Risikofaktorer som med rimelighet kan påvirke fremtidige operasjoner OG er karakteristikker av en organisasjon eller et system (ikke bare en person eller et øyeblikk).\n\nTrinn 7 — TILRÅDING OM TILTAK. SHT følger Haddons 10 prinsipper for risikotiltak (barrierer). Tilrådingene gis til relevante parter (rederi, kystverk, sjødirektoratet, departement).\n\nHVORFOR ULIK FRA STRAFFEPROSESS\nÅ skille gransking fra straff er kritisk for læring. Hvis ansatte frykter straffeforfølgelse, vil de skjule informasjon — patologisk kultur (Westrum). Et åpent læringssystem krever at granskingen IKKE blir grunnlag for straff. Politi og påtalemyndighet jobber parallelt om det er mistanke om straffbare handlinger.",
+      "stikkord": [
+        "Havarikommisjonen",
+        "SHT",
+        "STEP-analyse",
+        "barriereanalyse",
+        "5 Why",
+        "Ishikawa",
+        "HTO",
+        "Haddons 10 prinsipper",
+        "systemiske problemer"
+      ],
+      "kilde": "Undervisning dag 7"
+    },
+    {
+      "id": "ls-015",
+      "tema": "beslutninger",
+      "vanskegrad": "vanskelig",
+      "tittel": "ELECTRE I — fremgangsmåte",
+      "sporsmal": "Forklar hvordan ELECTRE I rangeringsmetoden brukes til å gjøre et valg mellom flere alternativer. Inkluder hva tillitsindeksen c* er, og hvordan grafisk representasjon brukes.",
+      "modellsvar": "ELECTRE I er en RANGERINGSMETODE / ELIMINERINGSMETODE. Mål: hjelpe en beslutningstaker til å strukturere problemstillingen, identifisere egne preferanser, og finne den optimale beslutningen.\n\nFREMGANGSMÅTE\n\n1) IDENTIFISER ALTERNATIVENE (d1, d2, …) og ATTRIBUTTENE / kriteriene (kostnad, pålitelighet, trivsel etc.).\n\n2) GI HVERT ATTRIBUTT EN VEKT (wj) — jo viktigere, jo høyere vekt.\n\n3) VURDER HVERT ALTERNATIV på en skala (typisk 1–5) for hvert attributt.\n\n4) BEREGN TILLITSINDEKS c(d1, d2) for hvert par av alternativer:\n   c(d1, d2) = (1/W) · Σ wj for de attributtene der gj(d1) ≥ gj(d2)\n   der W er sum av alle vekter.\n   c er et tall mellom 0 og 1, og kan tolkes som et mål for påstanden 'd1 er minst like god som d2'.\n\n5) VELG EN TILLITSGRENSE c* — typisk 6/10 eller 7/10. Jo høyere c*, jo strengere krav til at d1 'slår' d2.\n\n6) BYGG EN PILDIAGRAM-REPRESENTASJON\n   • d1 P d2 (pil fra d1 til d2): beslutningstakeren foretrekker d1 fremfor d2.\n   • d1 I d2: indifferent (begge oppfyller c* mot hverandre).\n   • d1 J d2: kan ikke sammenligne (ingen oppfyller c*).\n\n7) TEGN GRAFISK — alternativene som ikke har pilspisser inn mot seg, er de beste. Hvis ett alternativ ikke har innkommende piler, er det vinneren.\n\nEKSEMPEL (Eks. fra V23) — fire strategier A, B, C, D vurderes på Kostnad (vekt 2), Pålitelighet (vekt 4), Innovasjon (vekt 5). Total vekt W = 11.\n\nFor c(A,B): tell vekter for attributter der A ≥ B. Hvis A er like god eller bedre på pålitelighet (4 ≥ 3) og lik på kostnad (2 = 2), men dårligere på innovasjon (3 < 4), blir c(A,B) = (2+4)/11 = 6/11 ≈ 0,55.\n\nMan gjør dette for alle par. Setter c* = f.eks. 6/10, tegner pilene, og finner alternativ uten innkommende piler.\n\nFORDELER\n• Tvinger til å være eksplisitt om preferanser og vekting.\n• Gir mulighet til å variere c* og se hvordan rangeringen endrer seg (robusthet).\n• Strukturer kompliserte valg.\n\nULEMPER\n• Subjektiv vekting og evaluering.\n• Kan gi situasjoner der ingen klar vinner finnes (alle har innkommende piler).",
+      "stikkord": [
+        "rangeringsmetode",
+        "elimineringsmetode",
+        "tillitsindeks c*",
+        "vekting",
+        "preferanse P",
+        "indifferens I",
+        "ikke sammenlignbar J",
+        "pildiagram"
+      ],
+      "kilde": "Undervisning dag 6"
+    },
+    {
+      "id": "ls-016",
+      "tema": "beslutninger",
+      "vanskegrad": "middels",
+      "tittel": "Begrenset rasjonalitet",
+      "sporsmal": "Hva betyr det at 'mennesket er begrenset rasjonelt', og hvilke konsekvenser har det for beslutningstaking i sikkerhetskritiske situasjoner?",
+      "modellsvar": "BEGRENSET RASJONALITET (bounded rationality) betyr at vi som mennesker har en kognitiv kapasitet som er for liten til å vurdere all tilgjengelig informasjon. Hjernen er mer rettet inn på å FILTRERE, ORDNE og KOBLE informasjon ut fra tidligere erfaringer enn å analysere den på fritt grunnlag.\n\nVI KAN OPPTRE RASJONELT i én sammenheng, men irrasjonelt i en annen — det handler om kontekst og tilgjengelig mental kapasitet i øyeblikket.\n\nKONSEKVENSER FOR BESLUTNINGER\n\n• HEURISTIKKER tar over når kompleksiteten er for høy:\n  - Representativitet (Linda-eksempel)\n  - Forankring (første tall blir referansepunkt)\n  - Tilgjengelighet (det vi husker virker mest sannsynlig)\n  - Sunk costs (vi tar med tidligere investeringer som ikke skal påvirke fremtidsvalg)\n\n• PROBLEMET ER IKKE MANGEL PÅ INFORMASJON, men at vi ikke greier å ordne informasjonen.\n\n• INTUISJON — raske tanker uten refleksjon — dominerer ofte.\n\nKONSEKVENSER I SIKKERHETSKRITISKE SITUASJONER\n\n• Under STRESS, TIDSPRESS, SØVNMANGEL og høy belastning faller rasjonell analyse fra, og heuristikker tar over.\n\n• OPERATØRER tar feil beslutninger ikke fordi de er uvitende, men fordi systemet stilte krav som overskred mental kapasitet (kritikken av Heinrich — system, ikke menneske).\n\n• 'TUNNELSYN' under krise — fokus snevres inn, viktige signaler oversees (jf. MMD-inkubasjonsperiode).\n\nTILTAK\n\n• STRUKTURERTE METODER som ELECTRE, MAUT og forventet nytteteori tvinger frem eksplisitt vurdering av preferanser og alternativer.\n\n• SJEKKLISTER og PROSEDYRER — avlaster mental kapasitet for rutine, gir mer kapasitet til de uventede momentene.\n\n• TEAM og ÅPEN KOMMUNIKASJON (HRO, collective mindfulness) — flere som tenker reduserer sårbarhet ved enkeltpersoners begrensninger.\n\n• TRENING og SIMULERING — gjør komplekse beslutninger mer automatiserte.",
+      "stikkord": [
+        "bounded rationality",
+        "heuristikker",
+        "intuisjon",
+        "stress",
+        "ELECTRE",
+        "MAUT",
+        "sjekklister",
+        "HRO"
+      ],
+      "kilde": "Undervisning dag 6"
+    },
+    {
+      "id": "ls-017",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tittel": "Sti og kutt i pålitelighetsblokkdiagram",
+      "sporsmal": "Forklar begrepene 'minimal sti' og 'minimalt kutt' i pålitelighetsblokkdiagram. Hvorfor er det nyttig å identifisere disse i en pålitelighetsanalyse?",
+      "modellsvar": "STI og KUTT er to komplementære måter å beskrive et systems struktur i et pålitelighetsblokkdiagram.\n\nDEFINISJONER\n\n• EN STI er en mengde enheter som — ved å være FUNKSJONSDYKTIGE — sikrer at systemet selv er funksjonsdyktig.\n  - Stien er MINIMAL hvis ingen enhet kan fjernes uten at den mister sin status som sti.\n  - En minimal sti er altså det MINSTE settet av komponenter som må fungere for at hele systemet skal fungere.\n\n• ET KUTT er en mengde enheter som — ved å SVIKTE — sikrer at systemet selv svikter.\n  - Kuttet er MINIMALT hvis ingen enhet kan fjernes uten at det mister sin status som kutt.\n  - Et minimalt kutt er altså det MINSTE settet av komponenter som må svikte samtidig for at hele systemet svikter.\n\nEKSEMPEL (forenklet)\nEt system: A i serie med (B1 parallell B2) i serie med C.\n• Minimale stier: {A, B1, C} og {A, B2, C}.\n• Minimale kutt: {A}, {C}, og {B1, B2}.\n\nHVORFOR NYTTIG\n\n1) IDENTIFISERE ENKELTPUNKTFEIL (Single Point Failures) — komponenter som alene utgjør et minimalt kutt. Hvis et minimalt kutt inneholder bare ÉN enhet, er den en single point failure: hvis den svikter, svikter hele systemet. Dette er den viktigste informasjonen for vedlikehold og redundans-planlegging.\n\n2) FORENKLE BEREGNING — for komplekse diagram er det lettere å regne pålitelighet basert på stier/kutt enn å bruke nestede serie/parallell-formler.\n\n3) VURDERE REDUNDANS — antall stier viser hvor mange uavhengige måter systemet kan lykkes på. Få og overlappende stier betyr lav redundans.\n\n4) MÅLRETTET TILTAK — vet man hvilke kutt som er kritiske, kan man fokusere kvalitetsforbedring eller redundans der det monner mest.\n\n5) KOMMUNIKASJON — stier og kutt er konkrete og lette å presentere for ikke-tekniske beslutningstakere.\n\nFORUTSETNING — beregningene antar at komponentene er UAVHENGIGE. Felles strømforsyning eller felles vedlikeholdspersonell bryter forutsetningen og krever mer komplisert analyse.",
+      "stikkord": [
+        "minimal sti",
+        "minimalt kutt",
+        "single point failure",
+        "redundans",
+        "uavhengighet",
+        "pålitelighetsblokkdiagram"
+      ],
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "ls-018",
+      "tema": "palitelighet",
+      "vanskegrad": "middels",
+      "tittel": "Aktiv/passiv og varm/kald redundans",
+      "sporsmal": "Forklar skillet mellom aktiv og passiv redundans, og mellom varm og kald redundans. Gi minst ett eksempel for hver kombinasjon.",
+      "modellsvar": "REDUNDANS handler om å ha mer enn én enhet som kan utføre samme funksjon. Vi skiller mellom to dimensjoner: aktiv/passiv og varm/kald.\n\nAKTIV vs PASSIV (handler om hvorvidt back-up er i funksjon når hovedenheten er funksjonsdyktig)\n• AKTIV REDUNDANS — back-up er I FUNKSJON også når hovedenheten er funksjonsdyktig. Begge enhetene jobber samtidig.\n• PASSIV REDUNDANS — back-up er IKKE i funksjon når hovedenheten fungerer. Den står på vent.\n\nVARM vs KALD (handler om hvor raskt back-up kan ta over)\n• VARM REDUNDANS — back-up overtar AUTOMATISK, FEILFRITT og UMIDDELBART når hovedenheten svikter. Ingen handling kreves.\n• KALD REDUNDANS — back-up trenger et SIGNAL eller en aktiv handling før den kan overta. Tar lengre tid.\n\nDE FIRE KOMBINASJONENE\n\n1) VARM AKTIV REDUNDANS\n• Begge enheter er i drift, overtakelsen er automatisk.\n• Eksempel: To piloter i et fly. Begge er aktive under hele flyturen; hvis kaptein blir uvirksom, kan styrmann ta over umiddelbart uten signal.\n• Eksempel: To strømforsyninger med automatisk omkobling.\n\n2) VARM PASSIV REDUNDANS\n• Back-up er ikke i funksjon, men overtar automatisk og umiddelbart.\n• Eksempel: Standby-generator som starter automatisk ved strømbrudd. Den står stille til den trengs (passiv) men starter automatisk uten manuelt inngrep (varm).\n\n3) KALD AKTIV REDUNDANS\n• Back-up er i drift, men kreve en handling for å ta over funksjon.\n• Eksempel: Sjeldnere kombinasjon. Kan være to operatører som begge gjør oppgaver, men der den ene må gi beskjed for å overta den andres rolle.\n\n4) KALD PASSIV REDUNDANS\n• Back-up er ikke i funksjon og krever et signal/handling for å ta over.\n• Eksempel: Årer i en båt med påhengsmotor. Årene ligger i båten (passiv) og må aktivt tas i bruk hvis motoren svikter (kald).\n• Eksempel: Reservedekk i bilen.\n\nHVORFOR SKILLET ER VIKTIG\n• Påvirker overgangstid og dermed systempålitelighet i kritiske situasjoner.\n• Varm/aktiv redundans gir høyest pålitelighet men er ofte dyrest.\n• Kald/passiv redundans er rimeligst men gir 'dødtid' og krever at noen oppdager svikten og handler.\n• Valg av type redundans avhenger av kostnad, kritikalitet og hvor lang utfallstid som kan aksepteres.",
+      "stikkord": [
+        "aktiv redundans",
+        "passiv redundans",
+        "varm redundans",
+        "kald redundans",
+        "back-up",
+        "automatisk overtakelse",
+        "kritikalitet"
+      ],
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "ls-019",
+      "tema": "indikatorer",
+      "vanskegrad": "middels",
+      "tittel": "Sikkerhetsindikatorer — H1, H2 og F",
+      "sporsmal": "Beskriv H1-, H2- og F-verdiene som brukes som KPI-er i sikkerhetsstatistikk. Diskuter styrker og svakheter ved å bruke disse som primære mål på sikkerhet.",
+      "modellsvar": "H-VERDIER OG F-VERDI — DEFINISJONER\n\n• H1 = ANTALL FRAVÆRSSKADER per million arbeidstimer.\n  - Fraværsskade = skade som gjør at arbeider IKKE KAN ARBEIDE.\n• H2 = TOTALT ANTALL SKADER per million arbeidstimer.\n  - Inkluderer både fraværsskader og skader uten fravær.\n• F-VERDI = TOTALT ANTALL FRAVÆRSDAGER på grunn av skader per million arbeidstimer.\n  - Måler ALVORLIGHETSGRAD, ikke bare frekvens.\n\nFORMÅL OG BRUK\n• Brukes av virksomheter og særlig i kontrakter offshore (KPI for leverandører).\n• Gir tall som kan sammenlignes mellom selskaper og over tid.\n• Krav fra kunder.\n\nSTYRKER\n• OBJEKTIVT og LETT MÅLBART — bygd på registrerte skader og timer.\n• KVANTITATIVT — egnet for benchmark og rapportering.\n• ENKEL KOMMUNIKASJON — alle forstår 'færre skader per million timer er bedre'.\n• REGISTRERING tvinger fram et rapporteringssystem som også fanger nestenulykker.\n\nSVAKHETER\n\n1) BIAS MOT DET LETT MÅLBARE — fokus på hyppige men ofte mindre alvorlige skader (klem-, kutt-, fallskader). Sikkerhetsstyringssystemet utvikler en innebygd bias mot mindre ulykker.\n\n2) IKKE EGNET FOR STORULYKKER — H- og F-verdier sier lite om sannsynligheten for KATASTROFER. En oljeplattform kan ha lave H-verdier rett før en storulykke (kritikk fra 2010 oil-and-gas-studien som viste at fokus på små ulykker korrelerte med stabilt antall dødsfall i industrien).\n\n3) HEINRICH-FELLEN — det er ikke nødvendigvis sammenheng mellom mange små ulykker og store. Deming kritiserte Heinrich for å tilskrive menneskelig handling som hovedårsak, mens systemfeil ofte er dominerende.\n\n4) UNDERRAPPORTERING — pga. kontraktsmessig press kan virksomheter underrapportere for å holde tallene 'gode'.\n\n5) GAMING — fokus på H-verdi kan gi insentiv til å erklære skader som ikke-fraværsskader når det er marginalt.\n\n6) INGEN INFO OM LATENTE FORHOLD — KPI-ene er ETTER-indikatorer (laggende). Måler det som har skjedd, ikke det som kan komme til å skje.\n\nKOMPLEMENTÆRE MÅL\n• LEDENDE INDIKATORER (proaktive): antall sikkerhetsinspeksjoner, prosent gjennomførte SJA, oppdaterte prosedyrer, deltakelse i opplæring.\n• KULTURINDIKATORER: antall rapporterte nestenulykker (motsatt av forventet — flere = bedre rapporteringskultur, jf. Westrum generativ kultur).\n• BARRIERE-TILSTAND: vedlikeholdsetterslep på sikkerhetskritiske systemer.\n\nKONKLUSJON — H-verdier er nyttige, men bør ALDRI stå alene. De må suppleres med ledende indikatorer og kulturmål for å unngå at man måler 'det som lyser under gatelyset'.",
+      "stikkord": [
+        "H1",
+        "H2",
+        "F-verdi",
+        "KPI",
+        "laggende vs ledende indikatorer",
+        "Heinrich",
+        "Deming-kritikk",
+        "underrapportering",
+        "katastrofeforebygging"
+      ],
+      "kilde": "Undervisning dag 2 og dag 7"
+    },
+    {
+      "id": "ls-020",
+      "tema": "barrierer",
+      "vanskegrad": "middels",
+      "tittel": "Bow tie vs Swiss cheese",
+      "sporsmal": "Sammenlign Bow tie-modellen og Swiss cheese-modellen som verktøy for barriereanalyse. Hva er deres styrker og når egner hver seg best?",
+      "modellsvar": "Begge modellene er sentrale i barriereanalyse, men de har forskjellige formål.\n\nBOW TIE-MODELLEN\n• Visualiserer en uønsket hendelse som KNUTEN i midten.\n• VENSTRE SIDE — forhindrende barrierer som skal stoppe at hendelsen oppstår (årsaker → fare).\n• HØYRE SIDE — begrensende barrierer som skal redusere konsekvensene hvis hendelsen oppstår (fare → tap).\n• PROAKTIV — brukes i planlegging av risikohåndtering, særlig i ROS-analyse og prosessindustri.\n\nSTYRKER\n• Tydelig kommunikasjon — passer godt til workshop med tverrfaglige team.\n• Skiller forhindrende fra begrensende tiltak.\n• Lett å koble til Haddons 10 prinsipper.\n• Brukes ofte sammen med pålitelighetsblokkdiagram for kvantitativ vurdering.\n\nNÅR EGNER DEN SEG BEST\n• Planlegging av nye operasjoner.\n• Identifisere hvilke barrierer som mangler eller er svake.\n• Kommunisere med ledelse om risikohåndtering.\n\nSWISS CHEESE-MODELLEN (REASON)\n• Hver barriere er en 'osteskive' med hull — AKTIVE FEIL og LATENTE FORHOLD.\n• Ulykken skjer når hullene i flere skiver ligger PÅ LINJE.\n• Introduserer tre begrep: Fare → Forsvar → Tap.\n• RETROSPEKTIV — brukes mye i ulykkesanalyse for å forklare HVORDAN en sjelden hendelse kunne skje.\n\nSTYRKER\n• Forklarer hvorfor 'normale' barrierer kan svikte alle samtidig.\n• Skiller skarpe ende (aktive feil) fra butte ende (latente forhold).\n• Knytter ulykker til organisasjonsforhold, ikke bare individuelle feil.\n• Egnet for kompliserte system med mange lag.\n\nNÅR EGNER DEN SEG BEST\n• Analyse av storulykker i etterkant (granskingsrapporter).\n• Forklare organisatoriske bidrag til ulykker.\n• Argumentere for systemiske tiltak heller enn å straffe operatører.\n\nFELLES SVAKHETER\n• Avhengighet mellom barrierer (felles strømforsyning, felles vedlikehold) er vanskelig å vise.\n• Begge kan brukes feilaktig som 'sjekkliste-tenking' der man legger til prosedyre-barrierer som 'billig forsikring' uten å vurdere effekten.\n\nKOMBINERT BRUK — I praksis brukes ofte BEGGE: Bow tie i planleggingen, Swiss cheese i etterkant for å forstå hva som gikk galt og hvilke nye barrierer som trengs.",
+      "stikkord": [
+        "Bow tie",
+        "Swiss cheese",
+        "Reason",
+        "forhindrende vs begrensende barrierer",
+        "aktive feil",
+        "latente forhold",
+        "proaktiv vs retrospektiv"
+      ],
+      "kilde": "Undervisning dag 4"
+    },
+    {
+      "id": "ls-021",
+      "tema": "iso-31000",
+      "vanskegrad": "lett",
+      "tittel": "Risikostyringsprosessen — ISO 31000",
+      "sporsmal": "Beskriv hovedstegene i risikostyringsprosessen i henhold til ISO 31000.",
+      "modellsvar": "ISO 31000 gir generelle retningslinjer for risikohåndtering i bedrifter og organisasjoner. Risikostyringsprosessen består av følgende kjerneaktiviteter:\n\n1) PLANLEGGING — sett rammen for arbeidet: kontekst, mål, ressurser, interessenter. Definer kriterier for hva som skal regnes som akseptabel risiko (ALARP).\n\n2) RISIKOVURDERING — selve analysen, og består av TRE delsteg:\n   • RISIKOIDENTIFISERING — finn farer og uønskede hendelser. Verktøy: HAZID, HAZOP, FMECA, ROS-analyse, grov analyse.\n   • RISIKOANALYSE — vurder sannsynlighet og konsekvens for hver hendelse. Kvantitative eller kvalitative metoder, evt. pålitelighetsblokkdiagram.\n   • RISIKOEVALUERING — sammenlign analysen mot akseptkriteriene. Hvilke risikoer kan aksepteres, hvilke krever tiltak?\n\n3) RISIKOHÅNDTERING — beslutninger om tiltak: unngå, redusere (forebyggende eller skadereduserende), overføre (forsikring), eller akseptere risikoen.\n\nTo aktiviteter går PARALLELT gjennom hele prosessen:\n• KOMMUNIKASJON OG KONSULTASJON — med interessenter på alle nivåer, både for å hente inn informasjon og forankre beslutninger.\n• OVERVÅKNING OG GJENNOMGANG — løpende oppfølging av tiltakenes effekt og oppdatering når kontekst endrer seg. Demings sirkel og Jurans sløyfe ligger til grunn.\n\nVIKTIG SKILLE — risikovurdering ≠ risikohåndtering. Vurdering er å forstå hva som kan gå galt; håndtering er å bestemme hva man skal gjøre med det.\n\nANDRE STANDARDER OG REGELVERK på området:\n• IMO/SOLAS/ISM for sjøfart\n• Norsok Z-013 for offshore\n• EASA for luftfart\n• Arbeidsmiljøloven for landbasert virksomhet i Norge.",
+      "stikkord": [
+        "ISO 31000",
+        "planlegging",
+        "risikovurdering",
+        "identifisering",
+        "analyse",
+        "evaluering",
+        "risikohåndtering",
+        "kommunikasjon",
+        "overvåkning",
+        "ALARP"
+      ],
+      "kilde": "Undervisning dag 2"
+    },
+    {
+      "id": "ls-022",
+      "tema": "organisasjon",
+      "vanskegrad": "vanskelig",
+      "tittel": "Man Made Disasters (Turner)",
+      "sporsmal": "Beskriv Barry Turners modell for Man Made Disasters (MMD), inkludert de fire formene for informasjonssvikt og fasene i ulykkesforløpet. Hvilken type kultur er best egnet til å motvirke MMD?",
+      "modellsvar": "MAN MADE DISASTERS (MMD) — også kalt INFORMASJONSSVIKTPERSPEKTIVET — utviklet av Barry Turner på slutten av 1970-årene basert på tre ulykker: Aberfan kullslagg-ras, Hixon togulykke og Summerland brann.\n\nKJERNEPÅSTAND — Storulykker oppstår etter en lang INKUBASJONSPERIODE der informasjon som kunne forhindret ulykken ikke ble tatt på alvor. Selve den utløsende hendelsen er ofte triviell og burde vært håndtert hadde organisasjonen vært i normaltilstand.\n\nDE FIRE FORMENE FOR INFORMASJONSSVIKT\n\n1) UKJENT — informasjonen er fullstendig ukjent for organisasjonen. Ingen vet noe om den potensielle faren.\n\n2) OVERSETT — informasjonen er TILGJENGELIG men blir oversett. Den ligger i rapporter, eposter, eller er nevnt muntlig, men ingen tar tak i den.\n\n3) IKKE SATT I SAMMENHENG — flere informasjonselementer finnes hver for seg, men de blir ikke kombinert eller koblet sammen til et helhetsbilde.\n\n4) PASSER IKKE FORTOLKNINGSRAMMEN — informasjonen finnes og blir lest, men passer ikke inn i organisasjonens mentale modell. Den blir derfor avvist eller bortforklart.\n\nFASENE I MMD-MODELLEN\n\n• ANTATT NORMALSITUASJON — teknologi fungerer, regler følges, organisasjonen fungerer.\n• INKUBASJONSPERIODE — svakheter, avvik og uregelmessigheter bygger seg opp uten å bli oppfattet. Latente forhold akkumuleres.\n• UTLØSENDE HENDELSE — en hendelse som skulle vært håndtert hadde organisasjonen vært i normaltilstand. Utløser den oppsamlede risikoen.\n• BEGYNNENDE KRISE — situasjonen utvikler seg. Manglende oversikt og ressurser.\n• KRISEHÅNDTERING — akutt respons.\n• GJENOPPRETTING AV KONTROLL / KULTURELL OMSTILLING — lærdom integreres (eller ikke). Endring av kultur, prosedyrer, struktur.\n\nKULTUR SOM MOTVIRKER MMD — WESTRUMS GENERATIVE KULTUR\n\nWestrum (1993) viste at organisasjoner med forskjellig kultur håndterer informasjon ulikt:\n• PATOLOGISK — vil ikke vite. Budbringere 'skytes'. Største risiko for MMD.\n• BYRÅKRATISK — lytter hvis info dukker opp, men brobygging er vanskelig.\n• GENERATIV — aktivt søker informasjon, deler ansvar, oppmuntrer brobygging, nye ideer ønskes velkommen.\n\nKun GENERATIV KULTUR har tilstrekkelig 'forestillingsevne' til å tolke informasjon i sammenheng med ukjente situasjoner og dermed bryte inkubasjonen før katastrofen rammer.\n\nKOBLING TIL ANDRE TEORIER — MMD utfyller NAT (Perrow) ved å forklare HVORDAN ulykker bygger seg opp over tid; HRO og Resilience Engineering bygger på samme tanke om at organisasjonskultur og åpen informasjonsflyt er avgjørende.",
+      "stikkord": [
+        "Turner",
+        "Aberfan",
+        "informasjonssvikt",
+        "inkubasjonsperiode",
+        "Westrum",
+        "generativ kultur",
+        "latente forhold"
+      ],
+      "kilde": "Undervisning dag 5"
+    },
+    {
+      "id": "ls-023",
+      "tema": "risikoidentifisering",
+      "vanskegrad": "middels",
+      "tittel": "ROS-analyse — fremgangsmåte",
+      "sporsmal": "Hvordan utføres en ROS-analyse (grovanalyse) i praksis? Beskriv stegene og diskuter hvor metoden passer best.",
+      "modellsvar": "ROS = RISIKO- OG SÅRBARHETSANALYSE, mye brukt i det offentlige (kommune, stat, samfunnsberedskap). Også kjent som GROVANALYSE. Forenklet metode uten standardiserte krav, men nyttig hvis brukt fornuftig.\n\nVIKTIG BEGREP — ROS bruker SANNSYNLIGHET (ikke frekvens) i skjemaer, men tenk på det som forventet frekvens i bunn.\n\nFREMGANGSMÅTE\n\n1) GRUPPESETTING — Få med relevante personer med ulik erfaring. Sammensetning er avgjørende for kvaliteten på identifiseringen.\n\n2) BESKRIV DETALJERT — Hva skal skje? Bruk skisser, sekvensdiagram, kart. Del opp i sekvenser / faser (planlegging → gjennomføring → avslutning).\n\n3) IDENTIFISER HVA SOM KAN GÅ GALT — For hver fase, hvilke uønskede hendelser kan inntreffe? List opp risikomoment.\n\n4) VURDER SANNSYNLIGHET — Skala typisk 1–5 (svært lite sannsynlig → svært sannsynlig).\n\n5) VURDER KONSEKVENS — Skala typisk 1–5. Skill mellom konsekvenstyper (liv/helse, økonomi, miljø, omdømme).\n\n6) PLASSER I RISIKOMATRISE — Sannsynlighet × konsekvens. Identifiser hvilke risikomoment som er over akseptkriteriene.\n\n7) VURDER TILTAK — For risiko over akseptnivå: forebyggende eller skadereduserende tiltak. Bruk Bow tie-tankegangen.\n\n8) VURDER RESTRISIKO — Etter tiltak: ny vurdering. Er restrisikoen akseptabel (ALARP)?\n\n9) HELHETSVURDERING — Når alle hendelser er analysert og tiltak vurdert, vurder om risikoen for HELE arbeidsoppgaven/aktiviteten er tilfredsstillende.\n\n10) DOKUMENTASJON — Skjemaer med opprinnelig risiko, tiltak, sluttrisiko. Brukes som beslutningsstøtte.\n\nNÅR PASSER METODEN BEST\n\n• Mindre eller mellomstore prosjekter der detaljert kvantitativ analyse er for ressurskrevende.\n• Aktiviteter med begrenset varighet eller én-gangs-natur (fjelltur, prosjektmøte, arbeidsoperasjon).\n• Offentlig sektor — kommunalt beredskap, samfunnssikkerhet.\n• Som FØRSTE-PASS før mer avansert analyse (HAZOP, FMECA).\n\nFORDELER\n• Enkel, fleksibel, kostnadseffektiv.\n• Lav inngangsterskel — kan utføres av tverrfaglig gruppe uten dyp metodikkbakgrunn.\n• Lett å kommunisere visuelt.\n\nULEMPER\n• Subjektive vurderinger.\n• Ingen standardisert mal — krever bevisst metodisk arbeid.\n• Vanskelig å sammenligne mellom ulike grupper/analyser.\n• Kan undervurdere sjeldne, alvorlige hendelser (sorte svaner).",
+      "stikkord": [
+        "ROS-analyse",
+        "grovanalyse",
+        "risikomatrise",
+        "opprinnelig risiko",
+        "restrisiko",
+        "ALARP",
+        "Bow tie",
+        "sannsynlighet vs frekvens"
+      ],
+      "kilde": "Undervisning dag 2 og dag 3"
+    },
+    {
+      "id": "ls-024",
+      "tema": "risiko-grunnlag",
+      "vanskegrad": "middels",
+      "tittel": "Sekundæreffekter av tiltak",
+      "sporsmal": "Hva er sekundæreffekter ved risikoreduserende tiltak, og hvorfor er det viktig å vurdere dem? Bruk et konkret eksempel.",
+      "modellsvar": "SEKUNDÆREFFEKTER er NYE RISIKOER som introduseres som følge av et skadeforebyggende eller skadereduserende tiltak. Tiltaket reduserer den opprinnelige risikoen (primæreffekt), men kan samtidig skape utilsiktet ny risiko.\n\nHVORFOR DET ER VIKTIG\n• Hvis sekundæreffekter ikke blir vurdert og identifisert, kan det totale risikonivået ØKE uten at det blir synliggjort.\n• Tendensen til å legge på flere prosedyre-barrierer som 'billig forsikring' gjør at barriereoversikten blir uoversiktlig og introduserer skjulte risikoer.\n• Beslutningstakere kan tro at problemet er løst, mens det egentlig er flyttet eller forsterket.\n\nKONKRET EKSEMPEL — BOEING 737 MAX MCAS\n\nProblem: For å konkurrere mot Airbus A320neo monterte Boeing større, mer effektive motorer på 737-rammen. Motorene måtte plasseres lenger fremme og høyere, noe som endret aerodynamikken og kunne føre til at nesen vippet opp under visse forhold.\n\nPRIMÆRTILTAK (mot opprinnelig risiko): MCAS-systemet (Maneuvering Characteristics Augmentation System) ble innført for automatisk å presse nesen ned hvis sensoren oppdaget unormal vinkel.\n\nSEKUNDÆREFFEKTER\n• MCAS baserte seg på data fra ÉN sensor (single point failure). Tilgjengelig historisk data viste at sensoren feilet 1 av 1,7 millioner — 6× høyere enn det MCAS-designet krevde (1 av 10 millioner).\n• MCAS skulle gi 0,6 graders utslag, men gav opp til 2,5 grader i ferdig utviklet versjon.\n• Pilotene fikk knapt informasjon om systemet — det ble ikke nevnt blant 30 sider ulikhetsbeskrivelser mellom MAX og forrige generasjon.\n• Resultat: To dødelige ulykker (Lion Air 2018, Ethiopian Airlines 2019). 346 omkomne.\n\nLÆRDOM — Et tiltak som var ment å løse en aerodynamisk risiko introduserte en helt ny og verre risiko. Single point failures fikk videreført. Tidspress fra ledelsen og delegert myndighet til Boeing fra FAA bidro til at sekundæreffektene ikke ble vurdert grundig nok.\n\nHVORDAN UNNGÅ\n• Risikovurdering MÅ inkludere vurdering av tiltakets bivirkninger.\n• Bow tie- og Swiss cheese-modeller tvinger fram tenking om hva som kan svikte i selve barrieren.\n• Pålitelighetsblokkdiagram for nye barrierer for å se om de introduserer single point failures.\n• Vurder kompleksitet (NAT-perspektivet) — flere barrierer øker interaktiv kompleksitet og tette koblinger.",
+      "stikkord": [
+        "sekundæreffekter",
+        "Boeing 737 MAX",
+        "MCAS",
+        "single point failure",
+        "primæreffekt",
+        "skadeforebyggende tiltak",
+        "Bow tie"
+      ],
+      "kilde": "Undervisning dag 3"
+    },
+    {
+      "id": "ls-025",
+      "tema": "iso-31000",
+      "vanskegrad": "vanskelig",
+      "tittel": "Strategier for endring av sikkerhetskultur",
+      "sporsmal": "Beskriv de fire strategiene for endring som ble presentert i kurset (evolusjon, revolusjon, tvungen utvikling, karismatisk omforming). Hvilke styrker og svakheter har hver av dem?",
+      "modellsvar": "Når en organisasjon skal endre sikkerhetsstyringssystem eller -kultur, kan endringen skje på fire grunnleggende måter. Disse kan deles inn etter to dimensjoner: hastighet/karakter (inkrementell vs revolusjonær) og basis (tvang vs deltakelse/samarbeid).\n\n1) EVOLUSJON\n• Inkrementell utvikling i små steg.\n• Basis i deltakelse: bottom-up preg.\n• Små endringer bygger seg opp til store endringer som blir vanskelige å stoppe.\nSTYRKER\n• Lav motstand i organisasjonen.\n• Læring underveis.\n• Lavere risiko for sekundæreffekter.\nSVAKHETER\n• Tar lang tid.\n• Krevende å holde fokus over år.\n• Kan stagnere uten tydelige milepæler.\nNÅR — Stabile organisasjoner, generell forbedring, kulturarbeid.\n\n2) REVOLUSJON\n• Bottom-up preg, men raskere og mer omfattende.\n• Krever betydelig engasjement fra hele organisasjonen.\n• Basis i samarbeid og konsultasjon.\nSTYRKER\n• Eierskap til endringen i mange ledd.\n• Tilpasning gjennom dialog.\nSVAKHETER\n• Krever mye fra organisasjonen — energi, tid, kompetanse.\n• Vanskelig å koordinere mange parallelle initiativ.\nNÅR — Modne organisasjoner som vil ta et stort steg sammen.\n\n3) TVUNGEN UTVIKLING (diktatorisk omforming)\n• Oppfattelse av krise.\n• Militær stil, streng top-down.\n• Basis i ordre og tvang.\nSTYRKER\n• Rask gjennomføring.\n• Tydelig retning.\n• Egnet i ekte krisesituasjoner der det ikke er tid til konsensus.\nSVAKHETER\n• Skaper motstand.\n• Risiko for at endringen ikke forankres — folk gjør 'minste motstands vei' i hverdagen.\n• Patologisk kultur (Westrum) kan utvikle seg under tvang.\nNÅR — Akutt krise, juridisk pålegg, alvorlige hendelser (etter en ulykke som Helge Ingstad eller Herald of Free Enterprise).\n\n4) KARISMATISK OMFORMING\n• Leder blir 'redningsmann'.\n• Endring drives av leder med sterk personlig appell.\n• Vanskelig å satse på som strategi.\nSTYRKER\n• Kan fungere i organisasjoner som er åpne for inspirasjonsbasert ledelse.\n• Skaper energi og momentum.\nSVAKHETER\n• Helt avhengig av lederens personlighet — sårbart for endringer i ledelsen.\n• Fungerer i enkelte organisasjoner men ikke andre.\n• Risiko for 'helt-dyrking' fremfor strukturert endringsarbeid.\nNÅR — Organisasjoner i krise med behov for ny retning og tilgang på en sterk leder.\n\nPRAKSIS\nI virkeligheten er endringsprosesser ofte BLANDET. Etter en alvorlig hendelse er det vanlig med en tvungen kortsiktig fase (ny prosedyre umiddelbart) etterfulgt av evolusjonær konsolidering over tid. Karismatisk lederskap kan akselerere en evolusjonær prosess. Det viktige er at metoden passer til situasjon og organisasjon.",
+      "stikkord": [
+        "evolusjon",
+        "revolusjon",
+        "tvungen utvikling",
+        "karismatisk omforming",
+        "top-down",
+        "bottom-up",
+        "endringsledelse"
+      ],
+      "kilde": "Undervisning dag 2"
     }
   ]
 }
